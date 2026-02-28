@@ -4,8 +4,8 @@ import { ArrowUpRight, Wrench, Package, Headphones, ShieldCheck, Factory, FlaskC
 import AnimatedSection from "@/components/AnimatedSection";
 import heroImg from "@/assets/hero-lab.jpg";
 import ht9501Img from "@/assets/ht-9501.jpg";
-import ht2328Img from "@/assets/ht-2328.jpg";
 import ht2402Img from "@/assets/ht-2402.jpg";
+import ht2101Img from "@/assets/ht-2101.jpg";
 import { products } from "@/data/products";
 
 interface IndexProps {
@@ -14,8 +14,8 @@ interface IndexProps {
 
 const productImages: Record<string, string> = {
   "ht-9501": ht9501Img,
-  "ht-2328": ht2328Img,
   "ht-2402": ht2402Img,
+  "ht-2101": ht2101Img,
 };
 
 const whyUs = [
