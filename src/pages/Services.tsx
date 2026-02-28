@@ -80,7 +80,7 @@ const Services = ({ onOpenQuote }: ServicesProps) => (
           <h2 className="text-3xl md:text-4xl font-black text-primary-foreground mb-4">Need Urgent Support?</h2>
           <p className="text-primary-foreground/70 max-w-xl mx-auto mb-8">Our service team is available for emergency breakdown support across Peninsular Malaysia.</p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <a href="https://wa.me/60123456789" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/60122201096" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-accent text-accent-foreground hover:bg-orange-light font-semibold">WhatsApp Us Now</Button>
             </a>
             <Link to="/contact">
