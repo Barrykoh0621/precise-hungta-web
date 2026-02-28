@@ -4,8 +4,8 @@ import { ArrowUpRight, Wrench, Package, Headphones, ShieldCheck, Factory, FlaskC
 import AnimatedSection from "@/components/AnimatedSection";
 import heroImg from "@/assets/hero-lab.jpg";
 import ht9501Img from "@/assets/ht-9501.jpg";
-import ht2328Img from "@/assets/ht-2328.jpg";
 import ht2402Img from "@/assets/ht-2402.jpg";
+import ht2101Img from "@/assets/ht-2101.jpg";
 import { products } from "@/data/products";
 
 interface IndexProps {
@@ -14,8 +14,8 @@ interface IndexProps {
 
 const productImages: Record<string, string> = {
   "ht-9501": ht9501Img,
-  "ht-2328": ht2328Img,
   "ht-2402": ht2402Img,
+  "ht-2101": ht2101Img,
 };
 
 const whyUs = [
@@ -110,7 +110,7 @@ const Index = ({ onOpenQuote }: IndexProps) => {
             <h2 className="text-3xl md:text-4xl font-black text-center mb-4">Featured Products</h2>
             <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">Universal Testing Machines engineered for precision, built for production</p>
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProducts.map((product, i) => (
               <AnimatedSection key={product.id} delay={i * 0.1}>
                 <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-navy transition-shadow group h-full flex flex-col">

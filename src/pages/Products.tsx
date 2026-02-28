@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 import { products, categories, accessories } from "@/data/products";
 import AnimatedSection from "@/components/AnimatedSection";
 import ht9501Img from "@/assets/ht-9501.jpg";
-import ht2328Img from "@/assets/ht-2328.jpg";
 import ht2402Img from "@/assets/ht-2402.jpg";
+import ht2101Img from "@/assets/ht-2101.jpg";
 import { ArrowUpRight, Package } from "lucide-react";
 
 const productImages: Record<string, string> = {
   "ht-9501": ht9501Img,
-  "ht-2328": ht2328Img,
   "ht-2402": ht2402Img,
+  "ht-2101": ht2101Img,
 };
 
 interface ProductsProps {
