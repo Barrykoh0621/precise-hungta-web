@@ -16,7 +16,7 @@ const Footer = () => (
             <span className="font-bold text-lg">Hung Ta <span className="text-accent">(M)</span></span>
           </div>
           <p className="text-primary-foreground/60 text-sm leading-relaxed">
-            Malaysia's trusted partner for precision material testing instruments. Sales, servicing, and calibration since 2005.
+            Malaysia's trusted partner for precision material testing instruments. Sales, servicing, and calibration since 1990.
           </p>
         </div>
 
