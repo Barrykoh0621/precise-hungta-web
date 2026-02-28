@@ -15,6 +15,27 @@ export interface Product {
 
 export const products: Product[] = [
   {
+    id: "ht-2402",
+    model: "HT-2402",
+    name: "Single Column Benchtop Universal Testing Machine",
+    tagline: "Compact precision — the ideal benchtop testing solution.",
+    category: "metal",
+    categoryLabel: "Multi-Purpose",
+    image: "ht-2402",
+    description: "The HT-2402 is Hung Ta's versatile single-column benchtop universal testing machine, delivering laboratory-grade accuracy in a compact footprint. Ideal for tensile, compression, peel, and flexural testing across a wide range of materials. Its intuitive PC-based software and quick-change grip system make it the perfect choice for QC stations, R&D labs, and production floors where space is limited but precision is non-negotiable.",
+    specs: [
+      { label: "Capacity", value: "100 N – 5 kN" },
+      { label: "Configuration", value: "Single column, benchtop" },
+      { label: "Drive", value: "Ball screw servo motor" },
+      { label: "Speed Range", value: "0.5 – 500 mm/min" },
+      { label: "Tests", value: "Tensile, compression, peel, flexural" },
+      { label: "Software", value: "Full PC suite with Excel/PDF export" },
+    ],
+    idealFor: ["QC laboratories", "R&D departments", "Small manufacturers", "Educational institutions"],
+    standards: ["ISO 9001", "CE"],
+    featured: true,
+  },
+  {
     id: "ht-9501",
     model: "HT-9501",
     name: "Electro-Hydraulic Servo Universal Testing Machine",
