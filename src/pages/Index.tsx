@@ -46,7 +46,7 @@ const Index = ({ onOpenQuote }: IndexProps) => {
         <div className="container mx-auto px-4 relative z-10 py-32">
           <AnimatedSection>
             <span className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-accent text-sm font-semibold mb-6 border border-accent/30">
-              Serving Malaysia Since 2005
+              Serving Malaysia Since 1990
             </span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] max-w-3xl text-primary-foreground mb-6">
               Precision Testing Instruments for <span className="text-accent">Every Industry</span>
