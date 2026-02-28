@@ -109,7 +109,7 @@ const Contact = () => {
 
                   <div>
                     <a
-                      href="https://wa.me/60123456789"
+                      href="https://wa.me/60122201096"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
