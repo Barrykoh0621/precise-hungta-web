@@ -53,11 +53,11 @@ const Footer = () => (
           <ul className="space-y-3 text-sm text-primary-foreground/70">
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-accent" />
-              <span>No. 12, Jalan Industri 3/4,<br />Taman Industri Selesa Jaya,<br />43300 Balakong, Selangor, Malaysia</span>
+              <span>109 Taman AST,<br />Jalan Sungai Ujong,<br />Seremban, Negeri Sembilan, Malaysia</span>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="w-4 h-4 shrink-0 text-accent" />
-              <a href="tel:+60389616365" className="hover:text-accent transition-colors">+603-8961 6365</a>
+              <a href="tel:+60376360031" className="hover:text-accent transition-colors">+603-7636 0031</a>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-4 h-4 shrink-0 text-accent" />

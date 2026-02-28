@@ -86,11 +86,11 @@ const Contact = () => {
                     <ul className="space-y-4 text-sm">
                       <li className="flex items-start gap-3">
                         <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                        <span>No. 12, Jalan Industri 3/4,<br />Taman Industri Selesa Jaya,<br />43300 Balakong, Selangor,<br />Malaysia</span>
+                        <span>109 Taman AST,<br />Jalan Sungai Ujong,<br />Seremban, Negeri Sembilan,<br />Malaysia</span>
                       </li>
                       <li className="flex items-center gap-3">
                         <Phone className="w-5 h-5 text-accent shrink-0" />
-                        <a href="tel:+60389616365" className="hover:text-accent transition-colors">+603-8961 6365</a>
+                        <a href="tel:+60376360031" className="hover:text-accent transition-colors">+603-7636 0031</a>
                       </li>
                       <li className="flex items-center gap-3">
                         <Mail className="w-5 h-5 text-accent shrink-0" />
