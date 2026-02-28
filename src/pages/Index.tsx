@@ -110,7 +110,7 @@ const Index = ({ onOpenQuote }: IndexProps) => {
             <h2 className="text-3xl md:text-4xl font-black text-center mb-4">Featured Products</h2>
             <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">Universal Testing Machines engineered for precision, built for production</p>
           </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProducts.map((product, i) => (
               <AnimatedSection key={product.id} delay={i * 0.1}>
                 <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-navy transition-shadow group h-full flex flex-col">
