@@ -123,7 +123,7 @@ const Contact = () => {
                   <div className="rounded-lg overflow-hidden border border-border">
                     <iframe
                       title="Hung Ta (M) Instrument Location"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.4!2d101.75!3d3.02!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMDEnMTIuMCJOIDEwMcKwNDUnMDAuMCJF!5e0!3m2!1sen!2smy!4v1!5m2!1sen!2smy"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5!2d101.9387!3d2.7258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdcb3e3f4b1b1d%3A0x0!2s109+Taman+AST+Seremban!5e0!3m2!1sen!2smy!4v1!5m2!1sen!2smy"
                       width="100%"
                       height="250"
                       style={{ border: 0 }}
