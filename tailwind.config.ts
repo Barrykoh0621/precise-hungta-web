@@ -15,6 +15,9 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ["'DM Serif Display'", 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        cormorant: ["'Cormorant Garamond'", 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -61,6 +64,10 @@ export default {
         orange: {
           DEFAULT: "hsl(var(--orange))",
           light: "hsl(var(--orange-light))",
+        },
+        warm: {
+          cream: "hsl(var(--warm-cream))",
+          white: "hsl(var(--warm-white))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
