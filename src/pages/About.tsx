@@ -86,16 +86,64 @@ const About = () => (
     </section>
 
     {/* Certifications */}
-    <section className="py-20 bg-muted">
-      <div className="container mx-auto px-4 text-center">
+    <section className="py-24" style={{ background: '#0B1C2E' }}>
+      <div className="container mx-auto px-4">
         <AnimatedSection>
-          <h2 className="text-3xl font-black mb-8">Certifications & Standards</h2>
-          <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-            {["ISO 9001:2015", "ASTM E8/E9", "ISO 6892", "ISO 7500-1", "ASTM E4", "CE Certified", "ISO 37", "EN 455"].map((cert) => (
-              <span key={cert} className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium">
-                {cert}
-              </span>
-            ))}
+          <p className="text-center text-sm font-semibold tracking-[0.3em] uppercase mb-3" style={{ color: '#C9A84C', fontFamily: 'Montserrat, sans-serif' }}>
+            Quality Assurance
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4" style={{ fontFamily: "'Cormorant Garamond', serif", color: '#FFFFFF' }}>
+            Certifications & Standards
+          </h2>
+          <p className="text-center max-w-2xl mx-auto mb-16 text-base" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Montserrat, sans-serif' }}>
+            Our instruments meet the most rigorous international testing standards, ensuring reliability and precision across every application.
+          </p>
+        </AnimatedSection>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
+          {[
+            { cert: "ISO 9001:2015", desc: "Quality Management System", tag: "ISO" },
+            { cert: "ASTM E8/E9", desc: "Metallic Materials Testing", tag: "ASTM" },
+            { cert: "ISO 6892", desc: "Tensile Testing of Metals", tag: "ISO" },
+            { cert: "ISO 7500-1", desc: "Testing Machine Verification", tag: "ISO" },
+            { cert: "ASTM E4", desc: "Force Verification Standards", tag: "ASTM" },
+            { cert: "CE Certified", desc: "European Conformity Mark", tag: "Safety" },
+            { cert: "ISO 37", desc: "Rubber Tensile Properties", tag: "Rubber" },
+            { cert: "EN 455", desc: "Medical Gloves Standards", tag: "Medical" },
+          ].map((item, i) => (
+            <AnimatedSection key={item.cert} delay={i * 0.08}>
+              <div
+                className="relative rounded-lg p-6 transition-all duration-300 group cursor-default"
+                style={{
+                  background: 'rgba(255,255,255,0.04)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  borderTop: '2px solid transparent',
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.borderTopColor = '#C9A84C'; e.currentTarget.style.background = 'rgba(255,255,255,0.07)'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.borderTopColor = 'transparent'; e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; }}
+              >
+                <span
+                  className="inline-block text-[10px] font-bold tracking-wider uppercase rounded-full px-2.5 py-0.5 mb-3"
+                  style={{ background: 'rgba(201,168,76,0.15)', color: '#C9A84C', fontFamily: 'Montserrat, sans-serif' }}
+                >
+                  {item.tag}
+                </span>
+                <h3 className="text-lg font-bold mb-1" style={{ color: '#FFFFFF', fontFamily: "'Cormorant Garamond', serif" }}>
+                  {item.cert}
+                </h3>
+                <p className="text-xs" style={{ color: 'rgba(255,255,255,0.45)', fontFamily: 'Montserrat, sans-serif' }}>
+                  {item.desc}
+                </p>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+
+        <AnimatedSection delay={0.7}>
+          <div className="mt-16 text-center pt-8" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+            <p className="text-xs tracking-wider uppercase" style={{ color: 'rgba(255,255,255,0.35)', fontFamily: 'Montserrat, sans-serif' }}>
+              SIRIM-Accredited · Trusted by 500+ installations across Malaysia
+            </p>
           </div>
         </AnimatedSection>
       </div>
