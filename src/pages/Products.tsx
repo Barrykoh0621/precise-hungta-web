@@ -71,8 +71,8 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
                   }`}
                 >
                   <div className="grid md:grid-cols-3 gap-0">
-                    <div className="aspect-square md:aspect-auto bg-muted">
-                      <img src={productImages[product.image]} alt={product.name} className="w-full h-full object-cover" />
+                    <div className="aspect-[4/3] md:aspect-auto md:max-h-[280px] bg-muted overflow-hidden">
+                      <img src={productImages[product.image]} alt={product.name} className="w-full h-full object-contain p-4" />
                     </div>
                     <div className="md:col-span-2 p-6 md:p-8">
                       <span className="text-xs font-semibold text-accent">{product.categoryLabel}</span>
