@@ -110,5 +110,12 @@ export const accessories = [
 
 export const categories = [
   { id: "all", label: "All Products" },
-  { id: "metal", label: "Metal & Steel" },
+  { id: "utm", label: "Universal Testing Machine" },
+  { id: "auto-parts", label: "Auto Parts, Tyres & Bicycle" },
+  { id: "rubber", label: "Rubber" },
+  { id: "plastics", label: "Plastics & Polymers" },
+  { id: "wires", label: "Wires and Cable" },
+  { id: "paper", label: "Paper & Paperboard Testing" },
+  { id: "hardness", label: "Hardness Testing & Thickness Measurement" },
+  { id: "dynamic", label: "Dynamic Testing" },
 ];
