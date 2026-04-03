@@ -3,7 +3,7 @@ export interface Product {
   model: string;
   name: string;
   tagline: string;
-  category: "metal" | "textile" | "rubber" | "accessory";
+  category: "utm" | "auto-parts" | "rubber" | "plastics" | "wires" | "paper" | "hardness" | "dynamic";
   categoryLabel: string;
   image: string;
   description: string;
@@ -19,8 +19,8 @@ export const products: Product[] = [
     model: "HT-2402",
     name: "Computer Servo Control Material Testing Machines",
     tagline: "High Precision, High Accuracy, High Stability — tensile, compression, flexural and bending test.",
-    category: "metal",
-    categoryLabel: "Multi-Purpose",
+    category: "utm",
+    categoryLabel: "Universal Testing Machine",
     image: "ht-2402",
     description: "High Precision, High Accuracy, High Stability Material Testing Machines — able to do tensile, compression, flexural and bending test. ISO 9001 and CE certified, superior products fabricated by highly trained and experienced personnel. High strength aluminum alloy combined with streamlined design. Uses ball screw drive for less kinetic energy loss and noise elimination. Features a low-profile load cell with stable load induction, high accuracy, high stability, and a safety factor of 150%. Outstanding software with powerful control functions and testing speed range from 0.005 ~ 500 or 1000 mm/min. Standardized modular replacement design for quick grip switching.",
     specs: [
@@ -42,8 +42,8 @@ export const products: Product[] = [
     model: "HT-9501",
     name: "Electro-Hydraulic Servo Universal Testing Machine",
     tagline: "Where structural integrity meets laboratory precision.",
-    category: "metal",
-    categoryLabel: "Metal & Steel",
+    category: "utm",
+    categoryLabel: "Universal Testing Machine",
     image: "ht-9501",
     description: "With wide range of function and application, suitable for research, inspection, and testing in the field of metal, rubber, plastic, leather, cable and wire, textile, fiber, paper, PE, construction materials, electric appliance, petrochemical, transportation, automobile, package, polymer, aerospace and more. FDC55 high strength casting material with high stiffness axle materials for strong structure, high stability, and long durability. Hydraulic system adopts high efficiency pump and high conversational servo valve with excellent filtration. High accuracy loadcell with accuracy of load reaching ±0.005%, force accuracy reaches ±0.5 class. Close-loop fuzzy servo control matched with high precision servo valve.",
     specs: [
@@ -65,8 +65,8 @@ export const products: Product[] = [
     model: "HT-2101",
     name: "Electro-Hydraulic Servo Universal Testing Machine",
     tagline: "Versatile hydraulic testing for metals, polymers, and construction materials.",
-    category: "metal",
-    categoryLabel: "Metal & Steel",
+    category: "utm",
+    categoryLabel: "Universal Testing Machine",
     image: "ht-2101",
     description: "With wide range of function and application, suitable for research, inspection, and testing in the field of metal, rubber, plastic, leather, cable and wire, textile, fiber, paper, PE, construction materials, electric appliance, petrochemical, transportation, automobile, package, polymer, aerospace and more. FDC55 high strength casting material with driving screws and high stiffness axle materials for strong structure, high stability, and long durability. High accuracy loadcell with accuracy of load reaching ±0.005%, force accuracy reaches ±0.5 class. Standardized jaw holder specification for economic, convenient, and speedy replacement. Multi-purpose application test program for tensile, compression, shear, peeling, and displacement measurement.",
     specs: [
@@ -110,5 +110,12 @@ export const accessories = [
 
 export const categories = [
   { id: "all", label: "All Products" },
-  { id: "metal", label: "Metal & Steel" },
+  { id: "utm", label: "Universal Testing Machine" },
+  { id: "auto-parts", label: "Auto Parts, Tyres & Bicycle" },
+  { id: "rubber", label: "Rubber" },
+  { id: "plastics", label: "Plastics & Polymers" },
+  { id: "wires", label: "Wires and Cable" },
+  { id: "paper", label: "Paper & Paperboard Testing" },
+  { id: "hardness", label: "Hardness Testing & Thickness Measurement" },
+  { id: "dynamic", label: "Dynamic Testing" },
 ];
