@@ -3,7 +3,7 @@ export interface Product {
   model: string;
   name: string;
   tagline: string;
-  category: "metal" | "textile" | "rubber" | "accessory";
+  category: "utm" | "auto-parts" | "rubber" | "plastics" | "wires" | "paper" | "hardness" | "dynamic";
   categoryLabel: string;
   image: string;
   description: string;
