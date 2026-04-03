@@ -42,8 +42,8 @@ export const products: Product[] = [
     model: "HT-9501",
     name: "Electro-Hydraulic Servo Universal Testing Machine",
     tagline: "Where structural integrity meets laboratory precision.",
-    category: "metal",
-    categoryLabel: "Metal & Steel",
+    category: "utm",
+    categoryLabel: "Universal Testing Machine",
     image: "ht-9501",
     description: "With wide range of function and application, suitable for research, inspection, and testing in the field of metal, rubber, plastic, leather, cable and wire, textile, fiber, paper, PE, construction materials, electric appliance, petrochemical, transportation, automobile, package, polymer, aerospace and more. FDC55 high strength casting material with high stiffness axle materials for strong structure, high stability, and long durability. Hydraulic system adopts high efficiency pump and high conversational servo valve with excellent filtration. High accuracy loadcell with accuracy of load reaching ±0.005%, force accuracy reaches ±0.5 class. Close-loop fuzzy servo control matched with high precision servo valve.",
     specs: [
