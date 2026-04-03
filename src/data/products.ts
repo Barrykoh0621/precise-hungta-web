@@ -19,8 +19,8 @@ export const products: Product[] = [
     model: "HT-2402",
     name: "Computer Servo Control Material Testing Machines",
     tagline: "High Precision, High Accuracy, High Stability — tensile, compression, flexural and bending test.",
-    category: "metal",
-    categoryLabel: "Multi-Purpose",
+    category: "utm",
+    categoryLabel: "Universal Testing Machine",
     image: "ht-2402",
     description: "High Precision, High Accuracy, High Stability Material Testing Machines — able to do tensile, compression, flexural and bending test. ISO 9001 and CE certified, superior products fabricated by highly trained and experienced personnel. High strength aluminum alloy combined with streamlined design. Uses ball screw drive for less kinetic energy loss and noise elimination. Features a low-profile load cell with stable load induction, high accuracy, high stability, and a safety factor of 150%. Outstanding software with powerful control functions and testing speed range from 0.005 ~ 500 or 1000 mm/min. Standardized modular replacement design for quick grip switching.",
     specs: [
