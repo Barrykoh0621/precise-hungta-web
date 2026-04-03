@@ -65,8 +65,8 @@ export const products: Product[] = [
     model: "HT-2101",
     name: "Electro-Hydraulic Servo Universal Testing Machine",
     tagline: "Versatile hydraulic testing for metals, polymers, and construction materials.",
-    category: "metal",
-    categoryLabel: "Metal & Steel",
+    category: "utm",
+    categoryLabel: "Universal Testing Machine",
     image: "ht-2101",
     description: "With wide range of function and application, suitable for research, inspection, and testing in the field of metal, rubber, plastic, leather, cable and wire, textile, fiber, paper, PE, construction materials, electric appliance, petrochemical, transportation, automobile, package, polymer, aerospace and more. FDC55 high strength casting material with driving screws and high stiffness axle materials for strong structure, high stability, and long durability. High accuracy loadcell with accuracy of load reaching ±0.005%, force accuracy reaches ±0.5 class. Standardized jaw holder specification for economic, convenient, and speedy replacement. Multi-purpose application test program for tensile, compression, shear, peeling, and displacement measurement.",
     specs: [
