@@ -8,11 +8,17 @@ import ht2402Img from "@/assets/ht-2402.jpg";
 import ht2101Img from "@/assets/ht-2101.jpg";
 import { ArrowUpRight, Package } from "lucide-react";
 
-const productImages: Record<string, string> = {
+const localImages: Record<string, string> = {
   "ht-9501": ht9501Img,
   "ht-2402": ht2402Img,
   "ht-2101": ht2101Img,
 };
+
+function getProductImage(image: string): string {
+  // If it's a URL, use directly; otherwise look up local import
+  if (image.startsWith("http")) return image;
+  return localImages[image] || "";
+}
 
 interface ProductsProps {
   onOpenQuote: (productId?: string) => void;
@@ -72,7 +78,7 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
                 >
                   <div className="grid md:grid-cols-3 gap-0">
                     <div className="aspect-[4/3] md:aspect-auto md:max-h-[280px] bg-muted overflow-hidden">
-                      <img src={productImages[product.image]} alt={product.name} className="w-full h-full object-contain p-4" />
+                      <img src={getProductImage(product.image)} alt={product.name} className="w-full h-full object-contain p-4" />
                     </div>
                     <div className="md:col-span-2 p-6 md:p-8">
                       <span className="text-xs font-semibold text-accent">{product.categoryLabel}</span>
