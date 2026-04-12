@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { products, categories, accessories } from "@/data/products";
+import { products, categories } from "@/data/products";
+import type { Product } from "@/data/products";
 import AnimatedSection from "@/components/AnimatedSection";
+import ProductDetailModal from "@/components/ProductDetailModal";
 import ht9501Img from "@/assets/ht-9501.jpg";
 import ht2402Img from "@/assets/ht-2402.jpg";
 import ht2101Img from "@/assets/ht-2101.jpg";
-import { ArrowUpRight, Package } from "lucide-react";
+import { Eye, Package } from "lucide-react";
+import { accessories } from "@/data/products";
 
 const localImages: Record<string, string> = {
   "ht-9501": ht9501Img,
@@ -15,7 +18,6 @@ const localImages: Record<string, string> = {
 };
 
 function getProductImage(image: string): string {
-  // If it's a URL, use directly; otherwise look up local import
   if (image.startsWith("http")) return image;
   return localImages[image] || "";
 }
@@ -28,8 +30,26 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
   const [searchParams] = useSearchParams();
   const expandedId = searchParams.get("product");
   const [filter, setFilter] = useState("all");
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const filtered = filter === "all" ? products : products.filter((p) => p.category === filter);
+
+  // Auto-open modal if product param is in URL
+  useState(() => {
+    if (expandedId) {
+      const found = products.find((p) => p.id === expandedId);
+      if (found) {
+        setSelectedProduct(found);
+        setModalOpen(true);
+      }
+    }
+  });
+
+  const handleViewDetails = (product: Product) => {
+    setSelectedProduct(product);
+    setModalOpen(true);
+  };
 
   return (
     <main className="pt-16">
@@ -64,46 +84,34 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
         </div>
       </section>
 
-      {/* Product Grid */}
+      {/* Product Card Grid */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          <div className="space-y-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filtered.map((product, i) => (
-              <AnimatedSection key={product.id} delay={i * 0.05}>
-                <div
-                  id={product.id}
-                  className={`bg-card border rounded-lg overflow-hidden ${
-                    expandedId === product.id ? "border-accent ring-2 ring-accent/20" : "border-border"
-                  }`}
-                >
-                  <div className="grid md:grid-cols-3 gap-0">
-                    <div className="aspect-[4/3] md:aspect-auto md:max-h-[280px] bg-muted overflow-hidden">
-                      <img src={getProductImage(product.image)} alt={product.name} className="w-full h-full object-contain p-4" />
-                    </div>
-                    <div className="md:col-span-2 p-6 md:p-8">
-                      <span className="text-xs font-semibold text-accent">{product.categoryLabel}</span>
-                      <h2 className="text-2xl font-bold mt-1 mb-1">{product.model} — {product.name}</h2>
-                      <p className="text-accent font-medium text-sm mb-3 italic">{product.tagline}</p>
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-5">{product.description}</p>
-
-                      <div className="grid grid-cols-2 gap-2 mb-5">
-                        {product.specs.map((s) => (
-                          <div key={s.label} className="text-sm">
-                            <span className="font-semibold">{s.label}:</span>{" "}
-                            <span className="text-muted-foreground">{s.value}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      <div className="mb-5">
-                        <span className="text-sm font-semibold">Ideal for: </span>
-                        <span className="text-sm text-muted-foreground">{product.idealFor.join(" • ")}</span>
-                      </div>
-
-                      <Button onClick={() => onOpenQuote(product.id)} className="bg-accent text-accent-foreground hover:bg-orange-light font-semibold gap-1">
-                        Enquire Now <ArrowUpRight className="w-4 h-4" />
-                      </Button>
-                    </div>
+              <AnimatedSection key={product.id} delay={i * 0.03}>
+                <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg hover:border-accent/40 transition-all duration-200 flex flex-col h-full group">
+                  {/* Image */}
+                  <div className="aspect-square bg-muted overflow-hidden flex items-center justify-center">
+                    <img
+                      src={getProductImage(product.image)}
+                      alt={product.name}
+                      className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  {/* Info */}
+                  <div className="p-4 flex flex-col flex-1">
+                    <span className="text-[10px] font-semibold text-accent uppercase tracking-wider">{product.categoryLabel}</span>
+                    <h3 className="font-bold text-sm mt-1 line-clamp-1">{product.model}</h3>
+                    <p className="text-xs text-muted-foreground mt-1 line-clamp-2 flex-1">{product.tagline}</p>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="mt-3 w-full gap-1.5 text-xs"
+                      onClick={() => handleViewDetails(product)}
+                    >
+                      <Eye className="w-3.5 h-3.5" /> View Details
+                    </Button>
                   </div>
                 </div>
               </AnimatedSection>
@@ -135,6 +143,15 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
           </div>
         </div>
       </section>
+
+      {/* Detail Modal */}
+      <ProductDetailModal
+        product={selectedProduct}
+        open={modalOpen}
+        onOpenChange={setModalOpen}
+        onEnquire={onOpenQuote}
+        getImage={getProductImage}
+      />
     </main>
   );
 };
