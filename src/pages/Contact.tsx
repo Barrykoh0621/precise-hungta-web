@@ -93,6 +93,13 @@ const Contact = () => {
                         <a href="tel:+60376360031" className="hover:text-accent transition-colors">+603-7636 0031</a>
                       </li>
                       <li className="flex items-center gap-3">
+                        <Phone className="w-5 h-5 text-accent shrink-0" />
+                        <div>
+                          <p className="text-xs text-accent font-medium">Marketing Manager</p>
+                          <a href="tel:+60126280096" className="hover:text-accent transition-colors">012-628 0096</a>
+                        </div>
+                      </li>
+                      <li className="flex items-center gap-3">
                         <Mail className="w-5 h-5 text-accent shrink-0" />
                         <a href="mailto:hungtatest@yahoo.com" className="hover:text-accent transition-colors">hungtatest@yahoo.com</a>
                       </li>
