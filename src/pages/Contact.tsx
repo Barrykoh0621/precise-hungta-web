@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,10 +9,42 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { products } from "@/data/products";
 import { toast } from "sonner";
 
+// Web3Forms access key — get yours free at https://web3forms.com
+const WEB3FORMS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+
 const Contact = () => {
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+  const [productInterest, setProductInterest] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Message sent! We'll respond within 24 hours.");
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("access_key", WEB3FORMS_KEY);
+    formData.append("subject", "New Contact Enquiry — Hung Ta (M)");
+    formData.append("from_name", "Hung Ta (M) Website");
+    if (productInterest) formData.append("product_interest", productInterest);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        toast.success("Message sent! We'll respond within 24 hours.");
+        form.reset();
+        setProductInterest("");
+      } else {
+        toast.error(data.message || "Failed to send. Please call us directly.");
+      }
+    } catch {
+      toast.error("Network error. Please try again or call us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -36,26 +69,26 @@ const Contact = () => {
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <Label htmlFor="c-name">Name *</Label>
-                      <Input id="c-name" required placeholder="Your name" />
+                      <Input id="c-name" name="name" required placeholder="Your name" />
                     </div>
                     <div className="space-y-1.5">
                       <Label htmlFor="c-company">Company *</Label>
-                      <Input id="c-company" required placeholder="Company name" />
+                      <Input id="c-company" name="company" required placeholder="Company name" />
                     </div>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <Label htmlFor="c-email">Email *</Label>
-                      <Input id="c-email" type="email" required placeholder="email@company.com" />
+                      <Input id="c-email" name="email" type="email" required placeholder="email@company.com" />
                     </div>
                     <div className="space-y-1.5">
                       <Label htmlFor="c-phone">Phone</Label>
-                      <Input id="c-phone" placeholder="+60 12-345 6789" />
+                      <Input id="c-phone" name="phone" placeholder="+60 12-345 6789" />
                     </div>
                   </div>
                   <div className="space-y-1.5">
                     <Label>Product of Interest</Label>
-                    <Select>
+                    <Select value={productInterest} onValueChange={setProductInterest}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select a product (optional)" />
                       </SelectTrigger>
@@ -68,10 +101,14 @@ const Contact = () => {
                   </div>
                   <div className="space-y-1.5">
                     <Label htmlFor="c-message">Message *</Label>
-                    <Textarea id="c-message" required rows={5} placeholder="Tell us about your requirements, testing standards you need to meet, or any questions you have..." />
+                    <Textarea id="c-message" name="message" required rows={5} placeholder="Tell us about your requirements, testing standards you need to meet, or any questions you have..." />
                   </div>
-                  <Button type="submit" className="bg-accent text-accent-foreground hover:bg-orange-light font-semibold w-full md:w-auto px-8">
-                    Send Message
+                  <Button
+                    type="submit"
+                    disabled={loading}
+                    className="bg-accent text-accent-foreground hover:bg-orange-light font-semibold w-full md:w-auto px-8"
+                  >
+                    {loading ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </AnimatedSection>
@@ -108,7 +145,7 @@ const Contact = () => {
                         <div>
                           <p>Mon – Fri: 9:00 AM – 6:00 PM</p>
                           <p>Sat: 9:00 AM – 1:00 PM</p>
-                          <p>Sun & Public Holidays: Closed</p>
+                          <p>Sun &amp; Public Holidays: Closed</p>
                         </div>
                       </li>
                     </ul>
@@ -116,7 +153,7 @@ const Contact = () => {
 
                   <div>
                     <a
-                      href="https://wa.me/60122201096"
+                      href="https://wa.me/60126280096"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
