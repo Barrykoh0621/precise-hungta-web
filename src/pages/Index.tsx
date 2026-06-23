@@ -86,7 +86,7 @@ const Index = ({ onOpenQuote }: IndexProps) => {
               <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl text-white mb-7">
                 The precise force behind quality control.
               </h1>
-              <p className="text-lg md:text-xl max-w-2xl text-white/72 mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl max-w-2xl text-white/92 mb-8 leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]">
                 Tensile, universal and material testing machines for manufacturers, laboratories and QA teams that need dependable results, service support and calibration guidance.
               </p>
             </div>
@@ -104,7 +104,7 @@ const Index = ({ onOpenQuote }: IndexProps) => {
               {performanceStats.map((stat) => (
                 <div key={stat.label} className="py-5 pr-6">
                   <p className="text-3xl md:text-4xl font-black text-white">{stat.value}</p>
-                  <p className="text-xs uppercase tracking-[0.16em] text-white/48 mt-1">{stat.label}</p>
+                  <p className="text-xs uppercase tracking-[0.16em] text-white/82 mt-1">{stat.label}</p>
                 </div>
               ))}
             </div>

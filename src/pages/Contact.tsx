@@ -45,28 +45,31 @@ const Contact = () => {
               <Phone className="w-6 h-6 text-accent shrink-0" />
               <div>
                 <h2 className="font-bold mb-1">Phone</h2>
-                <a className="text-sm text-muted-foreground hover:text-accent" href="tel:+6067636031">+606 763 6031</a>
+                <div className="space-y-1">
+                  <a className="block text-sm text-muted-foreground hover:text-accent" href="tel:+60126280096">012-628 0096 Sales Manager</a>
+                  <a className="block text-sm text-muted-foreground hover:text-accent" href="tel:+60122201096">012-220 1096 Product Specialist</a>
+                </div>
               </div>
             </div>
             <div className="bg-card border border-border rounded-lg p-5 flex gap-4">
               <MessageCircle className="w-6 h-6 text-accent shrink-0" />
               <div>
                 <h2 className="font-bold mb-1">WhatsApp</h2>
-                <a className="text-sm text-muted-foreground hover:text-accent" href="https://wa.me/60126280096">+6012 628 0096</a>
+                <a className="text-sm text-muted-foreground hover:text-accent" href="https://wa.me/60126280096">012-628 0096 Sales Manager</a>
               </div>
             </div>
             <div className="bg-card border border-border rounded-lg p-5 flex gap-4">
               <Mail className="w-6 h-6 text-accent shrink-0" />
               <div>
                 <h2 className="font-bold mb-1">Email</h2>
-                <a className="text-sm text-muted-foreground hover:text-accent" href="mailto:info@hungtatester.com">info@hungtatester.com</a>
+                <a className="text-sm text-muted-foreground hover:text-accent" href="mailto:hungtatest@yahoo.com">hungtatest@yahoo.com</a>
               </div>
             </div>
             <div className="bg-card border border-border rounded-lg p-5 flex gap-4">
               <Clock className="w-6 h-6 text-accent shrink-0" />
               <div>
                 <h2 className="font-bold mb-1">Business Hours</h2>
-                <p className="text-sm text-muted-foreground">Monday to Friday, 9:00 AM - 5:00 PM</p>
+                <p className="text-sm text-muted-foreground">Monday to Friday, 9:00 AM - 6:00 PM</p>
               </div>
             </div>
           </div>
@@ -87,7 +90,7 @@ const Contact = () => {
                 `Testing requirement:`,
                 form.get("message"),
               ].join("\n");
-              window.location.href = `mailto:info@hungtatester.com?subject=${encodeURIComponent("Hung Ta website enquiry")}&body=${encodeURIComponent(body)}`;
+              window.location.href = `mailto:hungtatest@yahoo.com?subject=${encodeURIComponent("Hung Ta website enquiry")}&body=${encodeURIComponent(body)}`;
             }}
           >
             <h2 className="text-2xl font-black">Send Testing Requirement</h2>

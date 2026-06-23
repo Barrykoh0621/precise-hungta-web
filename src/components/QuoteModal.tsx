@@ -45,7 +45,7 @@ const QuoteModal = ({ open, onOpenChange, preselectedProduct }: QuoteModalProps)
               form.get("message"),
             ].join("\n");
 
-            window.location.href = `mailto:info@hungtatester.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = `mailto:hungtatest@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
           }}
         >
           <div className="grid gap-2">

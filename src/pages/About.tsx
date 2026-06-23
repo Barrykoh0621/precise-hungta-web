@@ -29,7 +29,7 @@ const About = () => {
     <section className="bg-primary py-24 industrial-grid">
       <div className="container mx-auto px-4">
         <AnimatedSection>
-          <p className="text-accent font-montserrat text-sm font-semibold tracking-[0.25em] uppercase mb-4">About Hung Ta (M)</p>
+          <p className="text-accent font-montserrat text-sm font-semibold tracking-[0.25em] uppercase mb-4">About Hung Ta Instrument</p>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-6">
             Precision You Can<br />Count On
           </h1>

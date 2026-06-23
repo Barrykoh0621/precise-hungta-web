@@ -13,7 +13,7 @@ const Footer = () => (
                 <path d="M12 2v20M8 6l4-4 4 4M8 18l4 4 4-4" />
               </svg>
             </div>
-            <span className="font-bold text-lg">Hung Ta <span className="text-accent">(M)</span></span>
+            <span className="font-bold text-lg">Hung Ta <span className="text-accent">Instrument</span></span>
           </div>
           <p className="text-primary-foreground/60 text-sm leading-relaxed">
             Malaysia testing instrument supplier for tensile, universal, material, tyre, rubber, plastics, wire and paper testing applications.
@@ -55,20 +55,23 @@ const Footer = () => (
               <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-accent" />
               <span>109 Taman AST,<br />Jalan Sungai Ujong,<br />Seremban, Negeri Sembilan, Malaysia</span>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-start gap-2">
               <Phone className="w-4 h-4 shrink-0 text-accent" />
-              <a href="tel:+6067636031" className="hover:text-accent transition-colors">+606-763 6031</a>
+              <div className="space-y-1">
+                <a href="tel:+60126280096" className="block hover:text-accent transition-colors">012-628 0096 Sales Manager</a>
+                <a href="tel:+60122201096" className="block hover:text-accent transition-colors">012-220 1096 Product Specialist</a>
+              </div>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-4 h-4 shrink-0 text-accent" />
-              <a href="mailto:info@hungtatester.com" className="hover:text-accent transition-colors">info@hungtatester.com</a>
+              <a href="mailto:hungtatest@yahoo.com" className="hover:text-accent transition-colors">hungtatest@yahoo.com</a>
             </li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-primary-foreground/10 mt-12 pt-6 text-center text-xs text-primary-foreground/40">
-        © {new Date().getFullYear()} Hung Ta (M) Instrument Sdn Bhd. All rights reserved.
+        © {new Date().getFullYear()} Hung Ta Instrument Sdn Bhd. All rights reserved.
       </div>
     </div>
   </footer>
