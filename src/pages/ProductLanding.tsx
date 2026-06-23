@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { ArrowRight, CheckCircle2, ClipboardCheck, Factory, FileText, Gauge, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -35,6 +36,7 @@ interface LandingConfig {
   standards: string[];
   quotePrompt: string;
   industries: string[];
+  path: string;
 }
 
 const landingPages: Record<LandingKey, LandingConfig> = {
@@ -53,6 +55,7 @@ const landingPages: Record<LandingKey, LandingConfig> = {
     standards: ["ASTM E4", "ASTM E8", "ISO 7500-1", "ISO 6892-1", "JIS B7721"],
     quotePrompt: "Send us your material, force range and test standard for a hydraulic machine recommendation.",
     industries: ["Metal", "Copper", "Construction material", "Automotive", "Factory QA"],
+    path: "/hydraulic-testing-machine-malaysia",
   },
   compression: {
     eyebrow: "Compression machine Malaysia",
@@ -69,6 +72,7 @@ const landingPages: Record<LandingKey, LandingConfig> = {
     standards: ["ASTM C39", "EN 12390-4", "BS 1881", "ISO 7500-1"],
     quotePrompt: "Tell us your specimen type, capacity and reporting needs for a compression machine quotation.",
     industries: ["Construction QC", "Metal parts", "Packaging", "Laboratories", "Manufacturing"],
+    path: "/compression-machine-malaysia",
   },
   "electrical-tensile": {
     eyebrow: "Electrical tensile testing machine Malaysia",
@@ -85,6 +89,7 @@ const landingPages: Record<LandingKey, LandingConfig> = {
     standards: ["ASTM E8", "ASTM D412", "ISO 6892", "ISO 37", "IEC 60811"],
     quotePrompt: "Share your sample, grip requirement and testing standard for an electrical tensile machine recommendation.",
     industries: ["Metal", "Rubber", "Copper", "Wire and cable", "QA laboratories"],
+    path: "/electrical-tensile-testing-machine-malaysia",
   },
 };
 
@@ -135,7 +140,39 @@ const ProductLanding = ({ pageKey, onOpenQuote }: ProductLandingProps) => {
   usePageSeo({
     title: page.seoTitle,
     description: page.seoDescription,
+    canonicalPath: page.path,
   });
+
+  useEffect(() => {
+    const scriptId = `structured-data-${pageKey}`;
+    document.getElementById(scriptId)?.remove();
+
+    const script = document.createElement("script");
+    script.id = scriptId;
+    script.type = "application/ld+json";
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: page.title,
+      serviceType: page.primaryKeyword,
+      provider: {
+        "@type": "LocalBusiness",
+        name: "HUNG TA INSTRUMENT (M) Sdn. Bhd.",
+        identifier: "SSM 256852-H",
+        telephone: "+60126280096",
+        email: "hungtatest@yahoo.com",
+        areaServed: ["Malaysia", "Singapore", "Asia"],
+      },
+      areaServed: page.industries,
+      description: page.seoDescription,
+      url: `https://www.hungtainstrument.com.my${page.path}`,
+    });
+    document.head.appendChild(script);
+
+    return () => {
+      document.getElementById(scriptId)?.remove();
+    };
+  }, [page, pageKey]);
 
   return (
     <main className="pt-20">

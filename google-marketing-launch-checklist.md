@@ -1,0 +1,132 @@
+# Google Marketing Launch Checklist
+
+Company: HUNG TA INSTRUMENT (M) Sdn. Bhd.
+
+## Current Reality
+
+The website landing pages are live on GitHub Pages, but Google search ranking does not appear instantly. Google needs to discover, crawl, index and rank the pages.
+
+The official domain `hungtainstrument.com.my` is purchased but still `Pending` in Exabytes. Until Exabytes activates it, DNS cannot be connected.
+
+Temporary live URLs:
+
+- `https://barrykoh0621.github.io/precise-hungta-web/hydraulic-testing-machine-malaysia`
+- `https://barrykoh0621.github.io/precise-hungta-web/compression-machine-malaysia`
+- `https://barrykoh0621.github.io/precise-hungta-web/electrical-tensile-testing-machine-malaysia`
+
+Final target URLs after domain activation:
+
+- `https://www.hungtainstrument.com.my/hydraulic-testing-machine-malaysia`
+- `https://www.hungtainstrument.com.my/compression-machine-malaysia`
+- `https://www.hungtainstrument.com.my/electrical-tensile-testing-machine-malaysia`
+
+## 1. Google Business Profile
+
+Update these fields:
+
+- Website: use the GitHub Pages URL first; replace with `https://www.hungtainstrument.com.my/` after DNS is active.
+- Business description:
+  HUNG TA INSTRUMENT (M) Sdn. Bhd. supplies hydraulic testing machines, compression machines, electrical tensile testing machines and material testing equipment for manufacturers, laboratories and QA teams across Malaysia, Singapore and Asia. We support metal, rubber and copper industries with machine selection, installation, training, calibration guidance and service support.
+- Products/services:
+  - Hydraulic Testing Machine
+  - Compression Testing Machine
+  - Electrical Tensile Testing Machine
+  - Universal Testing Machine
+  - Testing Machine Service and Calibration
+
+## 2. Google Search Console
+
+Temporary property:
+
+- `https://barrykoh0621.github.io/precise-hungta-web/`
+
+Submit sitemap:
+
+- `https://barrykoh0621.github.io/precise-hungta-web/sitemap-github.xml`
+
+Final property after domain activation:
+
+- `https://www.hungtainstrument.com.my/`
+
+Final sitemap:
+
+- `https://www.hungtainstrument.com.my/sitemap.xml`
+
+## 3. Google Ads Search Campaigns
+
+Start with Search Ads only. Do not start with Display/banner ads.
+
+Budget:
+
+- Test: RM20-RM50/day
+- Monthly: RM600-RM1,500
+
+Campaign A: Hydraulic Testing Machine
+
+- hydraulic testing machine Malaysia
+- hydraulic universal testing machine
+- electro hydraulic universal testing machine
+- high capacity material testing machine
+
+Landing page:
+
+- `/hydraulic-testing-machine-malaysia`
+
+Campaign B: Compression Machine
+
+- compression machine Malaysia
+- concrete compression testing machine
+- compression testing machine supplier
+- material compression tester
+
+Landing page:
+
+- `/compression-machine-malaysia`
+
+Campaign C: Electrical Tensile Testing Machine
+
+- electrical tensile testing machine Malaysia
+- tensile testing machine Malaysia
+- universal testing machine Malaysia
+- material testing machine Malaysia
+
+Landing page:
+
+- `/electrical-tensile-testing-machine-malaysia`
+
+## 4. Weekly Google Business Posts
+
+Post 1:
+
+Hydraulic testing machines for metal, copper and construction material QC. Hung Ta Instrument supports machine selection, installation and service across Malaysia.
+
+Post 2:
+
+Need a compression testing machine for concrete, packaging or factory QC? Send us your specimen type, capacity and test standard for recommendation.
+
+Post 3:
+
+Electrical tensile testing machines for metal, rubber, copper, wire and cable quality control. Request quotation from Hung Ta Instrument Malaysia.
+
+## 5. Lead Tracking
+
+Track these actions:
+
+- WhatsApp click
+- Quote form click
+- Phone click
+- Email click
+- Landing page visits
+
+Tool needed:
+
+- Google Analytics 4
+- Google Ads conversion tracking
+
+## 6. Exabytes Ticket
+
+Ticket purpose:
+
+Ask Exabytes to activate `hungtainstrument.com.my` and enable DNS management because the domain is paid but still Pending.
+
+If the support form asks for reCAPTCHA, the website owner must complete the CAPTCHA.
