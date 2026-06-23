@@ -60,6 +60,24 @@ const performanceStats = [
   { value: "MY", label: "Local sales & support" },
 ];
 
+const qualityProofs = [
+  {
+    title: "Standards-Driven Testing",
+    desc: "Support for common ASTM, ISO, EN, BS and JIS material testing applications, with machine recommendations based on sample, capacity and test method.",
+    meta: "ASTM / ISO / EN / BS / JIS",
+  },
+  {
+    title: "Malaysia Sales & Service",
+    desc: "Local consultation for machine selection, installation, training, calibration guidance, troubleshooting and spare parts support.",
+    meta: "Seremban support team",
+  },
+  {
+    title: "Application Matching",
+    desc: "Buyer conversations are guided by material type, force range, fixture requirement, software output and audit documentation needs.",
+    meta: "Factory, lab and QA ready",
+  },
+];
+
 const featuredProducts = products.filter((p) => p.featured);
 
 const Index = ({ onOpenQuote }: IndexProps) => {
@@ -121,6 +139,37 @@ const Index = ({ onOpenQuote }: IndexProps) => {
               {t}
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Quality Proof */}
+      <section className="py-20 bg-background border-b border-border">
+        <div className="container mx-auto px-4">
+          <AnimatedSection>
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 mb-10">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.28em] text-accent mb-3">Quality proof</p>
+                <h2 className="text-3xl md:text-5xl font-black max-w-3xl">Built for audited quality control environments</h2>
+              </div>
+              <p className="text-muted-foreground max-w-xl leading-relaxed">
+                Hung Ta helps buyers select testing machines around actual production materials, international test standards and long-term support needs.
+              </p>
+            </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {qualityProofs.map((proof, i) => (
+              <AnimatedSection key={proof.title} delay={i * 0.08}>
+                <div className="border border-border rounded-lg p-6 h-full bg-white hover:shadow-navy transition-shadow">
+                  <div className="w-10 h-10 rounded-sm bg-accent/10 flex items-center justify-center mb-5">
+                    <ShieldCheck className="w-5 h-5 text-accent" />
+                  </div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-accent mb-2">{proof.meta}</p>
+                  <h3 className="text-xl font-black mb-3">{proof.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{proof.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 
