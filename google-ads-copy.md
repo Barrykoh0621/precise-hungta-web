@@ -29,9 +29,64 @@ Descriptions:
 
 Landing page:
 
-- `/products?category=utm`
+- `/electrical-tensile-testing-machine-malaysia`
+- `/hydraulic-testing-machine-malaysia`
 
-## Campaign 2: Rubber, Plastics, Wire, Tyre
+## Campaign 2: Hydraulic Testing Machine
+
+Keywords:
+
+- hydraulic testing machine Malaysia
+- hydraulic universal testing machine
+- electro hydraulic universal testing machine
+- metal tensile testing machine Malaysia
+- high capacity material testing machine
+
+Headlines:
+
+- Hydraulic Testing Machine
+- Electro-Hydraulic UTM
+- High Capacity Testing
+- Hung Ta Instrument Malaysia
+- Request Machine Quotation
+
+Descriptions:
+
+- Hydraulic testing machines for metal, copper, construction material and factory QC applications.
+- Share your material, force range and test standard for a suitable machine recommendation.
+
+Landing page:
+
+- `/hydraulic-testing-machine-malaysia`
+
+## Campaign 3: Compression Machine
+
+Keywords:
+
+- compression machine Malaysia
+- concrete compression testing machine
+- compression testing machine supplier
+- material compression tester
+- factory QC compression test
+
+Headlines:
+
+- Compression Machine Malaysia
+- Concrete Compression Tester
+- Factory QC Testing Machine
+- Request Machine Quotation
+- Hung Ta Instrument
+
+Descriptions:
+
+- Compression testing machines for concrete, metal parts, packaging and laboratory QC.
+- Ask Hung Ta for capacity, specimen and standard-based compression machine recommendations.
+
+Landing page:
+
+- `/compression-machine-malaysia`
+
+## Campaign 4: Rubber, Plastics, Wire, Tyre
 
 Keywords:
 
@@ -60,7 +115,7 @@ Landing pages:
 - `/products?category=wires`
 - `/products?category=auto-parts`
 
-## Campaign 3: Service & Calibration
+## Campaign 5: Service & Calibration
 
 Keywords:
 

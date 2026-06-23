@@ -20,6 +20,9 @@ const Footer = () => (
           <ul className="space-y-2 text-sm text-primary-foreground/70">
             {[
               { label: "Products", path: "/products" },
+              { label: "Hydraulic Machines", path: "/hydraulic-testing-machine-malaysia" },
+              { label: "Compression Machines", path: "/compression-machine-malaysia" },
+              { label: "Electrical Tensile Machines", path: "/electrical-tensile-testing-machine-malaysia" },
               { label: "Services", path: "/services" },
               { label: "About Us", path: "/about" },
               { label: "Contact", path: "/contact" },

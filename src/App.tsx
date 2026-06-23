@@ -13,6 +13,7 @@ import Products from "./pages/Products";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import ProductLanding from "./pages/ProductLanding";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -54,6 +55,9 @@ const App = () => {
           <Navbar onOpenQuote={() => openQuote()} />
           <Routes>
             <Route path="/" element={<Index onOpenQuote={() => openQuote()} />} />
+            <Route path="/hydraulic-testing-machine-malaysia" element={<ProductLanding pageKey="hydraulic" onOpenQuote={openQuote} />} />
+            <Route path="/compression-machine-malaysia" element={<ProductLanding pageKey="compression" onOpenQuote={openQuote} />} />
+            <Route path="/electrical-tensile-testing-machine-malaysia" element={<ProductLanding pageKey="electrical-tensile" onOpenQuote={openQuote} />} />
             <Route path="/products" element={<Products onOpenQuote={openQuote} />} />
             <Route path="/services" element={<Services onOpenQuote={() => openQuote()} />} />
             <Route path="/about" element={<About />} />

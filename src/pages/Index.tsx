@@ -39,17 +39,17 @@ const buyerSearches = [
   {
     title: "Hydraulic Testing Machine Malaysia",
     desc: "For high-capacity metal, construction material and industrial strength testing applications.",
-    path: "/products?category=utm",
+    path: "/hydraulic-testing-machine-malaysia",
   },
   {
     title: "Compression Machine Malaysia",
     desc: "For compression testing, concrete, metal parts, product QC and laboratory verification.",
-    path: "/products?category=utm",
+    path: "/compression-machine-malaysia",
   },
   {
     title: "Electrical Tensile Machine Malaysia",
     desc: "For tensile, elongation, bending and material strength tests in factory QA and labs.",
-    path: "/products?category=utm",
+    path: "/electrical-tensile-testing-machine-malaysia",
   },
 ];
 
