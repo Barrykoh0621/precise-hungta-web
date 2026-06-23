@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => (
@@ -16,7 +16,7 @@ const Footer = () => (
             <span className="font-bold text-lg">Hung Ta <span className="text-accent">(M)</span></span>
           </div>
           <p className="text-primary-foreground/60 text-sm leading-relaxed">
-            Malaysia's trusted partner for precision material testing instruments. Sales, servicing, and calibration since 1990.
+            Malaysia testing instrument supplier for tensile, universal, material, tyre, rubber, plastics, wire and paper testing applications.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ const Footer = () => (
         <div>
           <h4 className="font-semibold mb-4 text-accent">Industries</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/70">
-            {["Metal & Steel", "Textile & Fabric", "Rubber & Glove", "R&D Laboratories", "Manufacturing QC"].map((i) => (
+            {["Metal & Steel", "Rubber & Plastics", "Wire & Cable", "Tyre & Auto Parts", "Manufacturing QC"].map((i) => (
               <li key={i}>{i}</li>
             ))}
           </ul>
@@ -57,11 +57,11 @@ const Footer = () => (
             </li>
             <li className="flex items-center gap-2">
               <Phone className="w-4 h-4 shrink-0 text-accent" />
-              <a href="tel:+60376360031" className="hover:text-accent transition-colors">+603-7636 0031</a>
+              <a href="tel:+6067636031" className="hover:text-accent transition-colors">+606-763 6031</a>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-4 h-4 shrink-0 text-accent" />
-              <a href="mailto:hungtatest@yahoo.com" className="hover:text-accent transition-colors">hungtatest@yahoo.com</a>
+              <a href="mailto:info@hungtatester.com" className="hover:text-accent transition-colors">info@hungtatester.com</a>
             </li>
           </ul>
         </div>

@@ -1,24 +1,32 @@
-import { ShieldCheck, Target, Users, Award, ArrowRight } from "lucide-react";
+﻿import { ShieldCheck, Target, Users, Award, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "@/components/AnimatedSection";
+import { usePageSeo } from "@/hooks/use-page-seo";
 
 const values = [
   { icon: Target, title: "Precision", desc: "Testing solutions that meet the highest international accuracy standards." },
   { icon: Users, title: "Partnership", desc: "A trusted extension of your quality team, built on lasting relationships." },
-  { icon: ShieldCheck, title: "Integrity", desc: "Honest advice, transparent pricing, and genuine parts — always." },
+  { icon: ShieldCheck, title: "Integrity", desc: "Honest advice, transparent pricing, and genuine parts - always." },
   { icon: Award, title: "Excellence", desc: "Continuous improvement in service delivery and technical knowledge." },
 ];
 
 const stats = [
-  { value: "35+", label: "Years of Experience" },
-  { value: "500+", label: "Machines Installed" },
-  { value: "3+", label: "Industries Served" },
+  { value: "1975", label: "Founded" },
+  { value: "1000+", label: "Testing Instruments" },
+  { value: "10+", label: "Testing Categories" },
 ];
 
-const About = () => (
-  <main className="pt-16">
+const About = () => {
+  usePageSeo({
+    title: "About Hung Ta Instrument Malaysia | Testing Instruments Since 1975",
+    description:
+      "Learn about HUNG TA INSTRUMENT (M) Sdn. Bhd., a Malaysia testing instrument supplier for quality control, material testing, service and calibration support.",
+  });
+
+  return (
+  <main className="pt-20">
     {/* Hero */}
-    <section className="bg-navy-gradient py-24">
+    <section className="bg-primary py-24 industrial-grid">
       <div className="container mx-auto px-4">
         <AnimatedSection>
           <p className="text-accent font-montserrat text-sm font-semibold tracking-[0.25em] uppercase mb-4">About Hung Ta (M)</p>
@@ -26,7 +34,7 @@ const About = () => (
             Precision You Can<br />Count On
           </h1>
           <p className="text-primary-foreground/60 max-w-xl text-lg font-montserrat">
-            Malaysia's authorised distributor for Hung Ta precision testing instruments since 1990.
+            HUNG TA INSTRUMENT (M) Sdn. Bhd. has served quality control testing needs since 1975.
           </p>
         </AnimatedSection>
 
@@ -44,7 +52,7 @@ const About = () => (
       </div>
     </section>
 
-    {/* Story — warm cream background with sticky sidebar */}
+    {/* Story - warm cream background with sticky sidebar */}
     <section className="py-24 bg-warm-cream">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto grid md:grid-cols-[280px_1fr] gap-12">
@@ -60,13 +68,13 @@ const About = () => (
           <AnimatedSection delay={0.15}>
             <div className="space-y-6 text-muted-foreground leading-relaxed font-montserrat">
               <p>
-                Hung Ta (M) Instrument Sdn Bhd was established in 1990 as the authorised Malaysian distributor for Hung Ta Instrument Co., Ltd. — one of Asia's leading manufacturers of universal testing machines and material testing systems.
+                HUNG TA INSTRUMENT (M) Sdn. Bhd. was founded in September 1975 as a pioneer in manufacturing and supplying quality control testing and inspecting equipment.
               </p>
               <p>
-                From our base in Selangor, we serve manufacturers, laboratories, and quality control departments across Peninsular Malaysia and East Malaysia. Our mission is to provide world-class material testing solutions backed by local expertise, rapid servicing, and genuine spare parts support.
+                From our Seremban office, we support manufacturers, laboratories and quality control departments with testing instruments, application guidance, servicing, upgrading, modification, calibration and software support.
               </p>
               <p>
-                Over three decades, we have installed more than 500 testing systems across industries ranging from rubber glove manufacturing and textile production to steel fabrication and automotive component testing. Our team of factory-trained engineers ensures every installation is commissioned to international standards and every customer receives ongoing support throughout the equipment lifecycle.
+                Our product range supports rubber, plastics, polymers, wires, cable, paper, paperboard, hardness measurement, dynamic testing, torque testing, tyre testing and universal material testing applications.
               </p>
             </div>
           </AnimatedSection>
@@ -74,7 +82,7 @@ const About = () => (
       </div>
     </section>
 
-    {/* Mission & Vision — navy section */}
+    {/* Mission & Vision - navy section */}
     <section className="py-24 bg-navy-gradient">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -82,7 +90,7 @@ const About = () => (
             <div className="rounded-lg p-8 h-full border border-primary-foreground/10 bg-primary-foreground/5">
               <h3 className="font-serif text-2xl text-accent mb-4">Our Mission</h3>
               <p className="text-primary-foreground/60 leading-relaxed font-montserrat text-sm">
-                To be Malaysia's most trusted partner for material testing equipment — delivering precision instruments, expert servicing, and responsive support that empowers manufacturers to meet the highest quality standards.
+                To help customers select, operate and maintain reliable testing instruments that improve quality control, compliance and production confidence.
               </p>
             </div>
           </AnimatedSection>
@@ -90,7 +98,7 @@ const About = () => (
             <div className="rounded-lg p-8 h-full border border-primary-foreground/10 bg-primary-foreground/5">
               <h3 className="font-serif text-2xl text-accent mb-4">Our Vision</h3>
               <p className="text-primary-foreground/60 leading-relaxed font-montserrat text-sm">
-                To equip every Malaysian manufacturer and research laboratory with world-class testing technology and the technical support to use it with confidence — advancing quality, safety, and innovation across the nation's industries.
+                To make Hung Ta a trusted testing equipment name for manufacturers, laboratories and QA teams across Malaysia and Southeast Asia.
               </p>
             </div>
           </AnimatedSection>
@@ -98,7 +106,7 @@ const About = () => (
       </div>
     </section>
 
-    {/* Values — warm white */}
+    {/* Values - warm white */}
     <section className="py-24 bg-warm-white">
       <div className="container mx-auto px-4">
         <AnimatedSection>
@@ -122,7 +130,7 @@ const About = () => (
       </div>
     </section>
 
-    {/* Certifications — premium navy + gold */}
+    {/* Certifications - premium navy + gold */}
     <section className="py-24" style={{ background: '#0B1C2E' }}>
       <div className="container mx-auto px-4">
         <AnimatedSection>
@@ -179,7 +187,7 @@ const About = () => (
         <AnimatedSection delay={0.7}>
           <div className="mt-16 text-center pt-8" style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
             <p className="text-xs tracking-wider uppercase font-montserrat" style={{ color: 'rgba(255,255,255,0.35)' }}>
-              SIRIM-Accredited · Trusted by 500+ installations across Malaysia
+              Testing instruments · Service support · Calibration guidance · Software application
             </p>
           </div>
         </AnimatedSection>
@@ -204,6 +212,7 @@ const About = () => (
       </div>
     </section>
   </main>
-);
+  );
+};
 
 export default About;

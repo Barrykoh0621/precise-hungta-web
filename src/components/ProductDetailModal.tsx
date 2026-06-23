@@ -1,4 +1,4 @@
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+﻿import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import type { Product } from "@/data/products";
@@ -18,7 +18,7 @@ const ProductDetailModal = ({ product, open, onOpenChange, onEnquire, getImage }
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-2xl max-h-[85vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-xl font-bold">{product.model} — {product.name}</DialogTitle>
+          <DialogTitle className="text-xl font-bold">{product.model} - {product.name}</DialogTitle>
         </DialogHeader>
 
         <div className="space-y-5 mt-2">
@@ -65,7 +65,7 @@ const ProductDetailModal = ({ product, open, onOpenChange, onEnquire, getImage }
           </div>
 
           {/* CTA */}
-          <Button onClick={() => { onOpenChange(false); onEnquire(product.id); }} className="w-full bg-accent text-accent-foreground hover:bg-orange-light font-semibold gap-1">
+          <Button onClick={() => { onOpenChange(false); onEnquire(product.id); }} className="w-full rounded-full bg-accent text-white hover:bg-orange-light font-semibold gap-1">
             Enquire Now <ArrowUpRight className="w-4 h-4" />
           </Button>
         </div>

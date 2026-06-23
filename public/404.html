@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting | Hung Ta Instrument</title>
+    <script>
+      var segmentCount = 1;
+      var locationPath = window.location.pathname
+        .split("/")
+        .slice(0, 1 + segmentCount)
+        .join("/");
+      var redirectPath = window.location.pathname
+        .slice(locationPath.length)
+        .replace(/^\//, "");
+      window.location.replace(
+        location.origin +
+          locationPath +
+          "/?redirect=/" +
+          redirectPath +
+          window.location.search.replace(/^\?/, "&") +
+          window.location.hash
+      );
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>

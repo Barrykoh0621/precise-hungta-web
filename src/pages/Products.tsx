@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { products, categories } from "@/data/products";
@@ -10,6 +10,7 @@ import ht2402Img from "@/assets/ht-2402.jpg";
 import ht2101Img from "@/assets/ht-2101.jpg";
 import { Eye, Package } from "lucide-react";
 import { accessories } from "@/data/products";
+import { usePageSeo } from "@/hooks/use-page-seo";
 
 const localImages: Record<string, string> = {
   "ht-9501": ht9501Img,
@@ -27,8 +28,15 @@ interface ProductsProps {
 }
 
 const Products = ({ onOpenQuote }: ProductsProps) => {
+  usePageSeo({
+    title: "Testing Machine Products | Hung Ta Instrument Malaysia",
+    description:
+      "Browse tensile, universal, material, tyre, rubber, plastics, wire, cable, paper and hardness testing equipment from Hung Ta Instrument Malaysia.",
+  });
+
   const [searchParams] = useSearchParams();
   const expandedId = searchParams.get("product");
+  const categoryParam = searchParams.get("category");
   const [filter, setFilter] = useState("all");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
@@ -36,7 +44,7 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
   const filtered = filter === "all" ? products : products.filter((p) => p.category === filter);
 
   // Auto-open modal if product param is in URL
-  useState(() => {
+  useEffect(() => {
     if (expandedId) {
       const found = products.find((p) => p.id === expandedId);
       if (found) {
@@ -44,7 +52,13 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
         setModalOpen(true);
       }
     }
-  });
+  }, [expandedId]);
+
+  useEffect(() => {
+    if (categoryParam && categories.some((category) => category.id === categoryParam)) {
+      setFilter(categoryParam);
+    }
+  }, [categoryParam]);
 
   const handleViewDetails = (product: Product) => {
     setSelectedProduct(product);
@@ -52,19 +66,20 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
   };
 
   return (
-    <main className="pt-16">
+    <main className="pt-20">
       {/* Header */}
-      <section className="bg-navy-gradient py-20">
+      <section className="bg-primary py-24 industrial-grid">
         <div className="container mx-auto px-4">
           <AnimatedSection>
-            <h1 className="text-4xl md:text-5xl font-black text-primary-foreground mb-4">Our Products</h1>
-            <p className="text-primary-foreground/70 max-w-xl text-lg">Universal Testing Machines for metal, textile, rubber, and polymer testing — engineered by Hung Ta, supported locally.</p>
+            <p className="text-accent text-xs font-bold uppercase tracking-[0.28em] mb-4">Product catalogue</p>
+            <h1 className="font-serif text-5xl md:text-6xl text-primary-foreground mb-5">Testing Machine Products</h1>
+            <p className="text-primary-foreground/68 max-w-2xl text-lg">Tensile, universal, material, tyre, rubber, plastics, wire, cable, paper and hardness testing equipment for quality control applications.</p>
           </AnimatedSection>
         </div>
       </section>
 
       {/* Filter */}
-      <section className="border-b border-border sticky top-16 bg-background z-30">
+      <section className="border-b border-border sticky top-20 bg-white/95 backdrop-blur z-30">
         <div className="container mx-auto px-4">
           <div className="flex gap-1 overflow-x-auto py-3">
             {categories.map((c) => (
@@ -73,7 +88,7 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
                 onClick={() => setFilter(c.id)}
                 className={`px-4 py-2 text-sm font-medium rounded-md whitespace-nowrap transition-colors ${
                   filter === c.id
-                    ? "bg-accent text-accent-foreground"
+                    ? "bg-accent text-white"
                     : "text-muted-foreground hover:bg-muted"
                 }`}
               >
@@ -90,9 +105,9 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filtered.map((product, i) => (
               <AnimatedSection key={product.id} delay={i * 0.03}>
-                <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg hover:border-accent/40 transition-all duration-200 flex flex-col h-full group">
+                <div className="bg-white border border-border rounded-lg overflow-hidden hover:shadow-navy hover:border-accent/40 transition-all duration-200 flex flex-col h-full group">
                   {/* Image */}
-                  <div className="aspect-square bg-muted overflow-hidden flex items-center justify-center">
+                  <div className="aspect-square bg-white overflow-hidden flex items-center justify-center border-b border-border">
                     <img
                       src={getProductImage(product.image)}
                       alt={product.name}
@@ -101,13 +116,13 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
                   </div>
                   {/* Info */}
                   <div className="p-4 flex flex-col flex-1">
-                    <span className="text-[10px] font-semibold text-accent uppercase tracking-wider">{product.categoryLabel}</span>
-                    <h3 className="font-bold text-sm mt-1 line-clamp-1">{product.model}</h3>
+                    <span className="text-[10px] font-bold text-accent uppercase tracking-[0.16em]">{product.categoryLabel}</span>
+                    <h3 className="font-black text-base mt-1 line-clamp-1">{product.model}</h3>
                     <p className="text-xs text-muted-foreground mt-1 line-clamp-2 flex-1">{product.tagline}</p>
                     <Button
                       variant="outline"
                       size="sm"
-                      className="mt-3 w-full gap-1.5 text-xs"
+                      className="mt-3 w-full gap-1.5 text-xs rounded-full"
                       onClick={() => handleViewDetails(product)}
                     >
                       <Eye className="w-3.5 h-3.5" /> View Details

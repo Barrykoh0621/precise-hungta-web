@@ -1,7 +1,8 @@
-import { Button } from "@/components/ui/button";
+﻿import { Button } from "@/components/ui/button";
 import { Wrench, Target, Package, GraduationCap, ArrowUpRight } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
+import { usePageSeo } from "@/hooks/use-page-seo";
 
 interface ServicesProps {
   onOpenQuote: () => void;
@@ -34,13 +35,21 @@ const services = [
   },
 ];
 
-const Services = ({ onOpenQuote }: ServicesProps) => (
-  <main className="pt-16">
-    <section className="bg-navy-gradient py-20">
+const Services = ({ onOpenQuote }: ServicesProps) => {
+  usePageSeo({
+    title: "Testing Machine Service, Calibration & Support | Hung Ta",
+    description:
+      "Service support for Hung Ta testing instruments, including calibration, repair, upgrading, software application, spare parts and installation training.",
+  });
+
+  return (
+  <main className="pt-20">
+    <section className="bg-primary py-24 industrial-grid">
       <div className="container mx-auto px-4">
         <AnimatedSection>
-          <h1 className="text-4xl md:text-5xl font-black text-primary-foreground mb-4">Our Services</h1>
-          <p className="text-primary-foreground/70 max-w-xl text-lg">Comprehensive support to keep your testing instruments accurate, compliant, and running at peak performance.</p>
+          <p className="text-accent text-xs font-bold uppercase tracking-[0.28em] mb-4">Lifecycle care</p>
+          <h1 className="font-serif text-5xl md:text-6xl text-primary-foreground mb-4">Service, Calibration & Support</h1>
+          <p className="text-primary-foreground/70 max-w-xl text-lg">Support for testing instruments, machine servicing, upgrading, modification, calibration and software application.</p>
         </AnimatedSection>
       </div>
     </section>
@@ -64,7 +73,7 @@ const Services = ({ onOpenQuote }: ServicesProps) => (
                     </li>
                   ))}
                 </ul>
-                <Button onClick={onOpenQuote} className="bg-accent text-accent-foreground hover:bg-orange-light font-semibold gap-1" size="sm">
+                <Button onClick={onOpenQuote} className="rounded-full bg-accent text-white hover:bg-orange-light font-semibold gap-1" size="sm">
                   Get Service Quote <ArrowUpRight className="w-4 h-4" />
                 </Button>
               </div>
@@ -80,17 +89,18 @@ const Services = ({ onOpenQuote }: ServicesProps) => (
           <h2 className="text-3xl md:text-4xl font-black text-primary-foreground mb-4">Need Urgent Support?</h2>
           <p className="text-primary-foreground/70 max-w-xl mx-auto mb-8">Our service team is available for emergency breakdown support across Peninsular Malaysia.</p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <a href="https://wa.me/60122201096" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-accent text-accent-foreground hover:bg-orange-light font-semibold">WhatsApp Us Now</Button>
+            <a href="https://wa.me/60126280096" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="rounded-full bg-accent text-white hover:bg-orange-light font-semibold px-7">WhatsApp Us Now</Button>
             </a>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold">Contact Page</Button>
+              <Button size="lg" variant="outline" className="rounded-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-7">Contact Page</Button>
             </Link>
           </div>
         </AnimatedSection>
       </div>
     </section>
   </main>
-);
+  );
+};
 
 export default Services;

@@ -1,4 +1,4 @@
-export interface Product {
+﻿export interface Product {
   id: string;
   model: string;
   name: string;
@@ -19,15 +19,15 @@ export const products: Product[] = [
     id: "ht-2402",
     model: "HT-2402",
     name: "Computer Servo Control Material Testing Machines",
-    tagline: "High Precision, High Accuracy, High Stability — tensile, compression, flexural and bending test.",
+    tagline: "High Precision, High Accuracy, High Stability - tensile, compression, flexural and bending test.",
     category: "utm",
     categoryLabel: "Universal Testing Machine",
     image: "ht-2402",
-    description: "High Precision, High Accuracy, High Stability Material Testing Machines — able to do tensile, compression, flexural and bending test. ISO 9001 and CE certified, superior products fabricated by highly trained and experienced personnel. High strength aluminum alloy combined with streamlined design. Uses ball screw drive for less kinetic energy loss and noise elimination. Features a low-profile load cell with stable load induction, high accuracy, high stability, and a safety factor of 150%. Outstanding software with powerful control functions and testing speed range from 0.005 ~ 500 or 1000 mm/min. Standardized modular replacement design for quick grip switching.",
+    description: "High Precision, High Accuracy, High Stability Material Testing Machines - able to do tensile, compression, flexural and bending test. ISO 9001 and CE certified, superior products fabricated by highly trained and experienced personnel. High strength aluminum alloy combined with streamlined design. Uses ball screw drive for less kinetic energy loss and noise elimination. Features a low-profile load cell with stable load induction, high accuracy, high stability, and a safety factor of 150%. Outstanding software with powerful control functions and testing speed range from 0.005 ~ 500 or 1000 mm/min. Standardized modular replacement design for quick grip switching.",
     specs: [
       { label: "Capacity", value: "50 ~ 250 kN" },
       { label: "Force Resolution", value: "1/200,000 (Hung Ta Interface Card)" },
-      { label: "Force Accuracy", value: "Class 0.5 ± 0.5% or Class 1 ≤ ±1%" },
+      { label: "Force Accuracy", value: "Class 0.5 ± 0.5% or Class 1 = ±1%" },
       { label: "Speed Range", value: "0.005 ~ 500 mm/min" },
       { label: "Drive", value: "AC Servo Motor & Servo Driver (Ball Screw)" },
       { label: "Tests", value: "Tensile, compression, flexural, bending" },
@@ -53,7 +53,7 @@ export const products: Product[] = [
       { label: "Force Resolution", value: "1/200,000 (Hung Ta Interface Card)" },
       { label: "Drive System", value: "Electro-hydraulic servo" },
       { label: "Tests", value: "Tensile, compression, shear, bending, peeling" },
-      { label: "Loading Speed", value: "≤100 max. (60 Hz)" },
+      { label: "Loading Speed", value: "=100 max. (60 Hz)" },
       { label: "Crosshead Speed", value: "150 ~ 300 mm/min" },
       { label: "Optional", value: "Environmental chamber, extensometer, furnace" },
     ],
@@ -76,7 +76,7 @@ export const products: Product[] = [
       { label: "Force Resolution", value: "1/200,000 (Hung Ta Interface Card)" },
       { label: "Drive System", value: "Electro-hydraulic servo" },
       { label: "Tests", value: "Tensile, compression, bending, shear, peeling" },
-      { label: "Loading Speed", value: "≤100 max. (60 Hz)" },
+      { label: "Loading Speed", value: "=100 max. (60 Hz)" },
       { label: "Crosshead Speed", value: "150 ~ 300 mm/min" },
       { label: "Optional", value: "Bending fixture, compression, extensometer, wire-rope jig, furnace" },
     ],
@@ -731,9 +731,9 @@ export const products: Product[] = [
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
     image: "https://hungtatester.jackychong.com/v3/img/products/6/uct6800-thumb.jpg",
-    description: "Advanced coating gauge, auto-detects ferrous/non-ferrous. 0~2000μm range. Bluetooth data transfer.",
+    description: "Advanced coating gauge, auto-detects ferrous/non-ferrous. 0~2000Î¼m range. Bluetooth data transfer.",
     specs: [
-      { label: "Range", value: "0 ~ 2000 μm" },
+      { label: "Range", value: "0 ~ 2000 Î¼m" },
       { label: "Detection", value: "Auto ferrous/non-ferrous" },
       { label: "Connectivity", value: "Bluetooth" },
     ],
@@ -748,9 +748,9 @@ export const products: Product[] = [
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
     image: "https://hungtatester.jackychong.com/v3/img/products/6/uct6500-thumb.jpg",
-    description: "Dual F+N coating gauge for paint, plating & anodizing. 0~1250μm. Pocket-size, USB output for SPC.",
+    description: "Dual F+N coating gauge for paint, plating & anodizing. 0~1250Î¼m. Pocket-size, USB output for SPC.",
     specs: [
-      { label: "Range", value: "0 ~ 1250 μm" },
+      { label: "Range", value: "0 ~ 1250 Î¼m" },
       { label: "Probes", value: "Dual F+N" },
       { label: "Output", value: "USB for SPC" },
     ],
