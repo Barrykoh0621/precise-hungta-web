@@ -2,6 +2,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import BrandLogo from "@/components/BrandLogo";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -22,16 +23,7 @@ const Navbar = ({ onOpenQuote }: NavbarProps) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container mx-auto flex items-center justify-between h-20 px-4">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-sm bg-accent flex items-center justify-center">
-            <svg viewBox="0 0 24 24" className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M12 2v20M8 6l4-4 4 4M8 18l4 4 4-4" />
-            </svg>
-          </div>
-          <span className="text-primary font-black text-lg tracking-tight uppercase">
-            Hung Ta <span className="text-accent">Instrument</span>
-          </span>
-        </Link>
+        <BrandLogo />
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1">
