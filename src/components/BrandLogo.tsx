@@ -5,13 +5,26 @@ interface BrandLogoProps {
   size?: "sm" | "md";
 }
 
-const BrandMark = ({ size = "md" }: Pick<BrandLogoProps, "size">) => (
-  <div className={size === "sm" ? "w-9 h-9 shrink-0" : "w-11 h-11 shrink-0"}>
-    <svg viewBox="0 0 64 64" className="w-full h-full" role="img" aria-label="Hung Ta Instrument logo mark">
-      <rect x="4" y="4" width="56" height="56" rx="10" fill="#11294B" />
-      <path d="M15 18h34M20 18v28M44 18v28M20 32h24" fill="none" stroke="#FFFFFF" strokeWidth="5" strokeLinecap="round" />
-      <path d="M32 10v10M32 44v10M10 32h10M44 32h10" fill="none" stroke="#D3133D" strokeWidth="4" strokeLinecap="round" />
-      <circle cx="32" cy="32" r="5" fill="#D3133D" />
+export const BrandMark = ({ size = "md" }: Pick<BrandLogoProps, "size">) => (
+  <div className={size === "sm" ? "w-10 h-10 shrink-0" : "w-12 h-12 shrink-0"}>
+    <svg viewBox="0 0 80 80" className="w-full h-full" role="img" aria-label="Hung Ta Instrument gear H logo mark">
+      <g fill="#D3133D">
+        {Array.from({ length: 16 }).map((_, index) => (
+          <rect
+            key={index}
+            x="36.5"
+            y="2"
+            width="7"
+            height="15"
+            rx="1.4"
+            transform={`rotate(${index * 22.5} 40 40)`}
+          />
+        ))}
+        <path fillRule="evenodd" d="M40 12a28 28 0 1 1 0 56 28 28 0 0 1 0-56Zm0 10a18 18 0 1 0 0 36 18 18 0 0 0 0-36Z" />
+        <rect x="27" y="21" width="9" height="38" rx="1" />
+        <rect x="44" y="21" width="9" height="38" rx="1" />
+        <rect x="30" y="35" width="20" height="10" rx="1" />
+      </g>
     </svg>
   </div>
 );

@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { products } from "@/data/products";
+import { BrandMark } from "@/components/BrandLogo";
 
 interface QuoteModalProps {
   open: boolean;
@@ -26,7 +27,13 @@ const QuoteModal = ({ open, onOpenChange, preselectedProduct }: QuoteModalProps)
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-lg">
         <DialogHeader>
-          <DialogTitle>Request a Machine Quotation</DialogTitle>
+          <div className="flex items-center gap-3">
+            <BrandMark size="sm" />
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent">Hung Ta Instrument</p>
+              <DialogTitle>Request a Machine Quotation</DialogTitle>
+            </div>
+          </div>
         </DialogHeader>
 
         <form
