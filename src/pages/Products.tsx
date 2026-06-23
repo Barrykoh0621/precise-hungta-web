@@ -29,9 +29,9 @@ interface ProductsProps {
 
 const Products = ({ onOpenQuote }: ProductsProps) => {
   usePageSeo({
-    title: "Testing Machine Products | Hung Ta Instrument Malaysia",
+    title: "Hydraulic, Compression & Electrical Tensile Testing Machines | Hung Ta Malaysia",
     description:
-      "Browse tensile, universal, material, tyre, rubber, plastics, wire, cable, paper and hardness testing equipment from Hung Ta Instrument Malaysia.",
+      "Browse hydraulic testing machines, compression machines, electrical tensile testing machines, material testing equipment and QC systems from Hung Ta Instrument Malaysia.",
   });
 
   const [searchParams] = useSearchParams();
@@ -80,7 +80,7 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
           <AnimatedSection>
             <p className="text-accent text-xs font-bold uppercase tracking-[0.28em] mb-4">Product catalogue</p>
             <h1 className="font-serif text-5xl md:text-6xl text-primary-foreground mb-5">Testing Machine Products</h1>
-            <p className="text-primary-foreground/68 max-w-2xl text-lg">Tensile, universal, material, tyre, rubber, plastics, wire, cable, paper and hardness testing equipment for quality control applications.</p>
+            <p className="text-primary-foreground/68 max-w-2xl text-lg">Hydraulic testing machines, compression machines, electrical tensile testing machines and material testing equipment for metal, rubber and copper quality control applications.</p>
           </AnimatedSection>
         </div>
       </section>
@@ -93,7 +93,7 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
                 <p className="text-xs font-bold uppercase tracking-[0.24em] text-accent mb-2">Catalogue overview</p>
                 <h2 className="text-2xl md:text-3xl font-black mb-3">{products.length}+ testing systems across {categoryCounts.length} application groups</h2>
                 <p className="text-sm text-muted-foreground max-w-3xl leading-relaxed">
-                  Browse by machine type, material application or testing standard. Each model includes key specifications, ideal applications and a direct quotation path for faster procurement review.
+                  Browse by machine type, material application or testing standard. Priority enquiries include hydraulic testing machines, compression machines and electrical tensile testing machines for metal, rubber and copper industries.
                 </p>
               </div>
             </AnimatedSection>

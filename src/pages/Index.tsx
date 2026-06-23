@@ -21,35 +21,35 @@ const productImages: Record<string, string> = {
 
 const whyUs = [
   { icon: Wrench, title: "Expert Servicing", desc: "Factory-trained technicians with decades of experience in UTM maintenance and repair." },
-  { icon: Package, title: "Wide Product Range", desc: "Complete portfolio of tensile testing machines from 100 N benchtop to 2,000 kN hydraulic systems." },
-  { icon: Headphones, title: "Fast Support", desc: "Rapid response times across Peninsular Malaysia. Remote diagnostics and on-site visits." },
+  { icon: Package, title: "Priority Machine Range", desc: "Hydraulic testing machines, compression machines and electrical tensile testing machines for production QC." },
+  { icon: Headphones, title: "Regional Support", desc: "Support for customers across Malaysia, Singapore and Asia. Remote diagnostics and on-site visits where suitable." },
   { icon: ShieldCheck, title: "Certified Equipment", desc: "All instruments comply with ASTM, ISO, EN, and BS international testing standards." },
 ];
 
 const industries = [
-  { icon: Cog, label: "Manufacturing" },
-  { icon: Factory, label: "Rubber & Glove" },
-  { icon: Shirt, label: "Textiles" },
-  { icon: Cpu, label: "Metal & Alloys" },
-  { icon: Beaker, label: "Electronics" },
+  { icon: Cpu, label: "Metal" },
+  { icon: Factory, label: "Rubber" },
+  { icon: Cog, label: "Copper" },
+  { icon: Beaker, label: "Laboratories" },
+  { icon: Shirt, label: "Factory QC" },
   { icon: FlaskConical, label: "R&D Labs" },
 ];
 
 const buyerSearches = [
   {
-    title: "Tensile Testing Machine Malaysia",
-    desc: "For tensile, compression, bending, peeling and material strength tests.",
+    title: "Hydraulic Testing Machine Malaysia",
+    desc: "For high-capacity metal, construction material and industrial strength testing applications.",
     path: "/products?category=utm",
   },
   {
-    title: "Rubber & Plastics Testing Equipment",
-    desc: "For polymers, rubber, gloves, elongation and product QC applications.",
-    path: "/products?category=rubber",
+    title: "Compression Machine Malaysia",
+    desc: "For compression testing, concrete, metal parts, product QC and laboratory verification.",
+    path: "/products?category=utm",
   },
   {
-    title: "Wire, Cable & Tyre Testing Machines",
-    desc: "For cable strength, tyre endurance, auto parts and industrial durability testing.",
-    path: "/products?category=wires",
+    title: "Electrical Tensile Machine Malaysia",
+    desc: "For tensile, elongation, bending and material strength tests in factory QA and labs.",
+    path: "/products?category=utm",
   },
 ];
 
@@ -68,8 +68,8 @@ const qualityProofs = [
   },
   {
     title: "Malaysia Sales & Service",
-    desc: "Local consultation for machine selection, installation, training, calibration guidance, troubleshooting and spare parts support.",
-    meta: "Seremban support team",
+    desc: "Consultation for machine selection, installation, training, calibration guidance, troubleshooting and spare parts support across Malaysia, Singapore and Asia.",
+    meta: "Malaysia / Singapore / Asia",
   },
   {
     title: "Application Matching",
@@ -82,9 +82,9 @@ const featuredProducts = products.filter((p) => p.featured);
 
 const Index = ({ onOpenQuote }: IndexProps) => {
   usePageSeo({
-    title: "Hung Ta Instrument Malaysia | Tensile & Universal Testing Machines",
+    title: "Hung Ta Instrument Malaysia | Hydraulic, Compression & Tensile Testing Machines",
     description:
-      "Hung Ta supplies tensile testing machines, universal testing machines, material testing equipment, calibration, software and service support in Malaysia.",
+      "Hung Ta supplies hydraulic testing machines, compression machines, electrical tensile testing machines, calibration, software and service support for metal, rubber and copper industries.",
   });
 
   return (
@@ -105,7 +105,7 @@ const Index = ({ onOpenQuote }: IndexProps) => {
                 The precise force behind quality control.
               </h1>
               <p className="text-lg md:text-xl max-w-2xl text-white mb-8 leading-relaxed bg-primary/78 backdrop-blur-sm border border-white/15 rounded-lg px-5 py-4 shadow-navy">
-                Tensile, universal and material testing machines for manufacturers, laboratories and QA teams that need dependable results, service support and calibration guidance.
+                Hydraulic testing machines, compression machines and electrical tensile testing machines for metal, rubber and copper manufacturers that need dependable results, service support and calibration guidance.
               </p>
             </div>
             <div className="flex flex-wrap gap-4 mb-10">
@@ -133,7 +133,7 @@ const Index = ({ onOpenQuote }: IndexProps) => {
       {/* Trust bar */}
       <section className="bg-muted border-b border-border">
         <div className="container mx-auto px-4 py-6 flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground font-medium">
-          {["Established 1975", "ISO 9001 / ISO 9002 History", "ASTM / ISO Test Applications", "1000+ Testing Instruments", "Malaysia Support"].map((t) => (
+          {["Established 1975", "SSM 256852-H", "ASTM / ISO Test Applications", "Hydraulic & Tensile Machines", "Malaysia, Singapore & Asia"].map((t) => (
             <div key={t} className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-accent" />
               {t}
@@ -203,7 +203,7 @@ const Index = ({ onOpenQuote }: IndexProps) => {
           <AnimatedSection>
             <p className="text-center text-xs font-bold uppercase tracking-[0.28em] text-accent mb-3">Flagship systems</p>
             <h2 className="text-3xl md:text-5xl font-black text-center mb-4">Featured Testing Machines</h2>
-            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">Built for buyers comparing tensile testing machines, universal testing machines, material testing machines and hydraulic UTM systems in Malaysia.</p>
+            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">Built for buyers comparing hydraulic testing machines, compression machines, electrical tensile machines and universal testing systems in Malaysia.</p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProducts.map((product, i) => (

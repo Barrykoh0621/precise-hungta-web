@@ -11,7 +11,7 @@ const Footer = () => (
             <BrandLogo variant="light" size="sm" />
           </div>
           <p className="text-primary-foreground/60 text-sm leading-relaxed">
-            Malaysia testing instrument supplier for tensile, universal, material, tyre, rubber, plastics, wire and paper testing applications.
+            HUNG TA INSTRUMENT (M) Sdn. Bhd. (SSM 256852-H), supplier of hydraulic, compression and electrical tensile testing machines for metal, rubber and copper industries.
           </p>
         </div>
 
@@ -34,7 +34,7 @@ const Footer = () => (
         <div>
           <h4 className="font-semibold mb-4 text-accent">Industries</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/70">
-            {["Metal & Steel", "Rubber & Plastics", "Wire & Cable", "Tyre & Auto Parts", "Manufacturing QC"].map((industry) => (
+            {["Metal Testing", "Rubber Testing", "Copper Testing", "Compression Testing", "Factory QC"].map((industry) => (
               <li key={industry}>{industry}</li>
             ))}
           </ul>
@@ -45,7 +45,7 @@ const Footer = () => (
           <ul className="space-y-3 text-sm text-primary-foreground/70">
             <li className="flex items-start gap-2">
               <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-accent" />
-              <span>109 Taman AST,<br />Jalan Sungai Ujong,<br />Seremban, Negeri Sembilan, Malaysia</span>
+              <span>109, Taman AST,<br />Jalan Sungai Ujong,<br />70200 Seremban, Negeri Sembilan, Malaysia</span>
             </li>
             <li className="flex items-start gap-2">
               <Phone className="w-4 h-4 shrink-0 text-accent" />
@@ -59,6 +59,7 @@ const Footer = () => (
               <a href="mailto:hungtatest@yahoo.com" className="hover:text-accent transition-colors">hungtatest@yahoo.com</a>
             </li>
           </ul>
+          <p className="text-xs text-primary-foreground/40 mt-4">Service area: Malaysia, Singapore and Asia.</p>
         </div>
       </div>
 

@@ -20,7 +20,7 @@ const About = () => {
   usePageSeo({
     title: "About Hung Ta Instrument Malaysia | Testing Instruments Since 1975",
     description:
-      "Learn about HUNG TA INSTRUMENT (M) Sdn. Bhd., a Malaysia testing instrument supplier for quality control, material testing, service and calibration support.",
+      "Learn about HUNG TA INSTRUMENT (M) Sdn. Bhd. (SSM 256852-H), a Malaysia supplier of hydraulic testing machines, compression machines, electrical tensile testing machines and support services.",
   });
 
   return (
@@ -34,7 +34,7 @@ const About = () => {
             Precision You Can<br />Count On
           </h1>
           <p className="text-primary-foreground/60 max-w-xl text-lg font-montserrat">
-            HUNG TA INSTRUMENT (M) Sdn. Bhd. has served quality control testing needs since 1975.
+            HUNG TA INSTRUMENT (M) Sdn. Bhd. (SSM 256852-H) has served quality control testing needs since 1975.
           </p>
         </AnimatedSection>
 
@@ -71,10 +71,10 @@ const About = () => {
                 HUNG TA INSTRUMENT (M) Sdn. Bhd. was founded in September 1975 as a pioneer in manufacturing and supplying quality control testing and inspecting equipment.
               </p>
               <p>
-                From our Seremban office, we support manufacturers, laboratories and quality control departments with testing instruments, application guidance, servicing, upgrading, modification, calibration and software support.
+                From 109, Taman AST, Jalan Sungai Ujong, Seremban, Negeri Sembilan, we support manufacturers, laboratories and quality control departments with testing instruments, application guidance, servicing, upgrading, modification, calibration and software support.
               </p>
               <p>
-                Our product range supports rubber, plastics, polymers, wires, cable, paper, paperboard, hardness measurement, dynamic testing, torque testing, tyre testing and universal material testing applications.
+                Our focus includes hydraulic testing machines, compression machines and electrical tensile testing machines for metal, rubber and copper industries across Malaysia, Singapore and Asia.
               </p>
             </div>
           </AnimatedSection>
@@ -98,7 +98,7 @@ const About = () => {
             <div className="rounded-lg p-8 h-full border border-primary-foreground/10 bg-primary-foreground/5">
               <h3 className="font-serif text-2xl text-accent mb-4">Our Vision</h3>
               <p className="text-primary-foreground/60 leading-relaxed font-montserrat text-sm">
-                To make Hung Ta a trusted testing equipment name for manufacturers, laboratories and QA teams across Malaysia and Southeast Asia.
+                To make Hung Ta a trusted testing equipment name for manufacturers, laboratories and QA teams across Malaysia, Singapore and Asia.
               </p>
             </div>
           </AnimatedSection>

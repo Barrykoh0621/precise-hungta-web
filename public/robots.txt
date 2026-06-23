@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://www.hungtatest.com/sitemap.xml
+Sitemap: https://barrykoh0621.github.io/precise-hungta-web/sitemap.xml
