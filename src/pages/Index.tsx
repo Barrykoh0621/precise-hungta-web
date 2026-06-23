@@ -86,7 +86,7 @@ const Index = ({ onOpenQuote }: IndexProps) => {
               <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl text-white mb-7">
                 The precise force behind quality control.
               </h1>
-              <p className="text-lg md:text-xl max-w-2xl text-white/92 mb-8 leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.45)]">
+              <p className="text-lg md:text-xl max-w-2xl text-white mb-8 leading-relaxed bg-primary/78 backdrop-blur-sm border border-white/15 rounded-lg px-5 py-4 shadow-navy">
                 Tensile, universal and material testing machines for manufacturers, laboratories and QA teams that need dependable results, service support and calibration guidance.
               </p>
             </div>
@@ -96,15 +96,15 @@ const Index = ({ onOpenQuote }: IndexProps) => {
                   Explore Testing Machines <ArrowUpRight className="w-5 h-5" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" onClick={onOpenQuote} className="rounded-full border-white/35 text-white hover:bg-white/10 font-semibold px-7">
+              <Button size="lg" variant="outline" onClick={onOpenQuote} className="rounded-full border-white bg-white text-primary hover:bg-white/90 font-semibold px-7">
                 Request a Quote
               </Button>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 max-w-4xl border-y border-white/15">
+            <div className="grid grid-cols-2 md:grid-cols-4 max-w-4xl gap-4">
               {performanceStats.map((stat) => (
-                <div key={stat.label} className="py-5 pr-6">
-                  <p className="text-3xl md:text-4xl font-black text-white">{stat.value}</p>
-                  <p className="text-xs uppercase tracking-[0.16em] text-white/82 mt-1">{stat.label}</p>
+                <div key={stat.label} className="bg-primary/78 backdrop-blur-sm border border-white/15 rounded-lg px-4 py-4 shadow-navy">
+                  <p className="text-3xl md:text-4xl font-black text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]">{stat.value}</p>
+                  <p className="text-[11px] uppercase tracking-[0.14em] text-white font-bold mt-1 leading-snug">{stat.label}</p>
                 </div>
               ))}
             </div>
