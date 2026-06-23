@@ -20,7 +20,7 @@ const localImages: Record<string, string> = {
 
 function getProductImage(image: string): string {
   if (image.startsWith("http")) return image;
-  return localImages[image] || "";
+  return localImages[image] || `${import.meta.env.BASE_URL}${image}`;
 }
 
 interface ProductsProps {
