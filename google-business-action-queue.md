@@ -2,6 +2,13 @@
 
 Use this as the live operating queue. Work from top to bottom.
 
+Latest operating note, 24 June 2026:
+
+- Photos/logo have been uploaded by owner.
+- Business description was entered, but Google Business stayed on the save screen. Retry save once from the same edit profile screen before retyping.
+- Product and post publishing require an image in Google's modal. If the upload picker opens, owner may need to select the file manually.
+- Do not claim ISO 17025 accreditation. Use "preparing ISO/IEC 17025 calibration capability" only.
+
 ## Priority 1: Products / Services
 
 Add these first in Google Business Profile:
@@ -73,6 +80,17 @@ Source:
 - `google-business-products-services.md`
 
 Use the Business Description section.
+
+Current entered description:
+
+HUNG TA INSTRUMENT (M) Sdn. Bhd. supplies tensile testing machines, universal testing machines and testing machine calibration support for manufacturers, laboratories and QA teams across Malaysia, Singapore and Asia. We support metal, rubber, copper, wire, cable and factory QC applications with machine selection, installation, training, calibration guidance and service support. Hung Ta is preparing ISO/IEC 17025 calibration capability for audit-driven customers.
+
+After the description is saved, update these profile fields:
+
+- Phone: 012-6280096
+- Website: keep temporary GitHub Pages link until official domain DNS is active
+- Hours: Monday to Friday, 8:30 AM - 6:00 PM; Saturday and Sunday closed
+- Service areas: Malaysia, Singapore, Asia
 
 ## Priority 5: Review After Posting
 
