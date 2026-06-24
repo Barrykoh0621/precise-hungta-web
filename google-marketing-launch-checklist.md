@@ -98,6 +98,8 @@ Landing page:
 
 ## 4. Weekly Google Business Posts
 
+Status: draft posts prepared in `google-business-posts-june-2026.md`.
+
 Post 1:
 
 Hydraulic testing machines for metal, copper and construction material QC. Hung Ta Instrument supports machine selection, installation and service across Malaysia.
@@ -137,3 +139,15 @@ Requested DNS records:
 - Apex/root A records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
 
 Status: ticket submitted on 24/06/2026 after reCAPTCHA verification.
+
+## 7. Google Business Photos
+
+Status: uploaded to Google Business Profile on 24/06/2026. Google shows the new photos as pending review.
+
+Photos generated for the profile:
+
+- `public/google-business-photos/google-business-01-tensile-lab.png`
+- `public/google-business-photos/google-business-02-factory-qa-tensile.png`
+- `public/google-business-photos/google-business-03-tensile-grip-detail.png`
+- `public/google-business-photos/google-business-04-compression-machine.png`
+- `public/google-business-photos/google-business-05-modern-company-front.png`
