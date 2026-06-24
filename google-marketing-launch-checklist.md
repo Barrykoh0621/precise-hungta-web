@@ -73,41 +73,41 @@ Start with Search Ads only. Do not start with Display/banner ads.
 
 Budget:
 
-- Test: RM20-RM50/day
-- Monthly: RM600-RM1,500
+- Current approved test: RM15/day
+- Monthly target: RM400-RM500
+- Estimated 30-day spend: about RM456
+- Ready-to-launch setup prepared in `google-ads-ready-to-launch.md`
 
-Campaign A: Hydraulic Testing Machine
+Campaign A: Universal / Tensile Testing Machine
 
-- hydraulic testing machine Malaysia
-- hydraulic universal testing machine
-- electro hydraulic universal testing machine
-- high capacity material testing machine
-
-Landing page:
-
-- `/hydraulic-testing-machine-malaysia`
-
-Campaign B: Compression Machine
-
-- compression machine Malaysia
-- concrete compression testing machine
-- compression testing machine supplier
-- material compression tester
-
-Landing page:
-
-- `/compression-machine-malaysia`
-
-Campaign C: Electrical Tensile Testing Machine
-
-- electrical tensile testing machine Malaysia
 - tensile testing machine Malaysia
 - universal testing machine Malaysia
-- material testing machine Malaysia
+- universal tensile machine
+- tensile tester supplier Malaysia
+- UTM machine Malaysia
 
 Landing page:
 
-- `/electrical-tensile-testing-machine-malaysia`
+- `/tensile-testing-machine-malaysia`
+- `/universal-testing-machine-malaysia`
+
+Campaign B: Calibration / ISO 17025 Preparation
+
+- testing machine calibration Malaysia
+- tensile machine calibration
+- universal testing machine calibration
+- load cell calibration Malaysia
+- ISO 17025 calibration Malaysia
+
+Landing page:
+
+- `/calibration-service-malaysia`
+
+Paused for later:
+
+- Hydraulic testing machine
+- Compression machine
+- Broad material testing machine
 
 ## 4. Weekly Google Business Posts
 
