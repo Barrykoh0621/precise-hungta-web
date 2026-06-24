@@ -157,3 +157,15 @@ Photos generated for the profile:
 - `public/google-business-photos/google-business-03-tensile-grip-detail.png`
 - `public/google-business-photos/google-business-04-compression-machine.png`
 - `public/google-business-photos/google-business-05-modern-company-front.png`
+
+## 8. Google Business Products and Services
+
+Status: product/service copy prepared in `google-business-products-services.md`.
+
+Use these first:
+
+- Hydraulic Testing Machine
+- Compression Testing Machine
+- Electrical Tensile Testing Machine
+- Universal Testing Machine
+- Testing Machine Service and Calibration Guidance
