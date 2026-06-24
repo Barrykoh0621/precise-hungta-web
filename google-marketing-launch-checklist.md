@@ -84,6 +84,7 @@ Budget:
   - `google-ads-keywords.csv`
   - `google-ads-responsive-search-ads.csv`
   - `google-ads-negative-keywords.csv`
+- Build steps prepared in `google-ads-build-steps.md`
 
 Campaign A: Universal / Tensile Testing Machine
 
