@@ -8,11 +8,12 @@ Important: start with Search Ads only. Do not start with Display/banner ads.
 
 ## Budget
 
-Recommended test budget:
+Recommended test budget for the current owner-approved range:
 
-- RM30/day for first 14 days
-- Estimated test spend: about RM420
-- If enquiries are relevant, increase to RM50/day
+- RM15/day for first 30 days
+- Estimated monthly spend: about RM456
+- Keep a hard monthly target of RM400-RM500
+- If enquiries are relevant, increase only after reviewing search terms and leads
 
 Initial location targeting:
 
@@ -24,11 +25,26 @@ Language:
 - English
 - Chinese can be tested later if search volume appears relevant
 
-## Campaign 1 - Tensile Testing Machine Malaysia
+## Current Launch Focus
+
+Start with only two campaigns so the RM400-RM500 budget is not spread too thin:
+
+- Campaign 1: Universal / Tensile Testing Machine
+- Campaign 2: Calibration / ISO 17025 preparation
+
+Pause hydraulic, compression and broad material campaigns until the first 30-day test has data.
+
+Suggested daily split:
+
+- RM9/day: Universal / Tensile Testing Machine
+- RM6/day: Calibration / ISO 17025 preparation
+
+## Campaign 1 - Universal / Tensile Testing Machine Malaysia
 
 Landing page:
 
 - `https://barrykoh0621.github.io/precise-hungta-web/tensile-testing-machine-malaysia/`
+- `https://barrykoh0621.github.io/precise-hungta-web/universal-testing-machine-malaysia/`
 - Backup page: `https://barrykoh0621.github.io/precise-hungta-web/electrical-tensile-testing-machine-malaysia/`
 - Change to official domain after DNS is live.
 
@@ -51,41 +67,44 @@ Ad headlines:
 - Testing Machines For Factory QC
 - Malaysia Sales And Service Support
 - Request Testing Machine Quotation
+- Universal Tensile Machine
 
 Descriptions:
 
 - Tensile and universal testing machines for manufacturers, laboratories and QA teams. Malaysia support, installation and service guidance.
 - Send us your sample type, capacity and test standard. Hung Ta Instrument helps recommend suitable testing machines for factory QC.
 
-## Campaign 2 - Universal Testing Machine Malaysia
+## Campaign 2 - Calibration / ISO 17025 Preparation
 
 Landing page:
 
-- `https://barrykoh0621.github.io/precise-hungta-web/universal-testing-machine-malaysia/`
+- `https://barrykoh0621.github.io/precise-hungta-web/calibration-service-malaysia/`
 
 Keywords:
 
-- universal testing machine malaysia
-- universal testing machine supplier
-- utm machine malaysia
-- material universal testing machine
-- tensile compression testing machine
-- universal testing equipment malaysia
+- testing machine calibration malaysia
+- tensile machine calibration
+- universal testing machine calibration
+- load cell calibration malaysia
+- calibration service malaysia
+- iso 17025 calibration malaysia
+- material testing machine calibration
 
 Ad headlines:
 
-- Universal Testing Machine
-- UTM Machine Malaysia
-- Tensile Compression Testing
-- Hung Ta Instrument Malaysia
-- Request UTM Quotation
+- Testing Machine Calibration
+- Calibration Support Malaysia
+- ISO 17025 Preparation
+- Tensile Machine Calibration
+- Hung Ta Instrument Service
+- Request Calibration Support
 
 Descriptions:
 
-- Universal testing machines for tensile, compression, bending and material strength testing. Malaysia support from Hung Ta Instrument.
-- Send your material, force range and test method for a suitable universal testing machine recommendation.
+- Calibration support for tensile machines, universal testing machines, load systems and QC equipment in Malaysia.
+- Hung Ta is preparing ISO/IEC 17025 calibration capability for audit-driven factories and laboratories.
 
-## Campaign 3 - Material Testing Machine Malaysia
+## Paused Campaign - Material Testing Machine Malaysia
 
 Landing page:
 
@@ -113,7 +132,7 @@ Descriptions:
 - Material testing machines for tensile, compression, bending, metal, rubber and copper quality control applications.
 - Hung Ta helps factories and labs choose suitable testing machines by material, standard and capacity.
 
-## Campaign 4 - Hydraulic Testing Machine Malaysia
+## Paused Campaign - Hydraulic Testing Machine Malaysia
 
 Landing page:
 
@@ -141,7 +160,7 @@ Descriptions:
 - Hydraulic and electro-hydraulic testing machines for metal, copper and material QC. Support for selection, installation and service.
 - Built for factory and laboratory testing needs. Contact Hung Ta Instrument for hydraulic testing machine recommendations.
 
-## Campaign 5 - Compression Machine Malaysia
+## Paused Campaign - Compression Machine Malaysia
 
 Landing page:
 
@@ -193,6 +212,10 @@ Add these from day one:
 - manga
 - comic
 - youtube
+- certificate download
+- iso standard pdf
+- calibration course
+- calibration training
 
 ## Conversion Actions
 
