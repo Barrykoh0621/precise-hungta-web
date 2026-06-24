@@ -77,6 +77,7 @@ Files:
 
 - `google-business-products-services.md`
 - `google-business-posts-june-2026.md`
+- `google-business-build-steps.md`
 
 ## SEO Status
 

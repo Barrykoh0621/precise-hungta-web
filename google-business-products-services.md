@@ -1,58 +1,87 @@
 # Google Business Products and Services
 
-Use this content inside Google Business Profile under Products / Services. Keep the wording direct because buyers are usually engineers, purchasers, QA managers or factory owners.
+Use this content inside Google Business Profile under Products / Services. Current focus: universal / tensile testing machines and calibration support.
 
 ## Business Description
 
-HUNG TA INSTRUMENT (M) Sdn. Bhd. supplies hydraulic testing machines, compression machines, electrical tensile testing machines and material testing equipment for manufacturers, laboratories and QA teams across Malaysia, Singapore and Asia. We support metal, rubber and copper industries with machine selection, installation, training, calibration guidance and service support.
+HUNG TA INSTRUMENT (M) Sdn. Bhd. supplies tensile testing machines, universal testing machines and testing machine calibration support for manufacturers, laboratories and QA teams across Malaysia, Singapore and Asia. We support metal, rubber, copper, wire, cable and factory QC applications with machine selection, installation, training, calibration guidance and service support. Hung Ta is preparing ISO/IEC 17025 calibration capability for audit-driven customers.
 
-## Service Categories
+## Priority Products / Services To Add First
 
-### Hydraulic Testing Machine
+### 1. Universal Testing Machine
 
-Hydraulic and electro-hydraulic universal testing machines for metal, copper, construction material and high-capacity material strength testing. Suitable for tensile, compression, bending and shear applications.
+Universal testing machines for tensile, compression, bending and material strength testing. Recommended based on sample type, force range, fixture requirement, software output and ASTM / ISO test method.
 
-Call to action: Request quotation
+Best for:
 
-Landing page:
+- Factory QA teams
+- Laboratories
+- Metal, rubber, copper, wire and cable testing
+- Manufacturers needing tensile, compression and bending capability
 
-https://barrykoh0621.github.io/precise-hungta-web/hydraulic-testing-machine-malaysia
+Call to action:
 
-### Compression Testing Machine
-
-Compression testing machines for concrete, metal parts, packaging, production QC and laboratory verification. Hung Ta helps buyers match specimen type, required load capacity, control system and reporting needs.
-
-Call to action: Request quotation
-
-Landing page:
-
-https://barrykoh0621.github.io/precise-hungta-web/compression-machine-malaysia
-
-### Electrical Tensile Testing Machine
-
-Electrical tensile testing machines and servo universal testing machines for metal, rubber, copper, wire, cable and material strength testing. Suitable for tensile strength, elongation, peel, adhesion, bending and flexural tests.
-
-Call to action: Request quotation
+Contact sales / Request quotation
 
 Landing page:
 
-https://barrykoh0621.github.io/precise-hungta-web/electrical-tensile-testing-machine-malaysia
+https://barrykoh0621.github.io/precise-hungta-web/universal-testing-machine-malaysia/
 
-### Universal Testing Machine
+### 2. Tensile Testing Machine
 
-Universal testing machines for tensile, compression, bending and material testing applications. Recommended based on sample type, force range, fixture requirement, software output and ASTM / ISO test method.
+Tensile testing machines for metal, rubber, copper, wire, cable and product quality control. Suitable for tensile strength, elongation, yield, break force, peel, adhesion and pull testing applications.
 
-Call to action: Contact sales
+Best for:
+
+- Material strength testing
+- Factory QC
+- Rubber and metal industries
+- Wire and cable testing
+
+Call to action:
+
+Request quotation
 
 Landing page:
 
-https://barrykoh0621.github.io/precise-hungta-web/products
+https://barrykoh0621.github.io/precise-hungta-web/tensile-testing-machine-malaysia/
 
-### Testing Machine Service and Calibration Guidance
+### 3. Testing Machine Calibration Support
 
-Support for machine selection, installation, training, troubleshooting, spare parts and calibration guidance for testing machines used in factories, QA laboratories and production environments.
+Calibration support for tensile machines, universal testing machines, load cells, load systems and material testing equipment used in factories, QA laboratories and audit-driven production environments.
 
-Call to action: Contact service support
+Important wording:
+
+Hung Ta is preparing ISO/IEC 17025 calibration capability. Do not claim official ISO 17025 accreditation until the certificate is approved.
+
+Best for:
+
+- QA audits
+- Factory quality control
+- Machine reliability checks
+- Testing equipment service planning
+
+Call to action:
+
+Request calibration support
+
+Landing page:
+
+https://barrykoh0621.github.io/precise-hungta-web/calibration-service-malaysia/
+
+## Secondary Services To Add Later
+
+### Machine Service and Repair
+
+Testing machine servicing, troubleshooting, spare parts and repair support for factories and laboratories using material testing equipment.
+
+Landing page:
+
+https://barrykoh0621.github.io/precise-hungta-web/services
+
+### Installation and Training
+
+Installation, commissioning, software setup and operator training for testing machines used in production QC and laboratory environments.
 
 Landing page:
 
@@ -84,8 +113,7 @@ Malaysia, Singapore and Asia
 
 Replace the temporary GitHub Pages links with:
 
-- https://www.hungtainstrument.com.my/hydraulic-testing-machine-malaysia
-- https://www.hungtainstrument.com.my/compression-machine-malaysia
-- https://www.hungtainstrument.com.my/electrical-tensile-testing-machine-malaysia
-- https://www.hungtainstrument.com.my/products
+- https://www.hungtainstrument.com.my/universal-testing-machine-malaysia/
+- https://www.hungtainstrument.com.my/tensile-testing-machine-malaysia/
+- https://www.hungtainstrument.com.my/calibration-service-malaysia/
 - https://www.hungtainstrument.com.my/services

@@ -36,13 +36,12 @@ Update these fields:
 
 - Website: use the GitHub Pages URL first; replace with `https://www.hungtainstrument.com.my/` after DNS is active.
 - Business description:
-  HUNG TA INSTRUMENT (M) Sdn. Bhd. supplies hydraulic testing machines, compression machines, electrical tensile testing machines and material testing equipment for manufacturers, laboratories and QA teams across Malaysia, Singapore and Asia. We support metal, rubber and copper industries with machine selection, installation, training, calibration guidance and service support.
+  HUNG TA INSTRUMENT (M) Sdn. Bhd. supplies tensile testing machines, universal testing machines and testing machine calibration support for manufacturers, laboratories and QA teams across Malaysia, Singapore and Asia. We support metal, rubber, copper, wire, cable and factory QC applications with machine selection, installation, training, calibration guidance and service support. Hung Ta is preparing ISO/IEC 17025 calibration capability for audit-driven customers.
 - Products/services:
-  - Hydraulic Testing Machine
-  - Compression Testing Machine
-  - Electrical Tensile Testing Machine
   - Universal Testing Machine
-  - Testing Machine Service and Calibration
+  - Tensile Testing Machine
+  - Testing Machine Calibration Support
+  - Machine Service and Repair
 
 ## 2. Google Search Console
 
@@ -124,15 +123,15 @@ Status: draft posts prepared in `google-business-posts-june-2026.md`.
 
 Post 1:
 
-Hydraulic testing machines for metal, copper and construction material QC. Hung Ta Instrument supports machine selection, installation and service across Malaysia.
+Universal and tensile testing machines for manufacturers, laboratories and QA teams in Malaysia.
 
 Post 2:
 
-Need a compression testing machine for concrete, packaging or factory QC? Send us your specimen type, capacity and test standard for recommendation.
+Testing machine calibration support for tensile machines, universal testing machines and load systems.
 
 Post 3:
 
-Electrical tensile testing machines for metal, rubber, copper, wire and cable quality control. Request quotation from Hung Ta Instrument Malaysia.
+Universal testing machine buyer guide: material, capacity, test standard, fixtures and software needs.
 
 ## 5. Lead Tracking
 
