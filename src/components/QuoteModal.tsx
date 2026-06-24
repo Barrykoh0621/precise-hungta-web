@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { products } from "@/data/products";
 import { BrandMark } from "@/components/BrandLogo";
+import { trackLeadEvent } from "@/lib/analytics";
 
 interface QuoteModalProps {
   open: boolean;
@@ -52,6 +53,10 @@ const QuoteModal = ({ open, onOpenChange, preselectedProduct }: QuoteModalProps)
               form.get("message"),
             ].join("\n");
 
+            trackLeadEvent("quote_email_prepare", {
+              product_id: selectedProduct?.id,
+              product_model: selectedProduct?.model,
+            });
             window.location.href = `mailto:hungtatest@yahoo.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
           }}
         >

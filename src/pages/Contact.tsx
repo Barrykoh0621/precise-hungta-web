@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import AnimatedSection from "@/components/AnimatedSection";
 import { usePageSeo } from "@/hooks/use-page-seo";
+import { trackLeadEvent } from "@/lib/analytics";
 
 const Contact = () => {
   usePageSeo({
@@ -56,8 +57,8 @@ const Contact = () => {
                 <div>
                   <h2 className="font-bold mb-1">Phone</h2>
                   <div className="space-y-1">
-                    <a className="block text-sm text-muted-foreground hover:text-accent" href="tel:+60126280096">012-628 0096 Sales Manager</a>
-                    <a className="block text-sm text-muted-foreground hover:text-accent" href="tel:+60122201096">012-220 1096 Product Specialist</a>
+                    <a className="block text-sm text-muted-foreground hover:text-accent" href="tel:+60126280096" onClick={() => trackLeadEvent("phone_click", { phone: "012-6280096", location: "contact_page" })}>012-628 0096 Sales Manager</a>
+                    <a className="block text-sm text-muted-foreground hover:text-accent" href="tel:+60122201096" onClick={() => trackLeadEvent("phone_click", { phone: "012-2201096", location: "contact_page" })}>012-220 1096 Product Specialist</a>
                   </div>
                 </div>
               </div>
@@ -66,7 +67,7 @@ const Contact = () => {
                 <MessageCircle className="w-6 h-6 text-accent shrink-0" />
                 <div>
                   <h2 className="font-bold mb-1">WhatsApp</h2>
-                  <a className="text-sm text-muted-foreground hover:text-accent" href="https://wa.me/60126280096">012-628 0096 Sales Manager</a>
+                  <a className="text-sm text-muted-foreground hover:text-accent" href="https://wa.me/60126280096" onClick={() => trackLeadEvent("whatsapp_click", { location: "contact_page" })}>012-628 0096 Sales Manager</a>
                 </div>
               </div>
 
@@ -74,7 +75,7 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-accent shrink-0" />
                 <div>
                   <h2 className="font-bold mb-1">Email</h2>
-                  <a className="text-sm text-muted-foreground hover:text-accent" href="mailto:hungtatest@yahoo.com">hungtatest@yahoo.com</a>
+                  <a className="text-sm text-muted-foreground hover:text-accent" href="mailto:hungtatest@yahoo.com" onClick={() => trackLeadEvent("email_click", { location: "contact_page" })}>hungtatest@yahoo.com</a>
                 </div>
               </div>
 
@@ -112,6 +113,7 @@ const Contact = () => {
                   `Testing requirement:`,
                   form.get("message"),
                 ].join("\n");
+                trackLeadEvent("contact_email_prepare", { location: "contact_page" });
                 window.location.href = `mailto:hungtatest@yahoo.com?subject=${encodeURIComponent("Hung Ta website enquiry")}&body=${encodeURIComponent(body)}`;
               }}
             >

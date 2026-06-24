@@ -133,6 +133,11 @@ Tool needed:
 - Google Analytics 4
 - Google Ads conversion tracking
 
+Website status:
+
+- Lead tracking event hooks are prepared for quote modal open, quotation email preparation and WhatsApp clicks.
+- These events will start reporting after a GA4 / Google Ads tag is added.
+
 ## 6. Exabytes Ticket
 
 Ticket purpose:

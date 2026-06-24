@@ -15,6 +15,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ProductLanding from "./pages/ProductLanding";
 import NotFound from "./pages/NotFound";
+import { trackLeadEvent } from "@/lib/analytics";
 
 const queryClient = new QueryClient();
 const routerBasename =
@@ -43,6 +44,7 @@ const App = () => {
   const openQuote = (productId?: string) => {
     setQuoteProduct(productId);
     setQuoteOpen(true);
+    trackLeadEvent("quote_modal_open", { product_id: productId });
   };
 
   return (
