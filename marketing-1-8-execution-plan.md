@@ -6,9 +6,16 @@ Prepared for HUNG TA INSTRUMENT (M) Sdn. Bhd.
 
 Target domain: `hungtainstrument.com.my`
 
-Status: purchased, but Exabytes still shows the domain as `Pending`.
+Status: purchased and Active in Exabytes.
 
-Next action: wait for Exabytes/MYNIC activation or open a support ticket asking Exabytes to activate the domain and enable DNS management.
+Current DNS still points to the Exabytes parking page (`103.7.9.22`), not GitHub Pages.
+
+Support ticket submitted to Exabytes asking them to point the domain to GitHub Pages:
+
+- `www` CNAME to `barrykoh0621.github.io`
+- Apex/root A records to GitHub Pages IP addresses
+
+Next action: wait for Exabytes to update DNS, then verify HTTPS and switch Google Business/Search Console to the official domain.
 
 ## 2. Website Foundation
 
@@ -47,7 +54,13 @@ Use the company details:
 
 ## 5. Google Search Console
 
-Status: wait for domain DNS.
+Status: temporary GitHub Pages property verified and sitemap submitted.
+
+Temporary sitemap:
+
+- `https://barrykoh0621.github.io/precise-hungta-web/sitemap-github.xml`
+
+Final action after Exabytes DNS is connected:
 
 After the domain is active and connected, submit:
 

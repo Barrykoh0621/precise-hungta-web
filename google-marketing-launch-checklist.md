@@ -6,7 +6,9 @@ Company: HUNG TA INSTRUMENT (M) Sdn. Bhd.
 
 The website landing pages are live on GitHub Pages, but Google search ranking does not appear instantly. Google needs to discover, crawl, index and rank the pages.
 
-The official domain `hungtainstrument.com.my` is purchased but still `Pending` in Exabytes. Until Exabytes activates it, DNS cannot be connected.
+The official domain `hungtainstrument.com.my` is purchased and Active in Exabytes.
+
+However, DNS still points to the Exabytes parking page (`103.7.9.22`). A support ticket has been submitted to Exabytes asking them to point the domain to GitHub Pages.
 
 Temporary live URLs:
 
@@ -127,6 +129,11 @@ Tool needed:
 
 Ticket purpose:
 
-Ask Exabytes to activate `hungtainstrument.com.my` and enable DNS management because the domain is paid but still Pending.
+Ask Exabytes to replace the parking DNS records and point `hungtainstrument.com.my` to GitHub Pages.
 
-If the support form asks for reCAPTCHA, the website owner must complete the CAPTCHA.
+Requested DNS records:
+
+- `www` CNAME to `barrykoh0621.github.io`
+- Apex/root A records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+
+Status: ticket submitted on 24/06/2026 after reCAPTCHA verification.
