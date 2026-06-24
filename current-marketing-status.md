@@ -2,7 +2,7 @@
 
 Company: HUNG TA INSTRUMENT (M) Sdn. Bhd.
 
-Last updated: 24 June 2026
+Last updated: 24 June 2026, 9:11 AM Malaysia time
 
 ## Where We Are Now
 
@@ -19,6 +19,12 @@ https://www.hungtainstrument.com.my/
 Current domain status:
 
 The domain is purchased, but DNS still points to Exabytes parking IP `103.7.9.22`. Exabytes needs to point it to GitHub Pages before the official domain can be used.
+
+Latest DNS check:
+
+- `hungtainstrument.com.my` still resolves to `103.7.9.22`
+- GitHub side is prepared with `public/CNAME` set to `www.hungtainstrument.com.my`
+- Next required action is Exabytes DNS change, not website code
 
 ## Website Status
 
@@ -76,6 +82,14 @@ Completed:
 - 4-week Google Business post schedule prepared
 - Google Business action queue prepared
 
+In progress:
+
+- Business description was entered in Google Business Profile, but the Google editor is currently stuck on the save screen. Retry from the same profile edit screen before retyping.
+
+Blocked by Google upload UI:
+
+- Product entries and posts require photo upload inside the Google Business modal. The browser automation can fill copy, but the current system file upload dialog must be completed manually if Google opens it.
+
 Files:
 
 - `google-business-products-services.md`
@@ -130,3 +144,12 @@ Everything else can continue in the workspace without restarting research.
 3. Post the first Google Business update about universal / tensile testing machines.
 4. Post the second Google Business update about calibration support.
 5. Build Google Ads campaigns in paused mode.
+
+Do not redo:
+
+- Keyword strategy
+- RM400-RM500 starter budget
+- Google Business copywriting
+- Landing page selection
+
+These are already decided. Continue execution only.
