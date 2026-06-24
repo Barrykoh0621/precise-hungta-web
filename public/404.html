@@ -1,28 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Redirecting | Hung Ta Instrument</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hung Ta Instrument</title>
+    <meta name="robots" content="noindex, follow" />
     <script>
-      var segmentCount = 1;
-      var locationPath = window.location.pathname
-        .split("/")
-        .slice(0, 1 + segmentCount)
-        .join("/");
-      var redirectPath = window.location.pathname
-        .slice(locationPath.length)
-        .replace(/^\//, "");
-      window.location.replace(
-        location.origin +
-          locationPath +
-          "/?redirect=/" +
-          redirectPath +
-          window.location.search.replace(/^\?/, "&") +
-          window.location.hash
-      );
+      (function () {
+        var base = location.pathname.indexOf("/precise-hungta-web/") === 0 ? "/precise-hungta-web/" : "/";
+        var path = location.pathname.replace(/^\/precise-hungta-web/, "") || "/";
+        var target = base + "?redirect=" + encodeURIComponent(path + location.search + location.hash);
+        location.replace(target);
+      })();
     </script>
   </head>
   <body>
-    Redirecting...
+    <p>Redirecting to Hung Ta Instrument...</p>
   </body>
 </html>

@@ -59,6 +59,7 @@ Technical SEO status:
 - LocalBusiness / Organization structured data added to the homepage.
 - Product landing page structured data uses the live host automatically, so it works on GitHub Pages now and the official domain after DNS is active.
 - Landing pages target hydraulic testing machine, compression machine and electrical tensile testing machine searches.
+- Direct route fallback pages added for contact, products, services and about, so shared links and browser refreshes are safer on GitHub Pages.
 
 ## 3. Google Ads Search Campaigns
 
