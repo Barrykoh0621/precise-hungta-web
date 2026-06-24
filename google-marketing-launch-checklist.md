@@ -18,6 +18,7 @@ Temporary live URLs:
 - `https://barrykoh0621.github.io/precise-hungta-web/tensile-testing-machine-malaysia`
 - `https://barrykoh0621.github.io/precise-hungta-web/universal-testing-machine-malaysia`
 - `https://barrykoh0621.github.io/precise-hungta-web/material-testing-machine-malaysia`
+- `https://barrykoh0621.github.io/precise-hungta-web/calibration-service-malaysia`
 
 Final target URLs after domain activation:
 
@@ -27,6 +28,7 @@ Final target URLs after domain activation:
 - `https://www.hungtainstrument.com.my/tensile-testing-machine-malaysia`
 - `https://www.hungtainstrument.com.my/universal-testing-machine-malaysia`
 - `https://www.hungtainstrument.com.my/material-testing-machine-malaysia`
+- `https://www.hungtainstrument.com.my/calibration-service-malaysia`
 
 ## 1. Google Business Profile
 
@@ -77,6 +79,11 @@ Budget:
 - Monthly target: RM400-RM500
 - Estimated 30-day spend: about RM456
 - Ready-to-launch setup prepared in `google-ads-ready-to-launch.md`
+- Manual entry CSV files prepared:
+  - `google-ads-campaign-settings.csv`
+  - `google-ads-keywords.csv`
+  - `google-ads-responsive-search-ads.csv`
+  - `google-ads-negative-keywords.csv`
 
 Campaign A: Universal / Tensile Testing Machine
 
