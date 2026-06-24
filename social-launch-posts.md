@@ -8,7 +8,9 @@ Hung Ta Instrument supports manufacturers, laboratories and QA teams with testin
 
 Products include tensile testing machines, universal testing machines, rubber and plastics testing equipment, wire and cable testing machines, tyre testing systems and calibration support.
 
-Website: https://www.hungtatest.com/
+Website: https://barrykoh0621.github.io/precise-hungta-web/
+
+Contact: 012-6280096 / hungtatest@yahoo.com
 
 ## Post 2
 
@@ -25,13 +27,17 @@ Hung Ta can help you review:
 
 Send your testing requirement for quotation.
 
+Website: https://barrykoh0621.github.io/precise-hungta-web/electrical-tensile-testing-machine-malaysia/
+
 ## Post 3
 
 Quality control depends on reliable testing data.
 
 Hung Ta supplies testing instruments and service support for rubber, plastics, polymers, wire, cable, paper, tyre, auto parts and material testing applications.
 
-Contact: info@hungtatester.com
+Contact: hungtatest@yahoo.com
+
+Website: https://barrykoh0621.github.io/precise-hungta-web/products
 
 ## Post 4
 
@@ -46,8 +52,20 @@ Before buying a universal testing machine, prepare these details:
 
 This helps Hung Ta recommend the right machine faster.
 
+Contact: 012-6280096
+
 ## Post 5
 
 Hung Ta Instrument is ready to support factories and laboratories that need testing machines for product quality, inspection and R&D.
 
 Request quotation through the website or WhatsApp the team with your sample and testing requirement.
+
+Website: https://barrykoh0621.github.io/precise-hungta-web/
+
+WhatsApp: https://wa.me/60126280096
+
+## After Official Domain Is Active
+
+Replace the temporary GitHub Pages website link with:
+
+https://www.hungtainstrument.com.my/
