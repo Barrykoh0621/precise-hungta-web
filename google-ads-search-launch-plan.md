@@ -28,7 +28,8 @@ Language:
 
 Landing page:
 
-- `https://barrykoh0621.github.io/precise-hungta-web/electrical-tensile-testing-machine-malaysia/`
+- `https://barrykoh0621.github.io/precise-hungta-web/tensile-testing-machine-malaysia/`
+- Backup page: `https://barrykoh0621.github.io/precise-hungta-web/electrical-tensile-testing-machine-malaysia/`
 - Change to official domain after DNS is live.
 
 Keywords:
@@ -56,7 +57,63 @@ Descriptions:
 - Tensile and universal testing machines for manufacturers, laboratories and QA teams. Malaysia support, installation and service guidance.
 - Send us your sample type, capacity and test standard. Hung Ta Instrument helps recommend suitable testing machines for factory QC.
 
-## Campaign 2 - Hydraulic Testing Machine Malaysia
+## Campaign 2 - Universal Testing Machine Malaysia
+
+Landing page:
+
+- `https://barrykoh0621.github.io/precise-hungta-web/universal-testing-machine-malaysia/`
+
+Keywords:
+
+- universal testing machine malaysia
+- universal testing machine supplier
+- utm machine malaysia
+- material universal testing machine
+- tensile compression testing machine
+- universal testing equipment malaysia
+
+Ad headlines:
+
+- Universal Testing Machine
+- UTM Machine Malaysia
+- Tensile Compression Testing
+- Hung Ta Instrument Malaysia
+- Request UTM Quotation
+
+Descriptions:
+
+- Universal testing machines for tensile, compression, bending and material strength testing. Malaysia support from Hung Ta Instrument.
+- Send your material, force range and test method for a suitable universal testing machine recommendation.
+
+## Campaign 3 - Material Testing Machine Malaysia
+
+Landing page:
+
+- `https://barrykoh0621.github.io/precise-hungta-web/material-testing-machine-malaysia/`
+
+Keywords:
+
+- material testing machine malaysia
+- material testing equipment malaysia
+- material testing machine supplier
+- testing machine supplier malaysia
+- quality control testing equipment
+- laboratory material testing machine
+
+Ad headlines:
+
+- Material Testing Machine
+- Testing Equipment Malaysia
+- Factory QC Testing Support
+- Hung Ta Instrument Since 1975
+- Request Machine Quotation
+
+Descriptions:
+
+- Material testing machines for tensile, compression, bending, metal, rubber and copper quality control applications.
+- Hung Ta helps factories and labs choose suitable testing machines by material, standard and capacity.
+
+## Campaign 4 - Hydraulic Testing Machine Malaysia
 
 Landing page:
 
@@ -84,7 +141,7 @@ Descriptions:
 - Hydraulic and electro-hydraulic testing machines for metal, copper and material QC. Support for selection, installation and service.
 - Built for factory and laboratory testing needs. Contact Hung Ta Instrument for hydraulic testing machine recommendations.
 
-## Campaign 3 - Compression Machine Malaysia
+## Campaign 5 - Compression Machine Malaysia
 
 Landing page:
 
@@ -154,4 +211,3 @@ Do not activate billing or publish ads until:
 - Official domain is live, or user approves temporary GitHub landing pages
 - Daily budget is confirmed
 - Google Ads billing is reviewed by the owner
-

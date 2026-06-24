@@ -27,7 +27,7 @@ function getSiteBaseUrl() {
     : "https://www.hungtainstrument.com.my";
 }
 
-type LandingKey = "hydraulic" | "compression" | "electrical-tensile";
+type LandingKey = "hydraulic" | "compression" | "electrical-tensile" | "tensile" | "universal" | "material";
 
 interface LandingConfig {
   eyebrow: string;
@@ -96,6 +96,57 @@ const landingPages: Record<LandingKey, LandingConfig> = {
     quotePrompt: "Share your sample, grip requirement and testing standard for an electrical tensile machine recommendation.",
     industries: ["Metal", "Rubber", "Copper", "Wire and cable", "QA laboratories"],
     path: "/electrical-tensile-testing-machine-malaysia",
+  },
+  tensile: {
+    eyebrow: "Tensile testing machine Malaysia",
+    title: "Tensile Testing Machines for Material Strength QC",
+    subtitle:
+      "Tensile testing machines for metal, rubber, copper, wire, cable and product quality control, with Malaysia sales support and machine selection guidance.",
+    seoTitle: "Tensile Testing Machine Malaysia | Hung Ta Instrument",
+    seoDescription:
+      "Tensile testing machines for metal, rubber, copper, wire and cable quality control in Malaysia, with quotation and service support from Hung Ta Instrument.",
+    primaryKeyword: "tensile testing machine Malaysia",
+    heroProductIds: ["ht-2402", "ht-2328-utm", "ht-9501"],
+    applications: ["Tensile strength", "Elongation", "Yield and break force", "Peel, adhesion and pull tests"],
+    buyerNeeds: ["Material and sample dimensions", "Capacity range in N or kN", "Grip and fixture requirement", "ASTM, ISO or customer test method"],
+    standards: ["ASTM E8", "ASTM D412", "ISO 6892", "ISO 37", "IEC 60811"],
+    quotePrompt: "Send your material, sample size, capacity and test standard for a tensile testing machine recommendation.",
+    industries: ["Metal", "Rubber", "Copper", "Wire and cable", "Factory QA"],
+    path: "/tensile-testing-machine-malaysia",
+  },
+  universal: {
+    eyebrow: "Universal testing machine Malaysia",
+    title: "Universal Testing Machines for Tensile, Compression and Bending",
+    subtitle:
+      "Universal testing machines for factories and laboratories that need tensile, compression, bending and material strength testing in one system.",
+    seoTitle: "Universal Testing Machine Malaysia | Hung Ta Instrument",
+    seoDescription:
+      "Universal testing machines for tensile, compression, bending and material testing applications in Malaysia, with machine recommendation and service support.",
+    primaryKeyword: "universal testing machine Malaysia",
+    heroProductIds: ["ht-9501", "ht-2402", "ht-2101"],
+    applications: ["Tensile testing", "Compression testing", "Bending and flexural tests", "Material strength verification"],
+    buyerNeeds: ["Required force capacity", "Test type and material", "Software and reporting needs", "Fixture, grip and extensometer requirements"],
+    standards: ["ASTM E4", "ASTM E8", "ISO 7500-1", "ISO 6892-1", "JIS B7721"],
+    quotePrompt: "Tell us your test type, material and force range for a universal testing machine quotation.",
+    industries: ["Manufacturing", "Metal", "Rubber", "Laboratories", "R&D Labs"],
+    path: "/universal-testing-machine-malaysia",
+  },
+  material: {
+    eyebrow: "Material testing machine Malaysia",
+    title: "Material Testing Machines for Factory QC and Laboratories",
+    subtitle:
+      "Material testing equipment for tensile, compression, bending, rubber, copper, metal and production QC applications across Malaysia and nearby markets.",
+    seoTitle: "Material Testing Machine Malaysia | Hung Ta Instrument",
+    seoDescription:
+      "Material testing machines for tensile, compression, bending, metal, rubber and copper QC applications in Malaysia, with quotation and support from Hung Ta.",
+    primaryKeyword: "material testing machine Malaysia",
+    heroProductIds: ["ht-2402", "ht-9501", "ht-8391"],
+    applications: ["Material strength testing", "Factory quality control", "Laboratory verification", "Production and R&D testing"],
+    buyerNeeds: ["Material and product type", "Test method and standard", "Required capacity", "Report, software and calibration needs"],
+    standards: ["ASTM", "ISO", "EN", "BS", "JIS"],
+    quotePrompt: "Share your material, test method and expected capacity for a material testing machine recommendation.",
+    industries: ["Metal", "Rubber", "Copper", "Packaging", "Laboratories"],
+    path: "/material-testing-machine-malaysia",
   },
 };
 

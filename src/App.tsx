@@ -60,6 +60,9 @@ const App = () => {
             <Route path="/hydraulic-testing-machine-malaysia" element={<ProductLanding pageKey="hydraulic" onOpenQuote={openQuote} />} />
             <Route path="/compression-machine-malaysia" element={<ProductLanding pageKey="compression" onOpenQuote={openQuote} />} />
             <Route path="/electrical-tensile-testing-machine-malaysia" element={<ProductLanding pageKey="electrical-tensile" onOpenQuote={openQuote} />} />
+            <Route path="/tensile-testing-machine-malaysia" element={<ProductLanding pageKey="tensile" onOpenQuote={openQuote} />} />
+            <Route path="/universal-testing-machine-malaysia" element={<ProductLanding pageKey="universal" onOpenQuote={openQuote} />} />
+            <Route path="/material-testing-machine-malaysia" element={<ProductLanding pageKey="material" onOpenQuote={openQuote} />} />
             <Route path="/products" element={<Products onOpenQuote={openQuote} />} />
             <Route path="/services" element={<Services onOpenQuote={() => openQuote()} />} />
             <Route path="/about" element={<About />} />

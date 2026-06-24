@@ -15,12 +15,18 @@ Temporary live URLs:
 - `https://barrykoh0621.github.io/precise-hungta-web/hydraulic-testing-machine-malaysia`
 - `https://barrykoh0621.github.io/precise-hungta-web/compression-machine-malaysia`
 - `https://barrykoh0621.github.io/precise-hungta-web/electrical-tensile-testing-machine-malaysia`
+- `https://barrykoh0621.github.io/precise-hungta-web/tensile-testing-machine-malaysia`
+- `https://barrykoh0621.github.io/precise-hungta-web/universal-testing-machine-malaysia`
+- `https://barrykoh0621.github.io/precise-hungta-web/material-testing-machine-malaysia`
 
 Final target URLs after domain activation:
 
 - `https://www.hungtainstrument.com.my/hydraulic-testing-machine-malaysia`
 - `https://www.hungtainstrument.com.my/compression-machine-malaysia`
 - `https://www.hungtainstrument.com.my/electrical-tensile-testing-machine-malaysia`
+- `https://www.hungtainstrument.com.my/tensile-testing-machine-malaysia`
+- `https://www.hungtainstrument.com.my/universal-testing-machine-malaysia`
+- `https://www.hungtainstrument.com.my/material-testing-machine-malaysia`
 
 ## 1. Google Business Profile
 
@@ -58,7 +64,7 @@ Technical SEO status:
 
 - LocalBusiness / Organization structured data added to the homepage.
 - Product landing page structured data uses the live host automatically, so it works on GitHub Pages now and the official domain after DNS is active.
-- Landing pages target hydraulic testing machine, compression machine and electrical tensile testing machine searches.
+- Landing pages target hydraulic testing machine, compression machine, electrical tensile testing machine, tensile testing machine, universal testing machine and material testing machine searches.
 - Direct route fallback pages added for contact, products, services and about, so shared links and browser refreshes are safer on GitHub Pages.
 
 ## 3. Google Ads Search Campaigns
