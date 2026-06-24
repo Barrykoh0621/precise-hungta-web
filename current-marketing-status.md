@@ -77,8 +77,10 @@ Files:
 
 - `google-business-products-services.md`
 - `google-business-posts-june-2026.md`
+- `google-business-posts-final-ready.md`
 - `google-business-build-steps.md`
 - `google-business-4-week-post-schedule.md`
+- `google-business-action-queue.md`
 
 ## SEO Status
 

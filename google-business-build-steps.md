@@ -58,6 +58,7 @@ Use the uploaded logo and AI-generated company/testing machine photos already pr
 Use:
 
 - `google-business-posts-june-2026.md`
+- `google-business-posts-final-ready.md`
 
 Post order:
 
