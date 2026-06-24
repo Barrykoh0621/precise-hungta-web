@@ -21,6 +21,12 @@ function getProductImage(image: string): string {
   return localImages[image] || `${import.meta.env.BASE_URL}${image}`;
 }
 
+function getSiteBaseUrl() {
+  return window.location.hostname.endsWith("github.io")
+    ? "https://barrykoh0621.github.io/precise-hungta-web"
+    : "https://www.hungtainstrument.com.my";
+}
+
 type LandingKey = "hydraulic" | "compression" | "electrical-tensile";
 
 interface LandingConfig {
@@ -150,6 +156,7 @@ const ProductLanding = ({ pageKey, onOpenQuote }: ProductLandingProps) => {
     const script = document.createElement("script");
     script.id = scriptId;
     script.type = "application/ld+json";
+    const baseUrl = getSiteBaseUrl();
     script.text = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Service",
@@ -162,17 +169,30 @@ const ProductLanding = ({ pageKey, onOpenQuote }: ProductLandingProps) => {
         telephone: "+60126280096",
         email: "hungtatest@yahoo.com",
         areaServed: ["Malaysia", "Singapore", "Asia"],
+        url: `${baseUrl}/`,
       },
       areaServed: page.industries,
       description: page.seoDescription,
-      url: `https://www.hungtainstrument.com.my${page.path}`,
+      url: `${baseUrl}${page.path}`,
+      offers: featuredProducts.map((product) => ({
+        "@type": "Offer",
+        availability: "https://schema.org/InStock",
+        areaServed: ["Malaysia", "Singapore", "Asia"],
+        itemOffered: {
+          "@type": "Product",
+          name: `${product.model} ${product.name}`,
+          category: product.categoryLabel,
+          description: product.tagline,
+          image: getProductImage(product.image),
+        },
+      })),
     });
     document.head.appendChild(script);
 
     return () => {
       document.getElementById(scriptId)?.remove();
     };
-  }, [page, pageKey]);
+  }, [featuredProducts, page, pageKey]);
 
   return (
     <main className="pt-20">

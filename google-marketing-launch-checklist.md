@@ -54,6 +54,12 @@ Final sitemap:
 
 - `https://www.hungtainstrument.com.my/sitemap.xml`
 
+Technical SEO status:
+
+- LocalBusiness / Organization structured data added to the homepage.
+- Product landing page structured data uses the live host automatically, so it works on GitHub Pages now and the official domain after DNS is active.
+- Landing pages target hydraulic testing machine, compression machine and electrical tensile testing machine searches.
+
 ## 3. Google Ads Search Campaigns
 
 Start with Search Ads only. Do not start with Display/banner ads.
