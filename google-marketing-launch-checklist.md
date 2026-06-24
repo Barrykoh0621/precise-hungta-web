@@ -68,6 +68,7 @@ Technical SEO status:
 - Product landing page structured data uses the live host automatically, so it works on GitHub Pages now and the official domain after DNS is active.
 - Landing pages target hydraulic testing machine, compression machine, electrical tensile testing machine, tensile testing machine, universal testing machine and material testing machine searches.
 - Direct route fallback pages added for contact, products, services and about, so shared links and browser refreshes are safer on GitHub Pages.
+- Calibration now has a full React page, navigation link, homepage buyer path and static landing page for Google Ads.
 
 ## 3. Google Ads Search Campaigns
 

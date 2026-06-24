@@ -18,8 +18,8 @@ const services = [
   {
     icon: Target,
     title: "Calibration Services",
-    desc: "Traceable calibration of load cells, extensometers, and displacement measurement systems. Our calibration procedures follow ISO 7500-1 and ASTM E4 requirements, ensuring your test results are audit-ready and internationally recognised.",
-    points: ["Force calibration (ISO 7500-1)", "Extensometer verification", "Displacement accuracy checks", "Calibration certificates issued"],
+    desc: "Calibration support for tensile machines, universal testing machines, load cells and displacement measurement systems. Hung Ta is preparing ISO/IEC 17025 calibration capability for factories and laboratories with audit-driven quality requirements.",
+    points: ["Force calibration support", "Extensometer verification", "Displacement accuracy checks", "ISO/IEC 17025 preparation"],
   },
   {
     icon: Package,

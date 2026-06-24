@@ -14,6 +14,7 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ProductLanding from "./pages/ProductLanding";
+import CalibrationLanding from "./pages/CalibrationLanding";
 import NotFound from "./pages/NotFound";
 import { trackLeadEvent } from "@/lib/analytics";
 
@@ -63,6 +64,7 @@ const App = () => {
             <Route path="/tensile-testing-machine-malaysia" element={<ProductLanding pageKey="tensile" onOpenQuote={openQuote} />} />
             <Route path="/universal-testing-machine-malaysia" element={<ProductLanding pageKey="universal" onOpenQuote={openQuote} />} />
             <Route path="/material-testing-machine-malaysia" element={<ProductLanding pageKey="material" onOpenQuote={openQuote} />} />
+            <Route path="/calibration-service-malaysia" element={<CalibrationLanding onOpenQuote={() => openQuote()} />} />
             <Route path="/products" element={<Products onOpenQuote={openQuote} />} />
             <Route path="/services" element={<Services onOpenQuote={() => openQuote()} />} />
             <Route path="/about" element={<About />} />

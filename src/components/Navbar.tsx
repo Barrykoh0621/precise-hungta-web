@@ -7,6 +7,7 @@ import BrandLogo from "@/components/BrandLogo";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Products", path: "/products" },
+  { label: "Calibration", path: "/calibration-service-malaysia" },
   { label: "Services", path: "/services" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
