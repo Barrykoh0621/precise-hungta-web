@@ -72,6 +72,9 @@ Completed:
 - Logo and generated company photos uploaded
 - Product/service copy prepared
 - Google Business posts prepared for tensile / universal machine and calibration support
+- Final ready-to-post Google Business package prepared
+- 4-week Google Business post schedule prepared
+- Google Business action queue prepared
 
 Files:
 
@@ -123,7 +126,7 @@ Everything else can continue in the workspace without restarting research.
 ## Next Best Actions
 
 1. Keep checking domain DNS until it stops pointing to `103.7.9.22`.
-2. Build Google Ads campaigns in paused mode.
-3. Add Google Business product/service entries.
-4. Post the first Google Business update about universal / tensile testing machines.
-5. Post the second Google Business update about calibration support.
+2. Add Google Business product/service entries using `google-business-action-queue.md`.
+3. Post the first Google Business update about universal / tensile testing machines.
+4. Post the second Google Business update about calibration support.
+5. Build Google Ads campaigns in paused mode.
