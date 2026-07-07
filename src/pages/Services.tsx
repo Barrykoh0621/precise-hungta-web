@@ -24,7 +24,7 @@ const services = [
   {
     icon: Package,
     title: "Spare Parts Supply",
-    desc: "As the authorised Malaysian distributor, we maintain a local inventory of critical spare parts including load cells, grips, jaws, extensometer arms, servo motors, and control boards. Fast delivery across Peninsular Malaysia.",
+    desc: "We help customers source critical spare parts including load cells, grips, jaws, extensometer arms, servo motors, and control boards. Fast support is available across Peninsular Malaysia where parts and scheduling allow.",
     points: ["Genuine Hung Ta spare parts", "Local stock for critical items", "Express delivery available", "Competitive pricing"],
   },
   {

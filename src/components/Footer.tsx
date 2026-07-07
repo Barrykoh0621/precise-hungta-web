@@ -31,6 +31,12 @@ const Footer = () => (
                 <Link to={link.path} className="hover:text-accent transition-colors">{link.label}</Link>
               </li>
             ))}
+            <li>
+              <a href="/tensile-testing-machine-malaysia" className="hover:text-accent transition-colors">Tensile Testing Machines</a>
+            </li>
+            <li>
+              <a href="/calibration-service-malaysia" className="hover:text-accent transition-colors">Calibration Service</a>
+            </li>
           </ul>
         </div>
 
