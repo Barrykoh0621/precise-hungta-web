@@ -35,6 +35,9 @@ const Footer = () => (
               <a href="/tensile-testing-machine-malaysia" className="hover:text-accent transition-colors">Tensile Testing Machines</a>
             </li>
             <li>
+              <a href="/how-to-choose-tensile-testing-machine-malaysia" className="hover:text-accent transition-colors">Tensile Machine Guide</a>
+            </li>
+            <li>
               <a href="/calibration-service-malaysia" className="hover:text-accent transition-colors">Calibration Service</a>
             </li>
           </ul>
