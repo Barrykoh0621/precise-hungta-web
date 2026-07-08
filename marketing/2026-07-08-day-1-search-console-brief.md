@@ -22,6 +22,9 @@ Completed:
   - https://www.hungtainstrument.com.my/calibration-service-malaysia
   - https://www.hungtainstrument.com.my/how-to-choose-tensile-testing-machine-malaysia
 
+- Added and requested indexing for one supporting calibration article:
+  - https://www.hungtainstrument.com.my/testing-machine-calibration-checklist-malaysia/
+
 Not completed yet:
 
 - Google Business Profile post publishing

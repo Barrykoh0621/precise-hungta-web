@@ -26,6 +26,9 @@ Priority keywords:
   - https://www.hungtainstrument.com.my/calibration-service-malaysia
   - https://www.hungtainstrument.com.my/how-to-choose-tensile-testing-machine-malaysia
 
+- Added and requested indexing for 1 additional supporting calibration article:
+  - https://www.hungtainstrument.com.my/testing-machine-calibration-checklist-malaysia/
+
 ### Website Actions
 
 - Expanded the live tensile testing machine landing page with:
