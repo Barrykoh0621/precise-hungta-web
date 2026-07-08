@@ -11,6 +11,21 @@ Priority keywords:
 
 ## Completed During Sleep Run
 
+### Google Search Console Actions
+
+- Verified the official URL-prefix property:
+  - https://www.hungtainstrument.com.my/
+  - Verification method shown by Google: HTML file.
+
+- Submitted sitemap in Google Search Console:
+  - https://www.hungtainstrument.com.my/sitemap.xml
+  - Immediate Google status showed "unable to fetch" / 0 pages, so recheck after Google retries.
+
+- Requested indexing for 3 priority pages:
+  - https://www.hungtainstrument.com.my/tensile-testing-machine-malaysia
+  - https://www.hungtainstrument.com.my/calibration-service-malaysia
+  - https://www.hungtainstrument.com.my/how-to-choose-tensile-testing-machine-malaysia
+
 ### Website Actions
 
 - Expanded the live tensile testing machine landing page with:
