@@ -2,7 +2,7 @@
 
 Owner: Barry / Rachel
 Business: Hung Ta Instrument
-Status: Ready to use after Barry confirms the correct Google review link
+Status: Ready to use
 
 ## Purpose
 
@@ -32,7 +32,7 @@ Thank you for working with us. We are improving our Google presence so new facto
 If you feel our machine/service support was helpful, could you leave Hung Ta a short honest Google review?
 
 Google review link:
-[PASTE GOOGLE REVIEW LINK]
+https://g.page/r/CerseOxyZsvtEBM/review
 
 No need to write long. One or two sentences about your experience is enough.
 
@@ -51,7 +51,7 @@ We are improving our Google presence so Malaysia factories and laboratories can 
 
 If you are comfortable, could you leave us a short honest Google review here?
 
-[PASTE GOOGLE REVIEW LINK]
+https://g.page/r/CerseOxyZsvtEBM/review
 
 One or two sentences about your experience with our machine support, service response or technical advice is enough.
 
@@ -66,7 +66,7 @@ Hi [Name], just a gentle follow-up on the Google review link I sent last week.
 If you have a minute, an honest review would really help our business visibility.
 
 Link:
-[PASTE GOOGLE REVIEW LINK]
+https://g.page/r/CerseOxyZsvtEBM/review
 
 Thank you.
 
@@ -76,9 +76,14 @@ Thank you.
 |---|---|---|---|---|---|---|
 |  |  | Customer / supplier / partner | WhatsApp / email | Asked / done / no reply |  |  |
 
+## Google Review Link
+
+Correct Google review link:
+
+https://g.page/r/CerseOxyZsvtEBM/review
+
 ## Owner Action Needed
 
-Barry needs to copy the correct Google review link from Google Business Profile.
+Barry needs to give 5 real contacts who can honestly review Hung Ta.
 
-Path:
-Google Business Profile > Ask for reviews / Request reviews > Copy link
+Do not send this to fake contacts. Start with customers who bought a machine, received service support, or had a real business relationship with Hung Ta.
