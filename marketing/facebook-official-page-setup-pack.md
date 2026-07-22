@@ -10,11 +10,25 @@ Create one new official Facebook page if admin access to the old pages cannot be
 
 Do not delete or merge old pages yet. Old pages may still carry historical trust signals, and deletion/merge should only happen after ownership is clear.
 
+## Created Page
+
+Created on 2026-07-22:
+
+https://www.facebook.com/profile.php?id=61592144285671
+
+Actual page name used:
+
+Hung Ta Instrument Enterprise
+
+Reason:
+
+Facebook did not accept the original company-name format with brackets / Sdn Bhd in the creation form.
+
 ## Page Identity
 
 Page name:
 
-Hung Ta Instrument (M) Sdn Bhd
+Hung Ta Instrument Enterprise
 
 Username / handle options:
 
