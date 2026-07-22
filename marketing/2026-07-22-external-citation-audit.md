@@ -11,6 +11,12 @@ External citation audit completed.
 
 No external listings were edited in this run because most citation platforms require account access, owner verification, or a manual "suggest edit" flow.
 
+## Owner Confirmations Added
+
+- hungtatest.com: no direct access; website is outsourced.
+- Facebook: no confirmed official page access; create one new official page if admin access to existing pages cannot be recovered.
+- Waze address: same physical location confirmed; use Jalan Sungai Ujong as the standard citation address.
+
 ## Correct NAP Target
 
 Use this as the reference format:
@@ -65,7 +71,7 @@ Action:
 
 Status:
 
-- Needs owner/domain access.
+- No direct access. Ask outsourced website vendor to add the official-domain link or banner.
 
 ### 3. Made-in-China
 
@@ -210,8 +216,9 @@ Risk:
 
 Action:
 
-- Barry/Rachel should identify which page is official.
-- Update official page About section with:
+- If admin access to an existing page can be recovered, use that page as official.
+- If admin access cannot be recovered, create one new official Facebook page.
+- Update the official page About section with:
   - website
   - phone
   - address
@@ -220,7 +227,7 @@ Action:
 
 Status:
 
-- Needs owner confirmation.
+- Create/recover official page.
 
 ### 9. YellowPages
 
@@ -244,13 +251,13 @@ Status:
    - Add review request process.
 
 2. Old domain hungtatest.com
-   - Add prominent link to official domain.
+   - Ask outsourced vendor to add prominent link to official domain.
 
 3. Made-in-China
    - Fix incorrect Taiwan address.
 
 4. Facebook
-   - Choose official page and update About section.
+   - Create or recover one official page and update About section.
 
 5. TradeIndia / ExportersIndia / contact.page
    - Add official website and calibration/tensile wording where possible.
@@ -264,7 +271,7 @@ When back at the computer, confirm these:
 
 1. Do we have login/admin access for hungtatest.com?
 2. Which Facebook page is official?
-3. Is "109 Jalan Dato' Tan Say Eng" a valid map road name for the same location, or should all listings use Jalan Sungai Ujong?
+3. If creating a new Facebook page, prepare company logo/photo access before starting.
 
 ## Risk To Watch
 
