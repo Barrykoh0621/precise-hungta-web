@@ -16,7 +16,7 @@ Hung Ta Instrument Enterprise
 
 Category:
 
-Industrial company / 工业公司
+Industrial company
 
 ## Completed In Facebook
 
