@@ -2,15 +2,11 @@
 
 Company: HUNG TA INSTRUMENT (M) Sdn. Bhd.
 
-Last updated: 24 June 2026, 9:11 AM Malaysia time
+Last updated: 30 July 2026, Malaysia time
 
 ## Where We Are Now
 
-The website is live on GitHub Pages and is being prepared for Google marketing.
-
-Temporary website:
-
-https://barrykoh0621.github.io/precise-hungta-web/
+The website is live on the official domain and is ready for Google marketing.
 
 Official domain:
 
@@ -18,13 +14,13 @@ https://www.hungtainstrument.com.my/
 
 Current domain status:
 
-The domain is purchased, but DNS still points to Exabytes parking IP `103.7.9.22`. Exabytes needs to point it to GitHub Pages before the official domain can be used.
+The official domain is connected to GitHub Pages and loads successfully over HTTPS.
 
 Latest DNS check:
 
-- `hungtainstrument.com.my` still resolves to `103.7.9.22`
-- GitHub side is prepared with `public/CNAME` set to `www.hungtainstrument.com.my`
-- Next required action is Exabytes DNS change, not website code
+- `www.hungtainstrument.com.my` points to `barrykoh0621.github.io`
+- `hungtainstrument.com.my` uses the four GitHub Pages A records
+- Website status confirmed: HTTP 200 on `https://www.hungtainstrument.com.my/`
 
 ## Website Status
 
@@ -43,9 +39,9 @@ Completed:
 
 Main active marketing pages:
 
-- https://barrykoh0621.github.io/precise-hungta-web/tensile-testing-machine-malaysia/
-- https://barrykoh0621.github.io/precise-hungta-web/universal-testing-machine-malaysia/
-- https://barrykoh0621.github.io/precise-hungta-web/calibration-service-malaysia/
+- https://www.hungtainstrument.com.my/tensile-testing-machine-malaysia/
+- https://www.hungtainstrument.com.my/universal-testing-machine-malaysia/
+- https://www.hungtainstrument.com.my/calibration-service-malaysia/
 
 ## Google Ads Status
 
@@ -84,7 +80,7 @@ Completed:
 
 In progress:
 
-- Business description was entered in Google Business Profile, but the Google editor is currently stuck on the save screen. Retry from the same profile edit screen before retyping.
+- Google Business Profile should now use the official domain. Verify in Google before launching ads.
 
 Blocked by Google upload UI:
 
@@ -104,8 +100,12 @@ Files:
 Completed:
 
 - Sitemap prepared
-- Google Search Console temporary property prepared/submitted earlier
-- Structured data added
+- Google Search Console sitemap submitted for official domain
+- Search Console found 14 submitted pages in sitemap
+- Universal testing machine page is indexed
+- Calibration service page is indexed
+- Tensile testing machine page indexing request submitted
+- Structured data updated from `Product` to `Service` for B2B machine supply/support to avoid Product Summary price/review/rating errors
 - Landing pages prepared for buyer keywords
 
 SEO does not guarantee instant first page ranking. Google Ads is the faster route for immediate search visibility.
@@ -131,19 +131,19 @@ Budget is RM400-RM500/month, so the first test must stay focused.
 
 Only needed before launch:
 
+- Confirm Google Business Profile changes are saved
 - Confirm Google Ads billing/payment method
-- Confirm whether to launch before domain is fixed or wait for official domain
 - Confirm ISO 17025 wording once official certificate status changes
 
 Everything else can continue in the workspace without restarting research.
 
 ## Next Best Actions
 
-1. Keep checking domain DNS until it stops pointing to `103.7.9.22`.
-2. Add Google Business product/service entries using `google-business-action-queue.md`.
-3. Post the first Google Business update about universal / tensile testing machines.
-4. Post the second Google Business update about calibration support.
-5. Build Google Ads campaigns in paused mode.
+1. Wait for GitHub Pages deployment after latest structured-data push.
+2. In Google Search Console, rerun live URL test for homepage.
+3. Validate fix for Product Summary issue after the deployed page no longer outputs Product schema.
+4. Build Google Ads campaigns in paused mode.
+5. Launch ads only after owner confirms billing and final budget.
 
 Do not redo:
 
