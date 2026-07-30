@@ -45,7 +45,7 @@ Main active marketing pages:
 
 ## Google Ads Status
 
-Prepared but not launched.
+Partly built in Google Ads, not launched.
 
 Budget plan:
 
@@ -67,6 +67,24 @@ Important:
 
 Ads must not be published or spend money until owner confirms billing and final launch.
 
+Google Ads account:
+
+- Account created/opened: `524-464-6437`
+- Campaign 1 draft created: `281499062168403`
+- Campaign type corrected from Performance Max to Search
+- Location: Malaysia
+- Search partners: off
+- Display Network: off
+- Final URL: `https://www.hungtainstrument.com.my/tensile-testing-machine-malaysia/`
+- Keywords entered: exact/phrase only for tensile, universal and UTM terms
+- Budget entered: RM9/day
+- Current blocker: Google Ads is on the billing/payment step. Do not press `Submit` until the owner confirms billing and launch timing.
+
+Still to build after billing setup:
+
+- Campaign 2: Calibration / ISO 17025 Preparation, RM6/day
+- Shared negative keywords inside Google Ads UI
+
 ## Google Business Status
 
 Completed:
@@ -80,7 +98,9 @@ Completed:
 
 In progress:
 
-- Google Business Profile should now use the official domain. Verify in Google before launching ads.
+- Google Business Profile uses the official domain in Google search results.
+- First Google Business post was prepared, but one post attempt was rejected.
+- A second post draft was started. The Google post UI currently requires a valid summary field and/or media upload; browser automation cannot reliably upload files until Chrome extension file access is enabled.
 
 Blocked by Google upload UI:
 
@@ -105,8 +125,15 @@ Completed:
 - Universal testing machine page is indexed
 - Calibration service page is indexed
 - Tensile testing machine page indexing request submitted
-- Structured data updated from `Product` to `Service` for B2B machine supply/support to avoid Product Summary price/review/rating errors
+- Structured data added
 - Landing pages prepared for buyer keywords
+- Product structured data issue was corrected by replacing product schema with service schema where pricing/reviews are not available.
+- Search Console Product Summary validation was started on 30 July 2026.
+- Calibration landing page strengthened for testing machine calibration, tensile machine calibration, universal testing machine calibration, load cell calibration and ISO/IEC 17025 preparation wording.
+
+In progress:
+
+- Google indexing requests are pending for new/updated landing pages. This can take days to weeks.
 
 SEO does not guarantee instant first page ranking. Google Ads is the faster route for immediate search visibility.
 
@@ -131,19 +158,20 @@ Budget is RM400-RM500/month, so the first test must stay focused.
 
 Only needed before launch:
 
-- Confirm Google Business Profile changes are saved
 - Confirm Google Ads billing/payment method
+- Confirm before pressing Google Ads `Submit`
+- If Google Business post media upload is needed, either upload manually or enable Chrome extension file URL access
 - Confirm ISO 17025 wording once official certificate status changes
 
 Everything else can continue in the workspace without restarting research.
 
 ## Next Best Actions
 
-1. Wait for GitHub Pages deployment after latest structured-data push.
-2. In Google Search Console, rerun live URL test for homepage.
-3. Validate fix for Product Summary issue after the deployed page no longer outputs Product schema.
-4. Build Google Ads campaigns in paused mode.
-5. Launch ads only after owner confirms billing and final budget.
+1. Finish Google Ads billing setup with owner present.
+2. Build Campaign 2 for calibration at RM6/day.
+3. Add shared negative keywords inside Google Ads.
+4. Complete or retry the Google Business post with media.
+5. Monitor Search Console indexing and Product Summary validation.
 
 Do not redo:
 
