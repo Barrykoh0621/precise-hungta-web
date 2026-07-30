@@ -29,6 +29,29 @@ const searchTerms = [
   "ISO 17025 calibration Malaysia",
 ];
 
+const calibrationFocus = [
+  {
+    title: "Testing machine calibration",
+    desc: "Support for factories and QA laboratories that need force, displacement or load-system checking before customer audits.",
+  },
+  {
+    title: "Tensile machine calibration",
+    desc: "For tensile testers used in metal, rubber, copper, wire, cable and material strength testing applications.",
+  },
+  {
+    title: "Universal testing machine calibration",
+    desc: "For UTM systems used across tensile, compression, bending and flexural testing workflows.",
+  },
+  {
+    title: "Load cell calibration support",
+    desc: "For load cells, force systems and load measurement chains used in material testing equipment.",
+  },
+  {
+    title: "ISO/IEC 17025 preparation",
+    desc: "Hung Ta is preparing ISO/IEC 17025 calibration capability. We will only make official certificate claims after approval documents are ready.",
+  },
+];
+
 const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
   usePageSeo({
     title: "Testing Machine Calibration Malaysia | Hung Ta Instrument",
@@ -112,6 +135,31 @@ const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
               </div>
             </div>
           </AnimatedSection>
+        </div>
+      </section>
+
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <AnimatedSection>
+            <div className="max-w-3xl mb-10">
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-accent mb-3">Calibration support scope</p>
+              <h2 className="text-3xl md:text-5xl font-black mb-5">Built around the calibration searches buyers actually use</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                This page is prepared for customers searching for testing machine calibration, tensile machine calibration, universal testing machine calibration, load cell calibration and ISO/IEC 17025 preparation support in Malaysia.
+              </p>
+            </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+            {calibrationFocus.map((item, index) => (
+              <AnimatedSection key={item.title} delay={index * 0.05}>
+                <div className="h-full border border-border rounded-lg p-5 bg-white">
+                  <ShieldCheck className="w-5 h-5 text-accent mb-4" />
+                  <h3 className="text-lg font-black mb-3">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
 
