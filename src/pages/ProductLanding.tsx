@@ -22,9 +22,7 @@ function getProductImage(image: string): string {
 }
 
 function getSiteBaseUrl() {
-  return window.location.hostname.endsWith("github.io")
-    ? "https://barrykoh0621.github.io/precise-hungta-web"
-    : "https://www.hungtainstrument.com.my";
+  return "https://www.hungtainstrument.com.my";
 }
 
 type LandingKey = "hydraulic" | "compression" | "electrical-tensile" | "tensile" | "universal" | "material";
@@ -230,9 +228,9 @@ const ProductLanding = ({ pageKey, onOpenQuote }: ProductLandingProps) => {
         availability: "https://schema.org/InStock",
         areaServed: ["Malaysia", "Singapore", "Asia"],
         itemOffered: {
-          "@type": "Product",
+          "@type": "Service",
           name: `${product.model} ${product.name}`,
-          category: product.categoryLabel,
+          serviceType: product.categoryLabel,
           description: product.tagline,
           image: getProductImage(product.image),
         },
