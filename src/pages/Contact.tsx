@@ -11,7 +11,7 @@ const Contact = () => {
   usePageSeo({
     title: "Contact Hung Ta Instrument | Hydraulic, Compression & Tensile Testing Machines",
     description:
-      "Contact HUNG TA INSTRUMENT (M) Sdn. Bhd. for hydraulic testing machine, compression machine, electrical tensile testing machine, calibration, software and support.",
+      "Contact Hung Ta Instrument Enterprise for hydraulic testing machine, compression machine, electrical tensile testing machine, calibration, software and support.",
   });
 
   return (
@@ -46,9 +46,9 @@ const Contact = () => {
               <div className="bg-card border border-border rounded-lg p-5 flex gap-4">
                 <Building2 className="w-6 h-6 text-accent shrink-0" />
                 <div>
-                  <h2 className="font-bold mb-1">Company Registration</h2>
-                  <p className="text-sm text-muted-foreground">HUNG TA INSTRUMENT (M) Sdn. Bhd.</p>
-                  <p className="text-sm text-muted-foreground">SSM: 256852-H</p>
+                  <h2 className="font-bold mb-1">Company</h2>
+                  <p className="text-sm text-muted-foreground">Hung Ta Instrument Enterprise</p>
+                  <p className="text-sm text-muted-foreground">Testing machine supply, service and calibration support</p>
                 </div>
               </div>
 
