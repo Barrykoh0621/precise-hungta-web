@@ -2,7 +2,7 @@
 
 Company: HUNG TA INSTRUMENT (M) Sdn. Bhd.
 
-Last updated: 30 July 2026, Malaysia time
+Last updated: 31 July 2026, Malaysia time
 
 ## Where We Are Now
 
@@ -36,6 +36,7 @@ Completed:
 - Calibration page added to main navigation
 - Homepage buyer paths updated for tensile, universal and calibration focus
 - Lead tracking event hooks prepared for future GA4 / Google Ads tracking
+- Google Ads tag `AW-18359884879` added and confirmed live on the homepage and the three core landing pages
 
 Main active marketing pages:
 
@@ -45,14 +46,14 @@ Main active marketing pages:
 
 ## Google Ads Status
 
-Partly built in Google Ads, not launched.
+Partly built in Google Ads. Campaign 1 is live; Campaign 2 is built as a draft but not published yet.
 
 Budget plan:
 
-- RM15/day
-- About RM456/month
-- RM9/day for universal / tensile machine
-- RM6/day for calibration / ISO 17025 preparation
+- RM13/day
+- About RM395/month
+- RM8/day for universal / tensile machine
+- RM5/day for calibration / ISO 17025 preparation
 
 Prepared files:
 
@@ -65,25 +66,40 @@ Prepared files:
 
 Important:
 
-Ads must not be published or spend money until owner confirms billing and final launch.
+Ads must stay within the approved starter budget of about RM13/day total, or about RM395/month.
 
 Google Ads account:
 
 - Account created/opened: `524-464-6437`
-- Campaign 1 draft created: `281499062168403`
+- Campaign 1 created and enabled
 - Campaign type corrected from Performance Max to Search
 - Location: Malaysia
 - Search partners: off
 - Display Network: off
 - Final URL: `https://www.hungtainstrument.com.my/tensile-testing-machine-malaysia/`
 - Keywords entered: exact/phrase only for tensile, universal and UTM terms
-- Budget entered: RM9/day
-- Current blocker: Google Ads is on the billing/payment step. Do not press `Submit` until the owner confirms billing and launch timing.
+- Budget: RM8/day
+- Current cost checked on 31 July 2026: MYR0.00
 
-Still to build after billing setup:
+Campaign 2 draft status:
 
-- Campaign 2: Calibration / ISO 17025 Preparation, RM6/day
-- Shared negative keywords inside Google Ads UI
+- Name: `HTI - Calibration ISO 17025 Prep`
+- Campaign type: Search
+- Bidding: maximize clicks with a RM3.00 maximum CPC cap
+- Location: Malaysia
+- Search partners: off
+- Display Network: off
+- AI Max: off
+- Final URL: `https://www.hungtainstrument.com.my/calibration-service-malaysia/`
+- Phone: `012-6280096`
+- Keywords entered: 10 exact/phrase calibration keywords
+- Budget: RM5/day
+- Status: draft reached review stage, but Google account identity verification interrupted publishing. The owner must approve Google verification on the iPhone/iPad prompt before publishing can continue.
+
+Still to finish in Google Ads:
+
+- Publish Campaign 2 after owner completes Google identity verification
+- Add shared/account negative keywords inside Google Ads UI
 
 ## Google Business Status
 
@@ -152,7 +168,7 @@ Pause for now:
 
 Reason:
 
-Budget is RM400-RM500/month, so the first test must stay focused.
+Budget is under RM400/month, so the first test must stay focused.
 
 ## What The Owner Needs To Do
 
@@ -168,7 +184,7 @@ Everything else can continue in the workspace without restarting research.
 ## Next Best Actions
 
 1. Finish Google Ads billing setup with owner present.
-2. Build Campaign 2 for calibration at RM6/day.
+2. Build Campaign 2 for calibration at RM5/day.
 3. Add shared negative keywords inside Google Ads.
 4. Complete or retry the Google Business post with media.
 5. Monitor Search Console indexing and Product Summary validation.
@@ -176,7 +192,7 @@ Everything else can continue in the workspace without restarting research.
 Do not redo:
 
 - Keyword strategy
-- RM400-RM500 starter budget
+- under RM400 starter budget
 - Google Business copywriting
 - Landing page selection
 
