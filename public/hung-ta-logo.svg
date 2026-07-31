@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" role="img" aria-labelledby="title desc">
-  <title id="title">Hung Ta Instrument (M) Sdn. Bhd. logo</title>
+  <title id="title">Hung Ta Instrument Enterprise logo</title>
   <desc id="desc">Red gear H mark with Hung Ta Instrument wordmark.</desc>
   <rect width="720" height="180" fill="#ffffff"/>
   <g transform="translate(36 26)" fill="#D3133D">
@@ -25,7 +25,7 @@
     <rect x="48" y="56" width="32" height="16" rx="2"/>
   </g>
   <g transform="translate(190 58)">
-    <text x="0" y="36" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800" letter-spacing="0" fill="#11294B">Hung Ta Instrument (M) Sdn. Bhd.</text>
+    <text x="0" y="36" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800" letter-spacing="0" fill="#11294B">Hung Ta Instrument Enterprise</text>
     <text x="2" y="70" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="4" fill="#D3133D">TESTING MACHINES AND QUALITY CONTROL SYSTEMS</text>
   </g>
 </svg>
