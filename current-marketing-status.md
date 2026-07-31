@@ -94,11 +94,11 @@ Campaign 2 draft status:
 - Phone: `012-6280096`
 - Keywords entered: 10 exact/phrase calibration keywords
 - Budget: RM5/day
-- Status: draft reached review stage, but Google account identity verification interrupted publishing. The owner must approve Google verification on the iPhone/iPad prompt before publishing can continue.
+- Status: draft reached review stage, but after Google identity verification the Google Ads UI reloaded the draft with missing required fields. Review showed no ad, no keywords and MYR0.00 budget, so the campaign was not published. The Google Ads page also showed an ad blocker warning, which may be preventing stable saving in the current browser session.
 
 Still to finish in Google Ads:
 
-- Publish Campaign 2 after owner completes Google identity verification
+- Rebuild or resume Campaign 2 in a stable Google Ads browser session with ad blocker disabled, then publish only after review confirms ad, 10 keywords and RM5/day budget
 - Add shared/account negative keywords inside Google Ads UI
 
 ## Google Business Status
