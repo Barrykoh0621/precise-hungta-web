@@ -11,7 +11,7 @@ const Footer = () => (
             <BrandLogo variant="light" size="sm" />
           </div>
           <p className="text-primary-foreground/60 text-sm leading-relaxed">
-            HUNG TA INSTRUMENT (M) Sdn. Bhd. (SSM 256852-H), supplier of hydraulic, compression and electrical tensile testing machines for metal, rubber and copper industries.
+            Hung Ta Instrument Enterprise, supplier of hydraulic, compression and electrical tensile testing machines for metal, rubber and copper industries.
           </p>
         </div>
 
@@ -31,15 +31,6 @@ const Footer = () => (
                 <Link to={link.path} className="hover:text-accent transition-colors">{link.label}</Link>
               </li>
             ))}
-            <li>
-              <a href="/tensile-testing-machine-malaysia" className="hover:text-accent transition-colors">Tensile Testing Machines</a>
-            </li>
-            <li>
-              <a href="/how-to-choose-tensile-testing-machine-malaysia" className="hover:text-accent transition-colors">Tensile Machine Guide</a>
-            </li>
-            <li>
-              <a href="/calibration-service-malaysia" className="hover:text-accent transition-colors">Calibration Service</a>
-            </li>
           </ul>
         </div>
 
@@ -76,7 +67,7 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-primary-foreground/10 mt-12 pt-6 text-center text-xs text-primary-foreground/40">
-        &copy; {new Date().getFullYear()} HUNG TA INSTRUMENT (M) SDN. BHD. All rights reserved.
+        &copy; {new Date().getFullYear()} Hung Ta Instrument Enterprise All rights reserved.
       </div>
     </div>
   </footer>
