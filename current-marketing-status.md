@@ -155,10 +155,12 @@ Completed:
 - External citation cleanup tracker prepared
 - Day 3 / Day 4 pages live for `tensile machine calibration Malaysia` and `universal testing machine service Malaysia`
 - Search Console indexing requested for the Day 3 / Day 4 supporting pages on 2026-08-02
+- Day 5 Google Business Profile calibration post was staged, but not published because Google required summary/photo validation and Chrome file upload permission blocked media upload
 
 In progress:
 
 - Google indexing and ranking movement are pending for new/updated landing pages. This can take days to weeks.
+- Google Business Profile post publishing is blocked until Chrome extension file URL access is enabled or Barry manually uploads the prepared post image.
 
 SEO does not guarantee instant first page ranking. Google Ads is the faster route for immediate search visibility.
 
@@ -193,9 +195,9 @@ Everything else can continue in the workspace without restarting research.
 ## Next Best Actions
 
 1. Upload Facebook profile and cover image.
-2. Finish Google Ads billing setup with owner present.
-3. Rebuild or resume Campaign 2 for calibration at RM5/day.
-4. Complete or retry the Google Business post with media.
+2. Enable Chrome extension file URL access, then retry Google Business Profile post with media.
+3. Finish Google Ads billing setup with owner present.
+4. Rebuild or resume Campaign 2 for calibration at RM5/day.
 5. Monitor Search Console indexing and Product Summary validation.
 
 Do not redo:
