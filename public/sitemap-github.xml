@@ -37,10 +37,22 @@
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://barrykoh0621.github.io/precise-hungta-web/tensile-machine-calibration-malaysia</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://barrykoh0621.github.io/precise-hungta-web/universal-testing-machine-malaysia</loc>
     <lastmod>2026-06-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://barrykoh0621.github.io/precise-hungta-web/universal-testing-machine-service-malaysia</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
   </url>
   <url>
     <loc>https://barrykoh0621.github.io/precise-hungta-web/material-testing-machine-malaysia</loc>

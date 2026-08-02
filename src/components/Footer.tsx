@@ -31,6 +31,21 @@ const Footer = () => (
                 <Link to={link.path} className="hover:text-accent transition-colors">{link.label}</Link>
               </li>
             ))}
+            <li>
+              <a href="/tensile-testing-machine-malaysia" className="hover:text-accent transition-colors">Tensile Testing Machines</a>
+            </li>
+            <li>
+              <a href="/how-to-choose-tensile-testing-machine-malaysia" className="hover:text-accent transition-colors">Tensile Machine Guide</a>
+            </li>
+            <li>
+              <a href="/calibration-service-malaysia" className="hover:text-accent transition-colors">Calibration Service</a>
+            </li>
+            <li>
+              <a href="/tensile-machine-calibration-malaysia" className="hover:text-accent transition-colors">Tensile Calibration Guide</a>
+            </li>
+            <li>
+              <a href="/universal-testing-machine-service-malaysia" className="hover:text-accent transition-colors">UTM Service Guide</a>
+            </li>
           </ul>
         </div>
 
