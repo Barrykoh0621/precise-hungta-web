@@ -38,29 +38,33 @@ Note: ISO/IEC 17025 accreditation claims should only be made with current offici
 
 ## Result
 
-Not published yet.
+Published after Barry enabled Chrome extension file URL access.
 
-Google Business Profile showed the same validation blocker seen in the earlier July attempt:
+Google Business Profile initially showed the same validation blocker seen in the earlier July attempt:
 
 - "必須提供摘要或相片/影片"
 - Browser-side image upload was blocked by the Chrome extension file upload permission.
 - Opening `chrome://extensions` through browser control was blocked by Chrome/browser security policy, so Codex cannot enable the setting remotely from this session.
 
+After Barry enabled `Allow access to file URLs` for the ChatGPT Chrome extension, Codex retried the post:
+
+- Uploaded `google-business-02-factory-qa-tensile.png`
+- Filled the approved calibration post copy
+- Published the post from Google Business Profile
+- Google Business Profile showed the newest post with a publish timestamp of "15 seconds ago"
+
+Older rejected post attempts are still visible in the Google Business Profile post list, but the newest post was published with the testing-machine image.
+
 ## Exact Owner Action Needed
 
-Barry needs to do this once on the computer:
+Completed by Barry:
 
 1. Open Chrome.
 2. Go to `chrome://extensions`.
 3. Find the ChatGPT extension.
 4. Click Details.
 5. Enable `Allow access to file URLs`.
-6. Return to the Google Business Profile post form and upload:
-   - `C:\Users\huail\precise-hungta-web\public\google-business-photos\google-business-02-factory-qa-tensile.png`
-
-After that, Codex can retry publishing the post.
 
 ## Practical Note
 
-This is still a useful Day 5 execution attempt because the approved post copy, target topic and blocker are now confirmed. The next execution should not rewrite the post; it should only solve the image upload permission and publish.
-
+Day 5 is now completed. The next Google Business Profile action should be Post 2 after 3 to 5 days, unless a time-sensitive calibration update is needed earlier.
