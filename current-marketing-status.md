@@ -153,11 +153,12 @@ Completed:
 - Calibration landing page strengthened for testing machine calibration, tensile machine calibration, universal testing machine calibration, load cell calibration and ISO/IEC 17025 preparation wording
 - Facebook official page created as Hung Ta Instrument Enterprise
 - External citation cleanup tracker prepared
-- Day 3 / Day 4 pages prepared for `tensile machine calibration Malaysia` and `universal testing machine service Malaysia`
+- Day 3 / Day 4 pages live for `tensile machine calibration Malaysia` and `universal testing machine service Malaysia`
+- Search Console indexing requested for the Day 3 / Day 4 supporting pages on 2026-08-02
 
 In progress:
 
-- Google indexing requests are pending for new/updated landing pages. This can take days to weeks.
+- Google indexing and ranking movement are pending for new/updated landing pages. This can take days to weeks.
 
 SEO does not guarantee instant first page ranking. Google Ads is the faster route for immediate search visibility.
 
@@ -191,12 +192,11 @@ Everything else can continue in the workspace without restarting research.
 
 ## Next Best Actions
 
-1. Request indexing for the two Day 3 / Day 4 supporting pages.
-2. Upload Facebook profile and cover image.
-3. Finish Google Ads billing setup with owner present.
-4. Rebuild or resume Campaign 2 for calibration at RM5/day.
-5. Complete or retry the Google Business post with media.
-6. Monitor Search Console indexing and Product Summary validation.
+1. Upload Facebook profile and cover image.
+2. Finish Google Ads billing setup with owner present.
+3. Rebuild or resume Campaign 2 for calibration at RM5/day.
+4. Complete or retry the Google Business post with media.
+5. Monitor Search Console indexing and Product Summary validation.
 
 Do not redo:
 

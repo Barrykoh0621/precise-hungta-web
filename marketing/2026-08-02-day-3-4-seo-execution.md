@@ -63,14 +63,15 @@ Secondary intent:
 - Added both URLs to sitemap.xml.
 - Added both URLs to sitemap-github.xml.
 - Added internal footer links so Google can crawl the new pages from the main React site.
+- Verified both pages were live on the official domain with HTTP 200 after deployment.
+- Requested Google Search Console indexing for both pages on 2026-08-02.
+- Search Console showed "已要求建立索引" / indexing requested for both URLs.
 
 ## What Still Needs Barry
 
-1. Open Google Search Console and request indexing for:
-   - https://www.hungtainstrument.com.my/tensile-machine-calibration-malaysia
-   - https://www.hungtainstrument.com.my/universal-testing-machine-service-malaysia
-2. Upload Facebook profile and cover image if Chrome extension upload permission is still blocked.
-3. Approve public Facebook or Google Business Profile posts before publishing.
+1. Upload Facebook profile and cover image if Chrome extension upload permission is still blocked.
+2. Approve public Facebook or Google Business Profile posts before publishing.
+3. Check Search Console again in 3 to 7 days for discovery, crawl and indexing status.
 
 ## Risk To Watch
 
