@@ -156,6 +156,7 @@ Completed:
 - Day 3 / Day 4 pages live for `tensile machine calibration Malaysia` and `universal testing machine service Malaysia`
 - Search Console indexing requested for the Day 3 / Day 4 supporting pages on 2026-08-02
 - Day 5 Google Business Profile calibration post was staged, but not published because Google required summary/photo validation and Chrome file upload permission blocked media upload
+- Day 6 Facebook calibration/service preparation post was published on the official Hung Ta Instrument Enterprise Facebook Page on 2026-08-02
 
 In progress:
 

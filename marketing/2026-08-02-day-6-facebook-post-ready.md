@@ -3,7 +3,7 @@
 Owner: Barry / Rachel
 Business: Hung Ta Instrument Enterprise
 Date prepared: 2026-08-02
-Status: Ready to publish after Facebook media upload works
+Status: Published on Facebook Page on 2026-08-02
 
 ## Post
 
@@ -34,9 +34,17 @@ Use:
 
 `C:\Users\huail\precise-hungta-web\public\google-business-photos\google-business-02-factory-qa-tensile.png`
 
+Image was not attached in the first live Facebook post because the no-image post could be published immediately and already generated a website link preview.
+
 ## Why This Post
 
 - Supports calibration buyer intent.
 - Gives useful preparation steps instead of a weak sales-only post.
 - Reuses the same message as the Google Business Profile post for consistent SEO/NAP signals.
 
+## Live Publishing Evidence
+
+- Facebook Page: `https://www.facebook.com/profile.php?id=61592144285671`
+- Page showed the post as published "剛剛" / just now.
+- Facebook generated a link preview for:
+  - `https://www.hungtainstrument.com.my/calibration-service-malaysia`
