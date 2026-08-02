@@ -2,7 +2,7 @@
 
 Company: Hung Ta Instrument Enterprise
 
-Last updated: 2 August 2026, 6:05 PM Malaysia time
+Last updated: 2 August 2026, 11:30 PM Malaysia time
 
 ## Where We Are Now
 
@@ -51,14 +51,26 @@ Main active marketing pages:
 
 ## Google Ads Status
 
-Partly built in Google Ads. Campaign 1 is live; Campaign 2 is built as a draft but not published yet.
+Live in Google Ads. The current practical setup is one Search campaign first, because the live campaign already contains both calibration and tensile / universal testing machine keywords.
 
-Budget plan:
+Current live setup checked on 2 August 2026:
 
-- RM13/day
-- About RM395/month
-- RM8/day for universal / tensile machine
-- RM5/day for calibration / ISO 17025 preparation
+- Account: `524-464-6437`
+- Account balance shown in Google Ads: `-MYR 200.00`
+- Primary payment method shown: FPX Public Bank
+- Campaign: `Campaign #1`
+- Campaign type: Search
+- Status: eligible / learning
+- Budget reduced from RM30/day to RM10/day to protect the RM200 starter balance
+- Early data seen in Google Ads: 3 impressions, 0 clicks, MYR0.00 cost
+- Search partners: previously set off
+- Display Network: previously set off
+
+Budget control:
+
+- Current live cap: RM10/day
+- RM200 balance should cover roughly 20 days if Google spends the full daily amount
+- Do not add more money yet; review search terms and clicks first
 
 Prepared files:
 
@@ -71,7 +83,7 @@ Prepared files:
 
 Important:
 
-Ads must stay within the approved starter budget of about RM13/day total, or about RM395/month.
+Ads must stay within the current RM10/day starter cap unless Barry explicitly approves an increase.
 
 Google Ads account:
 
@@ -83,8 +95,8 @@ Google Ads account:
 - Display Network: off
 - Final URL: `https://www.hungtainstrument.com.my/tensile-testing-machine-malaysia/`
 - Keywords entered: exact/phrase only for tensile, universal and UTM terms
-- Budget: RM8/day
-- Current cost checked on 31 July 2026: MYR0.00
+- Budget: RM10/day after 2 August 2026 adjustment
+- Current cost checked on 2 August 2026: MYR0.00
 
 Campaign 2 draft status:
 
@@ -101,10 +113,18 @@ Campaign 2 draft status:
 - Budget: RM5/day
 - Status: draft reached review stage, but after Google identity verification the Google Ads UI reloaded the draft with missing required fields. Review showed no ad, no keywords and MYR0.00 budget, so the campaign was not published. The Google Ads page also showed an ad blocker warning, which may be preventing stable saving in the current browser session.
 
+Negative keyword work completed on 2 August 2026:
+
+- 30 negative keywords are now visible in Google Ads
+- Added campaign-level negatives: `vacancy`, `career`, `internship`, `used`, `diy`, `homemade`, `free`, `meaning`, `wikipedia`, `youtube`, `certificate download`, `iso standard pdf`, `calibration course`, `calibration training`
+- Existing ad-group negatives remain in place, including `cheap`, `job`, `pdf`, `manual`, `salary`, `second hand`, `training`, `repair only`
+
 Still to finish in Google Ads:
 
-- Rebuild or resume Campaign 2 in a stable Google Ads browser session with ad blocker disabled, then publish only after review confirms ad, 10 keywords and RM5/day budget
-- Add shared/account negative keywords inside Google Ads UI
+- Disable ad blocker for Google Ads if the warning keeps appearing
+- Rename `Campaign #1` to a clearer name when convenient
+- After 24 to 48 hours of data, check search terms and add more negatives
+- Split calibration into its own campaign later only if data shows the current mixed campaign is wasting budget
 
 ## Google Business Status
 
@@ -157,6 +177,7 @@ Completed:
 - Search Console indexing requested for the Day 3 / Day 4 supporting pages on 2026-08-02
 - Day 5 Google Business Profile calibration post was published with testing-machine image after Chrome extension file URL access was enabled
 - Day 6 Facebook calibration/service preparation post was published on the official Hung Ta Instrument Enterprise Facebook Page on 2026-08-02
+- Day 7 Google Ads budget was reduced to RM10/day and campaign-level negative keywords were expanded on 2026-08-02
 
 In progress:
 
@@ -195,8 +216,8 @@ Everything else can continue in the workspace without restarting research.
 ## Next Best Actions
 
 1. Upload Facebook profile and cover image.
-2. Finish Google Ads billing setup with owner present.
-3. Rebuild or resume Campaign 2 for calibration at RM5/day.
+2. Monitor Google Ads search terms after the first 24 to 48 hours of spend.
+3. Disable ad blocker in Chrome for Google Ads if the warning remains.
 4. Monitor Search Console indexing and Product Summary validation.
 5. Prepare Google Business Profile Post 2 for 3 to 5 days later.
 
