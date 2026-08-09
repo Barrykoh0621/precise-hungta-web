@@ -2,7 +2,7 @@
 
 Company: Hung Ta Instrument Enterprise
 
-Last updated: 2 August 2026, 11:30 PM Malaysia time
+Last updated: 9 August 2026, Malaysia time
 
 ## Where We Are Now
 
@@ -48,6 +48,8 @@ Main active marketing pages:
 - https://www.hungtainstrument.com.my/calibration-service-malaysia/
 - https://www.hungtainstrument.com.my/tensile-machine-calibration-malaysia
 - https://www.hungtainstrument.com.my/universal-testing-machine-service-malaysia
+- https://www.hungtainstrument.com.my/testing-machine-calibration-thailand
+- https://www.hungtainstrument.com.my/testing-machine-calibration-indonesia
 
 ## Google Ads Status
 
@@ -65,6 +67,19 @@ Current live setup checked on 2 August 2026:
 - Early data seen in Google Ads: 3 impressions, 0 clicks, MYR0.00 cost
 - Search partners: previously set off
 - Display Network: previously set off
+
+Updated Google Ads data checked on 9 August 2026:
+
+- Date range shown: 30 July 2026 to 9 August 2026
+- Impressions: 254
+- Clicks: 21
+- CTR: 8.27%
+- Cost: MYR89.63
+- Search impression share: 14.11%
+- Balance shown: `-MYR 303.20`
+- Conversion tracking: 1 action recording, 2 actions with no new conversions
+- Strongest visible keywords by cost/clicks included `calibration service malaysia`, `testing machine calibration`, `universal tensile machine`, `machine calibration malaysia`, `universal testing machine calibration`
+- Search terms included buyer-relevant searches such as `calibration services malaysia`, `calibration company in selangor`, `universal testing machine`, `utm machine`, `calibrate machine`, `calibration company in malaysia`, `tensile machine calibration`, and `tensile machine`
 
 Budget control:
 
@@ -178,6 +193,7 @@ Completed:
 - Day 5 Google Business Profile calibration post was published with testing-machine image after Chrome extension file URL access was enabled
 - Day 6 Facebook calibration/service preparation post was published on the official Hung Ta Instrument Enterprise Facebook Page on 2026-08-02
 - Day 7 Google Ads budget was reduced to RM10/day and campaign-level negative keywords were expanded on 2026-08-02
+- Day 14 Thailand and Indonesia landing pages were created and added to the sitemap on 2026-08-09
 
 In progress:
 
@@ -191,6 +207,7 @@ Do first:
 
 1. Universal / tensile testing machine enquiries
 2. Calibration / ISO 17025 preparation enquiries
+3. Thailand and Indonesia regional testing machine enquiries, only through a separate controlled campaign or SEO pages
 
 Pause for now:
 
@@ -220,6 +237,8 @@ Everything else can continue in the workspace without restarting research.
 3. Disable ad blocker in Chrome for Google Ads if the warning remains.
 4. Monitor Search Console indexing and Product Summary validation.
 5. Prepare Google Business Profile Post 2 for 3 to 5 days later.
+6. Submit Thailand and Indonesia pages in Search Console.
+7. If approved, create a separate Thailand / Indonesia Google Ads campaign at RM10/day total for 7 days.
 
 Do not redo:
 
