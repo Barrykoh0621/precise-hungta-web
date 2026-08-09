@@ -37,6 +37,15 @@ Both pages target:
 - load cell calibration
 - factory QA and lab buyers
 
+Published and submitted:
+
+- GitHub Pages deployment completed successfully for commit `c385c49`.
+- Both new pages returned HTTP 200 after deployment.
+- Search Console indexing requested for the Thailand page.
+- Search Console indexing requested for the Indonesia page.
+- Sitemap was resubmitted in Search Console on 9 August 2026.
+- Search Console showed `/sitemap.xml` status `success` with 18 discovered pages after resubmission.
+
 ## Recommended Ads Move
 
 Do not add Thailand and Indonesia into the current Malaysia campaign.

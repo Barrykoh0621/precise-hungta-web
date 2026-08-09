@@ -194,6 +194,8 @@ Completed:
 - Day 6 Facebook calibration/service preparation post was published on the official Hung Ta Instrument Enterprise Facebook Page on 2026-08-02
 - Day 7 Google Ads budget was reduced to RM10/day and campaign-level negative keywords were expanded on 2026-08-02
 - Day 14 Thailand and Indonesia landing pages were created and added to the sitemap on 2026-08-09
+- Day 14 Search Console indexing was requested for the Thailand and Indonesia pages on 2026-08-09
+- Day 14 sitemap was resubmitted in Search Console and showed success with 18 discovered pages on 2026-08-09
 
 In progress:
 
@@ -237,7 +239,7 @@ Everything else can continue in the workspace without restarting research.
 3. Disable ad blocker in Chrome for Google Ads if the warning remains.
 4. Monitor Search Console indexing and Product Summary validation.
 5. Prepare Google Business Profile Post 2 for 3 to 5 days later.
-6. Submit Thailand and Indonesia pages in Search Console.
+6. Monitor Thailand and Indonesia indexing status in Search Console.
 7. If approved, create a separate Thailand / Indonesia Google Ads campaign at RM10/day total for 7 days.
 
 Do not redo:
