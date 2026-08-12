@@ -61,3 +61,27 @@ The approved monthly budget is RM700.
 3. If irrelevant clicks continue, add more negatives before raising budget.
 4. If WhatsApp or phone enquiries appear, keep RM15/day and improve conversion tracking.
 5. Keep Thailand and Indonesia on SEO only for now.
+
+## Extra Anti-Junk Click Tightening
+
+Prepared after Barry requested stronger junk-click prevention before sleeping.
+
+Added a second protection batch to the negative keyword source file and pushed it live in Google Ads. This batch targets searches that usually do not become customers:
+
+- Job, vacancy, internship and salary searches
+- Course, training and ISO 17025 PDF searches
+- Certificate, report, checklist, form and template searches
+- Student experiment, lab report, formula and calculation searches
+- Manual, repair manual, second-hand and rental searches
+
+Live verification:
+
+- Before extra tightening: 49 negative keyword rows
+- After extra tightening: 94 negative keyword rows
+- New live examples visible in Google Ads: `calibration job`, `calibration jobs`, `iso 17025 pdf`
+
+Important control:
+
+Do not block broad buyer terms such as `calibration service`, `calibration company`, `tensile machine`, `universal testing machine`, `load cell calibration`, or `testing machine calibration`.
+
+The goal is to reduce wasted spend without hiding the ads from real buyers.

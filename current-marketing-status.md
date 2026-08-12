@@ -98,6 +98,8 @@ Day 9 Google Ads cleanup completed on 13 August 2026:
 - Negative keyword table increased from 30 rows to 49 rows
 - Live campaign budget was found at `MYR58.00/day`, which was too high for the RM700/month budget
 - `Campaign #1` budget was reduced and verified at `MYR15.00/day`
+- A second anti-junk-click batch was added live after Barry requested stronger protection before sleeping
+- Negative keyword table increased again from 49 rows to 94 rows
 - Thailand and Indonesia ad campaigns were not created
 
 Budget control:
@@ -158,7 +160,8 @@ Negative keyword work completed on 2 August 2026:
 Negative keyword work completed on 13 August 2026:
 
 - 19 additional campaign-level negatives were added from the Day 8 cleanup list
-- Total negative keyword rows visible in Google Ads after saving: 49
+- 45 extra anti-junk-click negatives were added after Barry requested stronger protection
+- Total negative keyword rows visible in Google Ads after final saving: 94
 
 Still to finish in Google Ads:
 
@@ -224,7 +227,7 @@ Completed:
 - Day 14 sitemap was resubmitted in Search Console and showed success with 18 discovered pages on 2026-08-09
 - Day 18 internal links were added from the calibration page, services page and footer to the Thailand and Indonesia landing pages on 2026-08-13
 - Day 8 budget allocation was set around RM700/month and additional negative keyword candidates were prepared on 2026-08-13
-- Day 9 Google Ads cleanup was completed on 2026-08-13: 19 negative keywords added live and campaign budget reduced from MYR58/day to MYR15/day
+- Day 9 Google Ads cleanup was completed on 2026-08-13: 64 total negative keywords added live, negative keyword rows increased to 94, and campaign budget reduced from MYR58/day to MYR15/day
 
 In progress:
 
