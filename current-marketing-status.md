@@ -2,7 +2,7 @@
 
 Company: Hung Ta Instrument Enterprise
 
-Last updated: 9 August 2026, Malaysia time
+Last updated: 13 August 2026, Malaysia time
 
 ## Where We Are Now
 
@@ -196,6 +196,7 @@ Completed:
 - Day 14 Thailand and Indonesia landing pages were created and added to the sitemap on 2026-08-09
 - Day 14 Search Console indexing was requested for the Thailand and Indonesia pages on 2026-08-09
 - Day 14 sitemap was resubmitted in Search Console and showed success with 18 discovered pages on 2026-08-09
+- Day 18 internal links were added from the calibration page, services page and footer to the Thailand and Indonesia landing pages on 2026-08-13
 
 In progress:
 
@@ -240,7 +241,8 @@ Everything else can continue in the workspace without restarting research.
 4. Monitor Search Console indexing and Product Summary validation.
 5. Prepare Google Business Profile Post 2 for 3 to 5 days later.
 6. Monitor Thailand and Indonesia indexing status in Search Console.
-7. If approved, create a separate Thailand / Indonesia Google Ads campaign at RM10/day total for 7 days.
+7. Check live Google Ads search terms and add fresh negatives if irrelevant spend appears.
+8. If approved, create a separate Thailand / Indonesia Google Ads campaign at RM10/day total for 7 days.
 
 Do not redo:
 

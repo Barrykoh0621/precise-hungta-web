@@ -35,6 +35,19 @@ const services = [
   },
 ];
 
+const regionalSupportLinks = [
+  {
+    label: "Thailand testing machine calibration",
+    href: "/testing-machine-calibration-thailand",
+    desc: "For Thailand factories and QA labs that need tensile machine, UTM machine or load-cell calibration support.",
+  },
+  {
+    label: "Indonesia testing machine calibration",
+    href: "/testing-machine-calibration-indonesia",
+    desc: "For Indonesia factories and QA labs that need tensile machine, UTM machine or load-cell calibration support.",
+  },
+];
+
 const Services = ({ onOpenQuote }: ServicesProps) => {
   usePageSeo({
     title: "Testing Machine Service, Calibration & Support | Hung Ta",
@@ -80,6 +93,30 @@ const Services = ({ onOpenQuote }: ServicesProps) => {
             </div>
           </AnimatedSection>
         ))}
+      </div>
+    </section>
+
+    <section className="py-20 bg-muted">
+      <div className="container mx-auto px-4">
+        <AnimatedSection>
+          <div className="max-w-3xl mb-10">
+            <p className="text-accent text-xs font-bold uppercase tracking-[0.28em] mb-4">Regional support</p>
+            <h2 className="text-3xl md:text-5xl font-black mb-4">Thailand and Indonesia enquiries</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              For overseas enquiries, send the machine model, capacity, nameplate photo, location and required calibration or service date first. Hung Ta will advise the practical next step before any site arrangement.
+            </p>
+          </div>
+        </AnimatedSection>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {regionalSupportLinks.map((link, index) => (
+            <AnimatedSection key={link.href} delay={index * 0.08}>
+              <a href={link.href} className="block bg-card border border-border rounded-lg p-6 h-full hover:border-accent transition-colors">
+                <h3 className="text-xl font-black mb-3">{link.label}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{link.desc}</p>
+              </a>
+            </AnimatedSection>
+          ))}
+        </div>
       </div>
     </section>
 

@@ -46,6 +46,12 @@ const Footer = () => (
             <li>
               <a href="/universal-testing-machine-service-malaysia" className="hover:text-accent transition-colors">UTM Service Guide</a>
             </li>
+            <li>
+              <a href="/testing-machine-calibration-thailand" className="hover:text-accent transition-colors">Calibration Thailand</a>
+            </li>
+            <li>
+              <a href="/testing-machine-calibration-indonesia" className="hover:text-accent transition-colors">Calibration Indonesia</a>
+            </li>
           </ul>
         </div>
 
@@ -77,7 +83,7 @@ const Footer = () => (
               <a href="mailto:hungtatest@yahoo.com" className="hover:text-accent transition-colors">hungtatest@yahoo.com</a>
             </li>
           </ul>
-          <p className="text-xs text-primary-foreground/40 mt-4">Service area: Malaysia, Singapore and Asia.</p>
+          <p className="text-xs text-primary-foreground/40 mt-4">Service area: Malaysia, Singapore, Thailand, Indonesia and Southeast Asia.</p>
         </div>
       </div>
 
