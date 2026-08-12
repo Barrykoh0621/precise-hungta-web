@@ -92,11 +92,19 @@ Updated Google Ads data checked on 13 August 2026:
 - Balance shown: `-MYR 147.15`
 - Owner monthly budget: RM700
 
+Day 9 Google Ads cleanup completed on 13 August 2026:
+
+- 19 new campaign-level negative keywords were added to `Campaign #1`
+- Negative keyword table increased from 30 rows to 49 rows
+- Live campaign budget was found at `MYR58.00/day`, which was too high for the RM700/month budget
+- `Campaign #1` budget was reduced and verified at `MYR15.00/day`
+- Thailand and Indonesia ad campaigns were not created
+
 Budget control:
 
 - Owner approved monthly budget: RM700
 - Practical monthly average: about RM23/day
-- Recommended near-term cap: RM15/day for Malaysia only after fresh negative keywords are added
+- Current live cap: RM15/day for Malaysia only
 - Keep Thailand and Indonesia ads paused/not created for now
 
 Prepared files:
@@ -110,7 +118,7 @@ Prepared files:
 
 Important:
 
-Ads must stay within the current RM10/day starter cap unless Barry explicitly approves an increase.
+Ads must stay within the current RM15/day cap unless Barry explicitly approves an increase. Do not open Thailand or Indonesia campaigns yet.
 
 Google Ads account:
 
@@ -122,8 +130,9 @@ Google Ads account:
 - Display Network: off
 - Final URL: `https://www.hungtainstrument.com.my/tensile-testing-machine-malaysia/`
 - Keywords entered: exact/phrase only for tensile, universal and UTM terms
-- Budget: RM10/day after 2 August 2026 adjustment
-- Current cost checked on 2 August 2026: MYR0.00
+- Previous budget: RM10/day after 2 August 2026 adjustment
+- Current budget: RM15/day after 13 August 2026 Day 9 adjustment
+- Current cost checked on 13 August 2026: MYR234.13
 
 Campaign 2 draft status:
 
@@ -145,6 +154,11 @@ Negative keyword work completed on 2 August 2026:
 - 30 negative keywords are now visible in Google Ads
 - Added campaign-level negatives: `vacancy`, `career`, `internship`, `used`, `diy`, `homemade`, `free`, `meaning`, `wikipedia`, `youtube`, `certificate download`, `iso standard pdf`, `calibration course`, `calibration training`
 - Existing ad-group negatives remain in place, including `cheap`, `job`, `pdf`, `manual`, `salary`, `second hand`, `training`, `repair only`
+
+Negative keyword work completed on 13 August 2026:
+
+- 19 additional campaign-level negatives were added from the Day 8 cleanup list
+- Total negative keyword rows visible in Google Ads after saving: 49
 
 Still to finish in Google Ads:
 
@@ -210,6 +224,7 @@ Completed:
 - Day 14 sitemap was resubmitted in Search Console and showed success with 18 discovered pages on 2026-08-09
 - Day 18 internal links were added from the calibration page, services page and footer to the Thailand and Indonesia landing pages on 2026-08-13
 - Day 8 budget allocation was set around RM700/month and additional negative keyword candidates were prepared on 2026-08-13
+- Day 9 Google Ads cleanup was completed on 2026-08-13: 19 negative keywords added live and campaign budget reduced from MYR58/day to MYR15/day
 
 In progress:
 
