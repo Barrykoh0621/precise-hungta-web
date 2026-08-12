@@ -81,11 +81,23 @@ Updated Google Ads data checked on 9 August 2026:
 - Strongest visible keywords by cost/clicks included `calibration service malaysia`, `testing machine calibration`, `universal tensile machine`, `machine calibration malaysia`, `universal testing machine calibration`
 - Search terms included buyer-relevant searches such as `calibration services malaysia`, `calibration company in selangor`, `universal testing machine`, `utm machine`, `calibrate machine`, `calibration company in malaysia`, `tensile machine calibration`, and `tensile machine`
 
+Updated Google Ads data checked on 13 August 2026:
+
+- Date range shown: 30 July 2026 to 13 August 2026
+- Impressions: 718
+- Clicks: 52
+- CTR: 7.24%
+- Cost: MYR234.13
+- Search impression share: 18.47%
+- Balance shown: `-MYR 147.15`
+- Owner monthly budget: RM700
+
 Budget control:
 
-- Current live cap: RM10/day
-- RM200 balance should cover roughly 20 days if Google spends the full daily amount
-- Do not add more money yet; review search terms and clicks first
+- Owner approved monthly budget: RM700
+- Practical monthly average: about RM23/day
+- Recommended near-term cap: RM15/day for Malaysia only after fresh negative keywords are added
+- Keep Thailand and Indonesia ads paused/not created for now
 
 Prepared files:
 
@@ -197,6 +209,7 @@ Completed:
 - Day 14 Search Console indexing was requested for the Thailand and Indonesia pages on 2026-08-09
 - Day 14 sitemap was resubmitted in Search Console and showed success with 18 discovered pages on 2026-08-09
 - Day 18 internal links were added from the calibration page, services page and footer to the Thailand and Indonesia landing pages on 2026-08-13
+- Day 8 budget allocation was set around RM700/month and additional negative keyword candidates were prepared on 2026-08-13
 
 In progress:
 
@@ -242,7 +255,7 @@ Everything else can continue in the workspace without restarting research.
 5. Prepare Google Business Profile Post 2 for 3 to 5 days later.
 6. Monitor Thailand and Indonesia indexing status in Search Console.
 7. Check live Google Ads search terms and add fresh negatives if irrelevant spend appears.
-8. If approved, create a separate Thailand / Indonesia Google Ads campaign at RM10/day total for 7 days.
+8. Keep Thailand / Indonesia ads unlaunched for now; use SEO pages only until Malaysia campaign is cleaner.
 
 Do not redo:
 
