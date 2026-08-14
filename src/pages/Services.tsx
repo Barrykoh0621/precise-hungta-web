@@ -1,8 +1,9 @@
 ﻿import { Button } from "@/components/ui/button";
-import { Wrench, Target, Package, GraduationCap, ArrowUpRight } from "lucide-react";
+import { Wrench, Target, Package, GraduationCap, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { usePageSeo } from "@/hooks/use-page-seo";
+import { buildWhatsAppUrl } from "@/lib/leadLinks";
 
 interface ServicesProps {
   onOpenQuote: () => void;
@@ -24,7 +25,7 @@ const services = [
   {
     icon: Package,
     title: "Spare Parts Supply",
-    desc: "We help customers source critical spare parts including load cells, grips, jaws, extensometer arms, servo motors, and control boards. Fast support is available across Peninsular Malaysia where parts and scheduling allow.",
+    desc: "As the authorised Malaysian distributor, we maintain a local inventory of critical spare parts including load cells, grips, jaws, extensometer arms, servo motors, and control boards. Fast delivery across Peninsular Malaysia.",
     points: ["Genuine Hung Ta spare parts", "Local stock for critical items", "Express delivery available", "Competitive pricing"],
   },
   {
@@ -35,17 +36,10 @@ const services = [
   },
 ];
 
-const regionalSupportLinks = [
-  {
-    label: "Thailand testing machine calibration",
-    href: "/testing-machine-calibration-thailand",
-    desc: "For Thailand factories and QA labs that need tensile machine, UTM machine or load-cell calibration support.",
-  },
-  {
-    label: "Indonesia testing machine calibration",
-    href: "/testing-machine-calibration-indonesia",
-    desc: "For Indonesia factories and QA labs that need tensile machine, UTM machine or load-cell calibration support.",
-  },
+const responseFlow = [
+  "Send machine model, capacity, location and required date through WhatsApp or email.",
+  "Hung Ta checks whether the enquiry is for machine supply, calibration support, service or spare parts.",
+  "Sales prepares the next step: recommendation, quotation request, site visit discussion or document follow-up.",
 ];
 
 const Services = ({ onOpenQuote }: ServicesProps) => {
@@ -96,27 +90,27 @@ const Services = ({ onOpenQuote }: ServicesProps) => {
       </div>
     </section>
 
-    <section className="py-20 bg-muted">
+    <section className="py-20 bg-muted border-y border-border">
       <div className="container mx-auto px-4">
         <AnimatedSection>
-          <div className="max-w-3xl mb-10">
-            <p className="text-accent text-xs font-bold uppercase tracking-[0.28em] mb-4">Regional support</p>
-            <h2 className="text-3xl md:text-5xl font-black mb-4">Thailand and Indonesia enquiries</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              For overseas enquiries, send the machine model, capacity, nameplate photo, location and required calibration or service date first. Hung Ta will advise the practical next step before any site arrangement.
-            </p>
+          <div className="bg-white border border-border rounded-lg p-8 md:p-10 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8 items-center">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-accent mb-3">Faster quotation workflow</p>
+              <h2 className="text-3xl md:text-4xl font-black mb-4">What happens after you send a requirement?</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                To reduce back-and-forth, Hung Ta collects the details needed to qualify machine, service and calibration enquiries before preparing the next step.
+              </p>
+            </div>
+            <div className="space-y-3">
+              {responseFlow.map((item) => (
+                <div key={item} className="flex gap-3 bg-muted border border-border rounded-lg p-4">
+                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                  <p className="text-sm font-medium text-foreground/86">{item}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </AnimatedSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {regionalSupportLinks.map((link, index) => (
-            <AnimatedSection key={link.href} delay={index * 0.08}>
-              <a href={link.href} className="block bg-card border border-border rounded-lg p-6 h-full hover:border-accent transition-colors">
-                <h3 className="text-xl font-black mb-3">{link.label}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{link.desc}</p>
-              </a>
-            </AnimatedSection>
-          ))}
-        </div>
       </div>
     </section>
 
@@ -126,7 +120,15 @@ const Services = ({ onOpenQuote }: ServicesProps) => {
           <h2 className="text-3xl md:text-4xl font-black text-primary-foreground mb-4">Need Urgent Support?</h2>
           <p className="text-primary-foreground/70 max-w-xl mx-auto mb-8">Our service team is available for emergency breakdown support across Peninsular Malaysia.</p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <a href="https://wa.me/60126280096" target="_blank" rel="noopener noreferrer">
+            <a
+              href={buildWhatsAppUrl({
+                source: "services_urgent_support",
+                machine: "Testing machine service / calibration support",
+                requirement: "Urgent service, calibration or spare parts support",
+              })}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button size="lg" className="rounded-full bg-accent text-white hover:bg-orange-light font-semibold px-7">WhatsApp Us Now</Button>
             </a>
             <Link to="/contact">
