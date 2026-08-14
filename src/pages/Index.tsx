@@ -1,4 +1,4 @@
-﻿import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Wrench, Package, Headphones, ShieldCheck, Factory, FlaskConical, Cog, Cpu, Shirt, Beaker, Gauge, CheckCircle2 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -78,6 +78,12 @@ const qualityProofs = [
   },
 ];
 
+const enquirySystem = [
+  "Website and Google Ads bring buyers to focused tensile, UTM and calibration pages.",
+  "WhatsApp templates collect machine model, capacity, location and required date.",
+  "Sales can qualify the enquiry faster during business hours and prepare the next step.",
+];
+
 const featuredProducts = products.filter((p) => p.featured);
 
 const Index = ({ onOpenQuote }: IndexProps) => {
@@ -133,7 +139,7 @@ const Index = ({ onOpenQuote }: IndexProps) => {
       {/* Trust bar */}
       <section className="bg-muted border-b border-border">
         <div className="container mx-auto px-4 py-6 flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground font-medium">
-          {["Established 1975", "SSM 256852-H", "ASTM / ISO Test Applications", "Hydraulic & Tensile Machines", "Malaysia, Singapore & Asia"].map((t) => (
+          {["Established 1975", "Malaysia Support", "ASTM / ISO Test Applications", "Hydraulic & Tensile Machines", "Malaysia, Singapore & Asia"].map((t) => (
             <div key={t} className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-accent" />
               {t}
@@ -264,6 +270,34 @@ const Index = ({ onOpenQuote }: IndexProps) => {
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 24-hour enquiry intake */}
+      <section className="py-20 bg-muted border-y border-border">
+        <div className="container mx-auto px-4">
+          <AnimatedSection>
+            <div className="bg-white border border-border rounded-lg p-8 md:p-10 grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-8 items-center">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.28em] text-accent mb-3">24-hour enquiry intake</p>
+                <h2 className="text-3xl md:text-5xl font-black mb-4">Let the website collect better leads even after office hours</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  Buyers can send machine or calibration requirements any time. Hung Ta receives structured WhatsApp and email enquiries with the details needed for faster follow-up.
+                </p>
+              </div>
+              <div className="space-y-3">
+                {enquirySystem.map((item) => (
+                  <div key={item} className="flex gap-3 bg-muted border border-border rounded-lg p-4">
+                    <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                    <p className="text-sm font-medium text-foreground/86">{item}</p>
+                  </div>
+                ))}
+                <Button onClick={onOpenQuote} className="rounded-full bg-accent text-white hover:bg-orange-light font-semibold px-7 mt-2">
+                  Send Machine Requirement
+                </Button>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

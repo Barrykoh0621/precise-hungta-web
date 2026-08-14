@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import AnimatedSection from "@/components/AnimatedSection";
 import { usePageSeo } from "@/hooks/use-page-seo";
 import { trackLeadEvent } from "@/lib/analytics";
+import { buildQuoteMessage, buildWhatsAppUrl } from "@/lib/leadLinks";
 
 const Contact = () => {
   usePageSeo({
@@ -67,7 +68,13 @@ const Contact = () => {
                 <MessageCircle className="w-6 h-6 text-accent shrink-0" />
                 <div>
                   <h2 className="font-bold mb-1">WhatsApp</h2>
-                  <a className="text-sm text-muted-foreground hover:text-accent" href="https://wa.me/60126280096" onClick={() => trackLeadEvent("whatsapp_click", { location: "contact_page" })}>012-628 0096 Sales Manager</a>
+                  <a
+                    className="text-sm text-muted-foreground hover:text-accent"
+                    href={buildWhatsAppUrl({ source: "contact_page" })}
+                    onClick={() => trackLeadEvent("whatsapp_click", { location: "contact_page" })}
+                  >
+                    012-628 0096 Sales Manager
+                  </a>
                 </div>
               </div>
 
@@ -104,15 +111,14 @@ const Contact = () => {
               onSubmit={(event) => {
                 event.preventDefault();
                 const form = new FormData(event.currentTarget);
-                const body = [
-                  `Name: ${form.get("name")}`,
-                  `Company: ${form.get("company")}`,
-                  `Email: ${form.get("email")}`,
-                  `Phone: ${form.get("phone")}`,
-                  "",
-                  `Testing requirement:`,
-                  form.get("message"),
-                ].join("\n");
+                const body = buildQuoteMessage({
+                  name: form.get("name"),
+                  company: form.get("company"),
+                  email: form.get("email"),
+                  phone: form.get("phone"),
+                  machine: "Contact page enquiry",
+                  message: form.get("message"),
+                });
                 trackLeadEvent("contact_email_prepare", { location: "contact_page" });
                 window.location.href = `mailto:hungtatest@yahoo.com?subject=${encodeURIComponent("Hung Ta website enquiry")}&body=${encodeURIComponent(body)}`;
               }}
@@ -143,9 +149,31 @@ const Contact = () => {
                 <Label htmlFor="message">Requirement</Label>
                 <Textarea id="message" name="message" rows={5} required />
               </div>
-              <Button type="submit" className="w-full rounded-full bg-accent text-white hover:bg-orange-light font-semibold">
-                Prepare Enquiry Email
-              </Button>
+              <div className="grid gap-3">
+                <Button type="submit" className="w-full rounded-full bg-accent text-white hover:bg-orange-light font-semibold">
+                  Prepare Enquiry Email
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="w-full rounded-full font-semibold"
+                  onClick={(event) => {
+                    const form = new FormData(event.currentTarget.form || undefined);
+                    const body = buildQuoteMessage({
+                      name: form.get("name"),
+                      company: form.get("company"),
+                      email: form.get("email"),
+                      phone: form.get("phone"),
+                      machine: "Contact page enquiry",
+                      message: form.get("message"),
+                    });
+                    trackLeadEvent("contact_whatsapp_prepare", { location: "contact_page" });
+                    window.open(`https://wa.me/60126280096?text=${encodeURIComponent(body)}`, "_blank", "noopener,noreferrer");
+                  }}
+                >
+                  Send via WhatsApp
+                </Button>
+              </div>
             </form>
           </AnimatedSection>
         </div>

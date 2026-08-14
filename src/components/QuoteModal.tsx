@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { products } from "@/data/products";
 import { BrandMark } from "@/components/BrandLogo";
 import { trackLeadEvent } from "@/lib/analytics";
+import { buildQuoteMessage } from "@/lib/leadLinks";
 
 interface QuoteModalProps {
   open: boolean;
@@ -23,6 +24,16 @@ const QuoteModal = ({ open, onOpenChange, preselectedProduct }: QuoteModalProps)
   const subject = selectedProduct
     ? `Quotation request: ${selectedProduct.model}`
     : "Quotation request: Hung Ta testing machine";
+
+  const getFormLeadMessage = (form: FormData) =>
+    buildQuoteMessage({
+      name: form.get("name"),
+      company: form.get("company"),
+      email: form.get("email"),
+      phone: form.get("phone"),
+      machine: form.get("machine") || selectedProduct?.model || "Not specified",
+      message: form.get("message"),
+    });
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -42,16 +53,7 @@ const QuoteModal = ({ open, onOpenChange, preselectedProduct }: QuoteModalProps)
           onSubmit={(event) => {
             event.preventDefault();
             const form = new FormData(event.currentTarget);
-            const body = [
-              `Name: ${form.get("name")}`,
-              `Company: ${form.get("company")}`,
-              `Email: ${form.get("email")}`,
-              `Phone: ${form.get("phone")}`,
-              `Machine: ${form.get("machine") || selectedProduct?.model || "Not specified"}`,
-              "",
-              `Testing requirement:`,
-              form.get("message"),
-            ].join("\n");
+            const body = getFormLeadMessage(form);
 
             trackLeadEvent("quote_email_prepare", {
               product_id: selectedProduct?.id,
@@ -97,9 +99,27 @@ const QuoteModal = ({ open, onOpenChange, preselectedProduct }: QuoteModalProps)
               required
             />
           </div>
-          <Button type="submit" className="w-full rounded-full bg-accent text-white hover:bg-orange-light font-semibold">
-            Prepare Email to Hung Ta
-          </Button>
+          <div className="grid gap-3">
+            <Button type="submit" className="w-full rounded-full bg-accent text-white hover:bg-orange-light font-semibold">
+              Prepare Email to Hung Ta
+            </Button>
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full rounded-full font-semibold"
+              onClick={(event) => {
+                const form = new FormData(event.currentTarget.form || undefined);
+                const message = getFormLeadMessage(form);
+                trackLeadEvent("quote_whatsapp_prepare", {
+                  product_id: selectedProduct?.id,
+                  product_model: selectedProduct?.model,
+                });
+                window.open(`https://wa.me/60126280096?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+              }}
+            >
+              Send via WhatsApp
+            </Button>
+          </div>
         </form>
       </DialogContent>
     </Dialog>

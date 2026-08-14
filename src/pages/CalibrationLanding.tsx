@@ -2,6 +2,8 @@ import { ArrowRight, CheckCircle2, ClipboardCheck, Gauge, ShieldCheck, Wrench } 
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import { usePageSeo } from "@/hooks/use-page-seo";
+import { trackLeadEvent } from "@/lib/analytics";
+import { buildWhatsAppUrl } from "@/lib/leadLinks";
 
 interface CalibrationLandingProps {
   onOpenQuote: () => void;
@@ -52,19 +54,6 @@ const calibrationFocus = [
   },
 ];
 
-const regionalPages = [
-  {
-    country: "Thailand",
-    href: "/testing-machine-calibration-thailand",
-    desc: "Testing machine calibration, tensile machine support, UTM machine support and load cell calibration enquiries from Thailand factories and QA laboratories.",
-  },
-  {
-    country: "Indonesia",
-    href: "/testing-machine-calibration-indonesia",
-    desc: "Testing machine calibration, tensile machine support, UTM machine support and load cell calibration enquiries from Indonesia factories and QA laboratories.",
-  },
-];
-
 const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
   usePageSeo({
     title: "Testing Machine Calibration Malaysia | Hung Ta Instrument",
@@ -88,7 +77,16 @@ const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
                 <Button onClick={onOpenQuote} className="rounded-full bg-accent text-white hover:bg-orange-light font-semibold gap-2 px-7">
                   Request Calibration Support <ArrowRight className="w-4 h-4" />
                 </Button>
-                <a href="https://wa.me/60126280096" target="_blank" rel="noopener noreferrer">
+                <a
+                  href={buildWhatsAppUrl({
+                    source: "calibration_landing_hero",
+                    machine: "Testing machine calibration",
+                    requirement: "Calibration support for tensile / universal testing machine",
+                  })}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackLeadEvent("whatsapp_click", { location: "calibration_landing_hero" })}
+                >
                   <Button variant="outline" className="rounded-full border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-7">
                     WhatsApp Sales Manager
                   </Button>
@@ -199,31 +197,6 @@ const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
               </div>
             </div>
           </AnimatedSection>
-        </div>
-      </section>
-
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <AnimatedSection>
-            <div className="max-w-3xl mb-10">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-accent mb-3">Southeast Asia support</p>
-              <h2 className="text-3xl md:text-5xl font-black mb-5">Regional calibration and testing machine enquiries</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Hung Ta can advise regional factories and laboratories that need testing machine calibration support, tensile machine support or universal testing machine selection from Malaysia.
-              </p>
-            </div>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {regionalPages.map((page, index) => (
-              <AnimatedSection key={page.country} delay={index * 0.06}>
-                <a href={page.href} className="block h-full border border-border rounded-lg p-6 bg-white hover:border-accent transition-colors">
-                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-accent mb-3">{page.country}</p>
-                  <h3 className="text-2xl font-black mb-3">Testing machine calibration {page.country}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{page.desc}</p>
-                </a>
-              </AnimatedSection>
-            ))}
-          </div>
         </div>
       </section>
 
