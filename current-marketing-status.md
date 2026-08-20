@@ -2,7 +2,7 @@
 
 Company: Hung Ta Instrument Enterprise
 
-Last updated: 13 August 2026, Malaysia time
+Last updated: 20 August 2026, Malaysia time
 
 ## Where We Are Now
 
@@ -91,6 +91,19 @@ Updated Google Ads data checked on 13 August 2026:
 - Search impression share: 18.47%
 - Balance shown: `-MYR 147.15`
 - Owner monthly budget: RM700
+
+Updated Google Ads data checked on 20 August 2026:
+
+- Date range shown: 30 July 2026 to 20 August 2026
+- Impressions: 1,268
+- Clicks: 84
+- CTR: 6.62%
+- Cost: MYR383.97
+- Search impression share: 16.70%
+- Google Ads balance shown: MYR14.67
+- Payment note shown: next automatic payment on 1 September 2026 or when balance reaches MYR50.00
+- Compared with 13 August 2026: +550 impressions, +32 clicks, +MYR149.84 cost
+- Simple remaining amount against the RM700 monthly ad budget: about MYR316.03
 
 Day 9 Google Ads cleanup completed on 13 August 2026:
 
@@ -228,10 +241,12 @@ Completed:
 - Day 18 internal links were added from the calibration page, services page and footer to the Thailand and Indonesia landing pages on 2026-08-13
 - Day 8 budget allocation was set around RM700/month and additional negative keyword candidates were prepared on 2026-08-13
 - Day 9 Google Ads cleanup was completed on 2026-08-13: 64 total negative keywords added live, negative keyword rows increased to 94, and campaign budget reduced from MYR58/day to MYR15/day
+- 20 August 2026 marketing status check completed: Ads showed 1,268 impressions, 84 clicks, MYR383.97 cost, and MYR14.67 billing balance; website and sitemap pages returned HTTP 200
 
 In progress:
 
 - Google indexing and ranking movement are pending for new/updated landing pages. This can take days to weeks.
+- Official domain Search Console property was not accessible to `huailicia@gmail.com` during the 20 August 2026 check; old GitHub Pages property showed 2 organic clicks, 173 impressions, average CTR 1.2%, average position 34.2.
 
 SEO does not guarantee instant first page ranking. Google Ads is the faster route for immediate search visibility.
 
