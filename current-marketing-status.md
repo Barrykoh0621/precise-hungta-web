@@ -260,6 +260,27 @@ Do first:
 2. Calibration / ISO 17025 preparation enquiries
 3. Thailand and Indonesia regional testing machine enquiries, only through a separate controlled campaign or SEO pages
 
+## ISO/IEC 17025 Preparation Status
+
+Started on 20 August 2026:
+
+- First ISO/IEC 17025 scope explanation prepared
+- Recommended first accreditation route: force/load-cell related calibration first, with tensile/universal testing machine verification support prepared next
+- ISO/IEC 17025 starter document list prepared
+- Barry plain brief prepared for the next morning data handoff
+
+Prepared files:
+
+- `iso17025/2026-08-20-iso17025-scope-and-document-list.md`
+- `iso17025/2026-08-20-barry-iso17025-plain-brief.md`
+
+Still needed from Barry:
+
+- Current master/reference equipment list
+- Existing calibration certificate or service report samples
+- Current calibration methods used by Hung Ta
+- Old customer list and machine types
+
 Pause for now:
 
 - Hydraulic campaign
