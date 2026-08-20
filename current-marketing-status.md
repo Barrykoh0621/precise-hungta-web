@@ -246,7 +246,9 @@ Completed:
 In progress:
 
 - Google indexing and ranking movement are pending for new/updated landing pages. This can take days to weeks.
-- Official domain Search Console property was not accessible to `huailicia@gmail.com` during the 20 August 2026 check; old GitHub Pages property showed 2 organic clicks, 173 impressions, average CTR 1.2%, average position 34.2.
+- Official domain Search Console property was verified for `huailicia@gmail.com` on 20 August 2026 using DNS TXT verification.
+- Official domain Search Console performance report showed 26 organic clicks, 574 impressions, average CTR 4.5%, and average position 24.2 for 7 July 2026 to 18 August 2026.
+- Search Console overview showed 9 indexed pages and 22 not indexed pages after official domain verification.
 
 SEO does not guarantee instant first page ranking. Google Ads is the faster route for immediate search visibility.
 
