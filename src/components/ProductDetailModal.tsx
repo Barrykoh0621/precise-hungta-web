@@ -1,6 +1,6 @@
 ﻿import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import type { Product } from "@/data/products";
 
 interface ProductDetailModalProps {
@@ -28,6 +28,7 @@ const ProductDetailModal = ({ product, open, onOpenChange, onEnquire, getImage }
           </div>
 
           {/* Tagline */}
+          <span className={`inline-flex w-fit text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${product.brand === "Armstrong" ? "bg-accent/10 text-accent" : "bg-primary/10 text-primary"}`}>{product.brand || "Hung Ta"}</span>
           <p className="text-accent font-medium italic">{product.tagline}</p>
 
           {/* Description */}
@@ -65,6 +66,7 @@ const ProductDetailModal = ({ product, open, onOpenChange, onEnquire, getImage }
           </div>
 
           {/* CTA */}
+          {product.catalogueUrl && <a href={`/${product.catalogueUrl}`} target="_blank" rel="noreferrer" className="w-full inline-flex items-center justify-center gap-2 border border-border rounded-full px-4 py-2.5 text-sm font-semibold hover:bg-muted"><Download className="w-4 h-4" /> View Catalogue PDF</a>}
           <Button onClick={() => { onOpenChange(false); onEnquire(product.id); }} className="w-full rounded-full bg-accent text-white hover:bg-orange-light font-semibold gap-1">
             Enquire Now <ArrowUpRight className="w-4 h-4" />
           </Button>

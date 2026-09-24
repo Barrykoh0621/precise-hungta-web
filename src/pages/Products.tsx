@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { products, categories } from "@/data/products";
 import type { Product } from "@/data/products";
@@ -8,7 +8,7 @@ import ProductDetailModal from "@/components/ProductDetailModal";
 import ht9501Img from "@/assets/ht-9501.jpg";
 import ht2402Img from "@/assets/ht-2402.jpg";
 import ht2101Img from "@/assets/ht-2101.jpg";
-import { ArrowUpRight, Eye, FileText, Package } from "lucide-react";
+import { ArrowUpRight, Download, Eye, FileText, Package } from "lucide-react";
 import { accessories } from "@/data/products";
 import { usePageSeo } from "@/hooks/use-page-seo";
 
@@ -25,9 +25,10 @@ function getProductImage(image: string): string {
 
 interface ProductsProps {
   onOpenQuote: (productId?: string) => void;
+  initialBrand?: "Armstrong";
 }
 
-const Products = ({ onOpenQuote }: ProductsProps) => {
+const Products = ({ onOpenQuote, initialBrand }: ProductsProps) => {
   usePageSeo({
     title: "Hydraulic, Compression & Electrical Tensile Testing Machines | Hung Ta Malaysia",
     description:
@@ -37,11 +38,15 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
   const [searchParams] = useSearchParams();
   const expandedId = searchParams.get("product");
   const categoryParam = searchParams.get("category");
+  const brandParam = searchParams.get("brand");
   const [filter, setFilter] = useState("all");
+  const [brandFilter, setBrandFilter] = useState<string>(initialBrand || brandParam || "all");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
 
-  const filtered = filter === "all" ? products : products.filter((p) => p.category === filter);
+  const filtered = products.filter((p) =>
+    (filter === "all" || p.category === filter) && (brandFilter === "all" || (p.brand || "Hung Ta") === brandFilter)
+  );
   const activeCategory = categories.find((category) => category.id === filter);
   const categoryCounts = categories
     .filter((category) => category.id !== "all")
@@ -67,6 +72,10 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
     }
   }, [categoryParam]);
 
+  useEffect(() => {
+    setBrandFilter(initialBrand || brandParam || "all");
+  }, [initialBrand, brandParam]);
+
   const handleViewDetails = (product: Product) => {
     setSelectedProduct(product);
     setModalOpen(true);
@@ -78,14 +87,14 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
       <section className="bg-primary py-24 industrial-grid">
         <div className="container mx-auto px-4">
           <AnimatedSection>
-            <p className="text-accent text-xs font-bold uppercase tracking-[0.28em] mb-4">Product catalogue</p>
-            <h1 className="font-serif text-5xl md:text-6xl text-primary-foreground mb-5">Testing Machine Products</h1>
-            <p className="text-primary-foreground/68 max-w-2xl text-lg">Hydraulic testing machines, compression machines, electrical tensile testing machines and material testing equipment for metal, rubber and copper quality control applications.</p>
+            <p className="text-accent text-xs font-bold uppercase tracking-[0.28em] mb-4">{initialBrand ? "Armstrong product range" : "Product catalogue"}</p>
+            <h1 className="font-serif text-5xl md:text-6xl text-primary-foreground mb-5">{initialBrand ? "Armstrong Testing Equipment" : "Testing Machine Products"}</h1>
+            <p className="text-primary-foreground/68 max-w-2xl text-lg">{initialBrand ? "Explore the Armstrong-branded concrete testing and laboratory equipment range from Hung Ta Instrument." : "Browse Hung Ta and Armstrong testing machines and laboratory equipment by brand and application."}</p>
           </AnimatedSection>
         </div>
       </section>
 
-      <section className="bg-muted border-b border-border">
+      {!initialBrand && <section className="bg-muted border-b border-border">
         <div className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.7fr] gap-8 items-center">
             <AnimatedSection>
@@ -112,6 +121,16 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
               </div>
             </AnimatedSection>
           </div>
+        </div>
+      </section>}
+
+      <section className="py-8 border-b border-border bg-white">
+        <div className="container mx-auto px-4 flex flex-wrap items-center gap-3">
+          <span className="text-xs uppercase tracking-widest font-bold text-muted-foreground mr-2">Browse by brand</span>
+          <Link to="/products" className={`px-4 py-2 rounded-full text-sm ${brandFilter === "all" ? "bg-primary text-white" : "bg-muted text-primary"}`}>All brands</Link>
+          <Link to="/products?brand=Hung%20Ta" className={`px-4 py-2 rounded-full text-sm ${brandFilter === "Hung Ta" ? "bg-primary text-white" : "bg-muted text-primary"}`}>Hung Ta</Link>
+          <Link to="/armstrong-testing-machines-malaysia" className={`px-4 py-2 rounded-full text-sm ${brandFilter === "Armstrong" ? "bg-accent text-white" : "bg-muted text-primary"}`}>Armstrong</Link>
+          {initialBrand && <span className="text-sm text-muted-foreground ml-auto">Armstrong is shown as a separate brand range; Hung Ta machines remain separately identified.</span>}
         </div>
       </section>
 
@@ -166,7 +185,7 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
                   </div>
                   {/* Info */}
                   <div className="p-4 flex flex-col flex-1">
-                    <span className="text-[10px] font-bold text-accent uppercase tracking-[0.16em]">{product.categoryLabel}</span>
+                    <div className="flex items-center justify-between gap-2"><span className="text-[10px] font-bold text-accent uppercase tracking-[0.16em]">{product.categoryLabel}</span><span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full ${product.brand === "Armstrong" ? "bg-accent/10 text-accent" : "bg-primary/10 text-primary"}`}>{product.brand || "Hung Ta"}</span></div>
                     <h3 className="font-black text-base mt-1 line-clamp-1">{product.model}</h3>
                     <p className="text-xs text-muted-foreground mt-1 line-clamp-2 flex-1">{product.tagline}</p>
                     <div className="mt-4 space-y-2 border-t border-border pt-3">
@@ -194,6 +213,7 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
                     >
                       <Eye className="w-3.5 h-3.5" /> View Details
                     </Button>
+                    {product.catalogueUrl && <a href={`/${product.catalogueUrl}`} target="_blank" rel="noreferrer" className="mt-2 w-full inline-flex items-center justify-center gap-1.5 text-xs rounded-full border border-border px-3 py-2 hover:bg-muted"><Download className="w-3.5 h-3.5" /> View Catalogue PDF</a>}
                     <Button
                       size="sm"
                       className="mt-2 w-full gap-1.5 text-xs rounded-full bg-primary text-white hover:bg-navy-light"
@@ -210,7 +230,7 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
       </section>
 
       {/* Accessories */}
-      <section className="py-16 bg-muted">
+      {!initialBrand && <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <AnimatedSection>
             <h2 className="text-3xl font-black mb-8">Accessories & Add-Ons</h2>
@@ -231,7 +251,7 @@ const Products = ({ onOpenQuote }: ProductsProps) => {
             ))}
           </div>
         </div>
-      </section>
+      </section>}
 
       {/* Detail Modal */}
       <ProductDetailModal

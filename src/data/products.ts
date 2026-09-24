@@ -3,9 +3,11 @@
   model: string;
   name: string;
   tagline: string;
-  category: "utm" | "auto-parts" | "rubber" | "plastics" | "wires" | "paper" | "hardness" | "dynamic";
+  category: "utm" | "auto-parts" | "rubber" | "plastics" | "wires" | "paper" | "hardness" | "dynamic" | "compression" | "lab-equipment";
   categoryLabel: string;
+  brand?: "Hung Ta" | "Armstrong";
   image: string;
+  catalogueUrl?: string;
   description: string;
   specs: { label: string; value: string }[];
   idealFor: string[];
@@ -1060,6 +1062,83 @@ export const products: Product[] = [
     idealFor: ["Automotive drivetrain", "Fastener testing", "Bio-medical implants"],
     standards: ["ISO 1352", "ASTM E2207"],
   },
+  // === ARMSTRONG RANGE ===
+  {
+    id: "armstrong-concrete-compression-tester",
+    model: "A-HTA-CTM-1000 / A-HTA-CTM-2000",
+    name: "Automatic Concrete Compression Tester",
+    tagline: "Automatic computer-controlled concrete cube compression testing.",
+    category: "compression",
+    categoryLabel: "Concrete Compression Testing",
+    brand: "Armstrong",
+    image: "product-images/armstrong-automatic-concrete-compression-tester.jpeg",
+    catalogueUrl: "catalogues/armstrong-automatic-concrete-compression-tester.pdf",
+    description: "Armstrong automatic computer-controlled hydraulic compression tester for concrete cubes. Available in 1,000 kN and 2,000 kN capacity configurations, with digital force indication, controlled loading rate, peak hold and overload protection.",
+    specs: [
+      { label: "Capacity", value: "1,000 kN / 2,000 kN" },
+      { label: "Indication range", value: "2%-100% full scale" },
+      { label: "Resolution", value: "0.1 kN" },
+      { label: "Pressure platens", value: "200 x 200 mm / 220 x 220 mm" },
+      { label: "Power supply", value: "3-phase, 380 V ±10%, 50-60 Hz" },
+      { label: "Cube sizes", value: "30 / 50 / 100 mm" },
+    ],
+    idealFor: ["Concrete testing laboratories", "Construction quality control", "Civil engineering"],
+  },
+  {
+    id: "armstrong-muffle-furnace-800c",
+    model: "HTA-MF-800",
+    name: "Laboratory Muffle Furnace",
+    tagline: "800 °C maximum temperature for laboratory heating workflows.",
+    category: "lab-equipment",
+    categoryLabel: "Laboratory & Weighing Equipment",
+    brand: "Armstrong",
+    image: "product-images/armstrong-800c-muffle-furnace.jpeg",
+    catalogueUrl: "catalogues/armstrong-800c-muffle-furnace.pdf",
+    description: "Armstrong laboratory muffle furnace with a maximum temperature of 800 °C and 220-240 V AC supply, for heat-treatment and material-preparation workflows.",
+    specs: [
+      { label: "Maximum temperature", value: "800 °C" },
+      { label: "Supply", value: "220-240 V AC" },
+      { label: "Type", value: "Laboratory muffle furnace" },
+    ],
+    idealFor: ["Laboratory sample preparation", "Material testing laboratories", "Heat-treatment workflows"],
+  },
+  {
+    id: "armstrong-laboratory-balance-200g",
+    model: "HTA-LB-200",
+    name: "Laboratory Balance",
+    tagline: "200 g capacity with 0.1 g readability.",
+    category: "lab-equipment",
+    categoryLabel: "Laboratory & Weighing Equipment",
+    brand: "Armstrong",
+    image: "product-images/armstrong-200g-laboratory-balance.jpeg",
+    catalogueUrl: "catalogues/armstrong-200g-laboratory-balance.pdf",
+    description: "Armstrong compact laboratory balance for routine sample weighing, with 200 g capacity, 0.1 g readability and a calibration certificate requirement.",
+    specs: [
+      { label: "Capacity", value: "200 g" },
+      { label: "Readability", value: "0.1 g" },
+      { label: "Calibration certificate", value: "Required" },
+    ],
+    idealFor: ["Laboratory bench weighing", "Sample preparation", "Quality control"],
+  },
+  {
+    id: "armstrong-digital-scale-5kg",
+    model: "HTA-WS-5K",
+    name: "Digital Weighing Scale",
+    tagline: "5 kg capacity with an integrated digital display.",
+    category: "lab-equipment",
+    categoryLabel: "Laboratory & Weighing Equipment",
+    brand: "Armstrong",
+    image: "product-images/armstrong-5kg-digital-weighing-scale.jpeg",
+    catalogueUrl: "catalogues/armstrong-5kg-digital-weighing-scale.pdf",
+    description: "Armstrong digital weighing scale with 5 kg capacity, an integrated digital display and stainless-steel weighing platform. A calibration certificate is required.",
+    specs: [
+      { label: "Capacity", value: "5 kg" },
+      { label: "Display", value: "Integrated digital display" },
+      { label: "Platform", value: "Stainless steel" },
+      { label: "Calibration certificate", value: "Required" },
+    ],
+    idealFor: ["Laboratory weighing", "Bench use", "Quality control"],
+  },
 ];
 
 export const accessories = [
@@ -1087,6 +1166,8 @@ export const accessories = [
 
 export const categories = [
   { id: "all", label: "All Products" },
+  { id: "compression", label: "Concrete Compression Testing" },
+  { id: "lab-equipment", label: "Laboratory & Weighing Equipment" },
   { id: "utm", label: "Universal Testing Machine" },
   { id: "auto-parts", label: "Auto Parts, Tyres & Bicycle" },
   { id: "rubber", label: "Rubber, Plastics & Polymers" },

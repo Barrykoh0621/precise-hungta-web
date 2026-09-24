@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Wrench, Package, Headphones, ShieldCheck, Factory, FlaskConical, Cog, Cpu, Shirt, Beaker, Gauge, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, Download, Wrench, Package, Headphones, ShieldCheck, Factory, FlaskConical, Cog, Cpu, Shirt, Beaker, Gauge, CheckCircle2 } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import heroImg from "@/assets/hero-lab.jpg";
 import ht9501Img from "@/assets/ht-9501.jpg";
@@ -242,6 +242,38 @@ const Index = ({ onOpenQuote }: IndexProps) => {
                 View All Products <ArrowUpRight className="w-4 h-4" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Armstrong Brand Range */}
+      <section className="py-20 bg-background border-y border-border">
+        <div className="container mx-auto px-4">
+          <AnimatedSection>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-9">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.28em] text-accent mb-3">A separate brand range</p>
+                <h2 className="text-3xl md:text-5xl font-black mb-3">Armstrong Equipment</h2>
+                <p className="text-muted-foreground max-w-2xl">A new selection of concrete testing and laboratory equipment, clearly separated from Hung Ta’s established machine range.</p>
+              </div>
+              <Link to="/armstrong-testing-machines-malaysia"><Button variant="outline" className="rounded-full gap-2">Explore Armstrong <ArrowUpRight className="w-4 h-4" /></Button></Link>
+            </div>
+          </AnimatedSection>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {products.filter((product) => product.brand === "Armstrong").map((product) => (
+              <article key={product.id} className="bg-white border border-border rounded-lg overflow-hidden flex flex-col">
+                <div className="aspect-square border-b border-border flex items-center justify-center"><img src={`${import.meta.env.BASE_URL}${product.image}`} alt={`Armstrong ${product.name}`} className="w-full h-full object-contain p-5" loading="lazy" /></div>
+                <div className="p-5 flex flex-col flex-1">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-accent">Armstrong</span>
+                  <h3 className="font-bold mt-2">{product.name}</h3>
+                  <p className="text-sm text-muted-foreground mt-2 flex-1">{product.tagline}</p>
+                  <div className="grid grid-cols-2 gap-2 mt-5">
+                    <Link to={`/products?product=${product.id}`}><Button variant="outline" size="sm" className="w-full rounded-full">View Details</Button></Link>
+                    <a href={`/${product.catalogueUrl}`} target="_blank" rel="noreferrer"><Button size="sm" className="w-full rounded-full bg-primary text-white"><Download className="w-3.5 h-3.5 mr-1" />Catalogue</Button></a>
+                  </div>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>

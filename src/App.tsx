@@ -66,6 +66,7 @@ const App = () => {
             <Route path="/material-testing-machine-malaysia" element={<ProductLanding pageKey="material" onOpenQuote={openQuote} />} />
             <Route path="/calibration-service-malaysia" element={<CalibrationLanding onOpenQuote={() => openQuote()} />} />
             <Route path="/products" element={<Products onOpenQuote={openQuote} />} />
+            <Route path="/armstrong-testing-machines-malaysia" element={<Products onOpenQuote={openQuote} initialBrand="Armstrong" />} />
             <Route path="/services" element={<Services onOpenQuote={() => openQuote()} />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
