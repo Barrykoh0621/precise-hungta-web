@@ -111,7 +111,7 @@ export const products: Product[] = [
     tagline: "Compact single-column servo UTM for lab QC.",
     category: "utm",
     categoryLabel: "Universal Testing Machine",
-    image: "product-images/1-ht2328-thumb.jpg",
+    image: "product-images/generated/ht-2328-utm.png",
     description: "Compact single-column servo UTM up to 5kN. Benchtop size for lab QC. Tensile, compression, peel & flexural tests. Touch-screen controller.",
     specs: [
       { label: "Capacity", value: "Up to 5 kN" },
@@ -128,7 +128,7 @@ export const products: Product[] = [
     tagline: "Environmental testing from -70°C to +250°C.",
     category: "utm",
     categoryLabel: "Universal Testing Machine",
-    image: "product-images/1-ht8747-thumb.jpg",
+    image: "product-images/generated/ht-8747.png",
     description: "Optional thermal chamber accessory for UTM. Tests materials at -70°C to +250°C. Compatible with HT-2101 & HT-9501 series.",
     specs: [
       { label: "Temperature Range", value: "-70°C to +250°C" },
@@ -144,7 +144,7 @@ export const products: Product[] = [
     tagline: "High-precision clip-on extensometer for strain measurement.",
     category: "utm",
     categoryLabel: "Universal Testing Machine",
-    image: "product-images/1-ht8160-thumb.jpg",
+    image: "product-images/generated/ht-8160.png",
     description: "High-precision clip-on extensometer for accurate strain & elongation measurement. ISO 9513 Class 0.5. Compatible with most UTM brands.",
     specs: [
       { label: "Class", value: "ISO 9513 Class 0.5" },
@@ -160,7 +160,7 @@ export const products: Product[] = [
     tagline: "Horizontal UTM for wire ropes, chains & long specimens.",
     category: "utm",
     categoryLabel: "Universal Testing Machine",
-    image: "product-images/1-ht8296-thumb.jpg",
+    image: "product-images/generated/ht-8296.png",
     description: "Horizontal UTM for testing wire ropes, chains, cables & long specimens. Capacity up to 3000 kN. Dual independent actuators.",
     specs: [
       { label: "Capacity", value: "Up to 3000 kN" },
@@ -177,7 +177,7 @@ export const products: Product[] = [
     tagline: "Fully automatic concrete compression tester.",
     category: "utm",
     categoryLabel: "Universal Testing Machine",
-    image: "product-images/1-ht8391-thumb.jpg",
+    image: "product-images/generated/ht-8391.png",
     description: "Fully automatic concrete compression tester for cubes, cylinders & blocks. Auto-ramp load control. Built-in printer & data storage.",
     specs: [
       { label: "Specimens", value: "Cubes, cylinders, blocks" },
@@ -194,7 +194,7 @@ export const products: Product[] = [
     tagline: "Pendulum impact tester for fracture energy measurement.",
     category: "utm",
     categoryLabel: "Universal Testing Machine",
-    image: "product-images/1-ht8041a-thumb.jpg",
+    image: "product-images/generated/ht-8041a.png",
     description: "Pendulum Charpy impact tester measuring energy absorbed during fracture. 150J/300J/450J capacities. Digital angle display. Auto pendulum release.",
     specs: [
       { label: "Capacities", value: "150J / 300J / 450J" },
@@ -211,7 +211,7 @@ export const products: Product[] = [
     tagline: "IZOD impact tester for plastics & composites.",
     category: "utm",
     categoryLabel: "Universal Testing Machine",
-    image: "product-images/1-ht8041b-thumb.jpg",
+    image: "product-images/generated/ht-8041b.png",
     description: "IZOD pendulum impact tester for plastics & composites. Notched & un-notched specimens. Interchangeable hammers. Direct readout in Joules.",
     specs: [
       { label: "Specimens", value: "Notched & un-notched" },
@@ -228,7 +228,7 @@ export const products: Product[] = [
     tagline: "Rotating bending fatigue for S-N curve generation.",
     category: "utm",
     categoryLabel: "Universal Testing Machine",
-    image: "product-images/1-ht8120-thumb.jpg",
+    image: "product-images/generated/ht-8120.png",
     description: "Rotating bending fatigue machine for S-N curve generation. Variable speed motor with cycle counter. Essential for aerospace & automotive qualification.",
     specs: [
       { label: "Test Type", value: "Rotating bending fatigue" },
@@ -245,7 +245,7 @@ export const products: Product[] = [
     tagline: "Ultra-low profile load cell, Accuracy Class 0.05%.",
     category: "utm",
     categoryLabel: "Universal Testing Machine",
-    image: "product-images/1-ht8336-thumb.jpg",
+    image: "product-images/generated/ht-8336.png",
     description: "Ultra-low profile load cell, Accuracy Class 0.05%. Capacities 1~500 kN. Stainless steel, overload protection. OIML R60 compliant.",
     specs: [
       { label: "Accuracy", value: "Class 0.05%" },
@@ -265,7 +265,7 @@ export const products: Product[] = [
     tagline: "High-speed drum tester for tire & rim endurance.",
     category: "auto-parts",
     categoryLabel: "Auto Parts, Tyres & Bicycle",
-    image: "product-images/2-ht2811t3-thumb.jpg",
+    image: "product-images/generated/ht-2811t3.png",
     description: "High-speed drum tester for tire & rim endurance. Simulates real road conditions. Variable load & speed control.",
     specs: [
       { label: "Test Type", value: "Tire & rim endurance" },
@@ -282,7 +282,7 @@ export const products: Product[] = [
     tagline: "Radial fatigue tester for passenger car & light truck tires.",
     category: "auto-parts",
     categoryLabel: "Auto Parts, Tyres & Bicycle",
-    image: "product-images/2-ht2811t5-thumb.jpg",
+    image: "product-images/generated/ht-2811t5.png",
     description: "Radial fatigue tester for passenger car & light truck tires. Constant radial load at controlled speed. Auto stop on failure.",
     specs: [
       { label: "Application", value: "Passenger car & light truck tires" },
@@ -299,7 +299,7 @@ export const products: Product[] = [
     tagline: "Heavy-duty radial fatigue tester for truck & bus tires.",
     category: "auto-parts",
     categoryLabel: "Auto Parts, Tyres & Bicycle",
-    image: "product-images/2-ht2811t10-thumb.jpg",
+    image: "product-images/generated/ht-2811t10.png",
     description: "Heavy-duty radial fatigue tester for truck, bus & off-road tires. High capacity for commercial vehicles. Servo-controlled load.",
     specs: [
       { label: "Application", value: "Truck, bus & off-road tires" },
@@ -315,7 +315,7 @@ export const products: Product[] = [
     tagline: "Motorcycle wheel & rim fatigue under cornering loads.",
     category: "auto-parts",
     categoryLabel: "Auto Parts, Tyres & Bicycle",
-    image: "product-images/2-ht2724-thumb.jpg",
+    image: "product-images/generated/ht-2724.png",
     description: "Motorcycle wheel & rim fatigue tester under combined radial + lateral cornering load. Evaluates rim structural integrity.",
     specs: [
       { label: "Load Type", value: "Combined radial + lateral cornering" },
@@ -331,7 +331,7 @@ export const products: Product[] = [
     tagline: "Tire stiffness measurement for vehicle dynamics simulation.",
     category: "auto-parts",
     categoryLabel: "Auto Parts, Tyres & Bicycle",
-    image: "product-images/2-ht2706tf-thumb.jpg",
+    image: "product-images/generated/ht-2706tf.png",
     description: "Measures lateral, longitudinal & torsional tire stiffness for vehicle dynamics simulation. 6-component force/moment measurement.",
     specs: [
       { label: "Measurement", value: "6-component force/moment" },
@@ -347,7 +347,7 @@ export const products: Product[] = [
     tagline: "Simulates pothole & kerb impact on tires & wheels.",
     category: "auto-parts",
     categoryLabel: "Auto Parts, Tyres & Bicycle",
-    image: "product-images/2-ht8041rhi-thumb.jpg",
+    image: "product-images/generated/ht-8041-rhi.png",
     description: "Simulates pothole & kerb impact on tires & wheels. Evaluates bead unseating resistance. Drop-weight impactor with controlled energy.",
     specs: [
       { label: "Simulation", value: "Pothole & kerb impact" },
@@ -363,7 +363,7 @@ export const products: Product[] = [
     tagline: "Pendulum impact tester for tire-rim assemblies.",
     category: "auto-parts",
     categoryLabel: "Auto Parts, Tyres & Bicycle",
-    image: "product-images/2-ht2912-thumb.jpg",
+    image: "product-images/generated/ht-2912.png",
     description: "Pendulum impact tester for tire-rim assemblies at various inflation pressures & angles. Used for OEM rim qualification.",
     specs: [
       { label: "Test Type", value: "Pendulum impact" },
@@ -379,7 +379,7 @@ export const products: Product[] = [
     tagline: "25kN servo-hydraulic for automotive components.",
     category: "auto-parts",
     categoryLabel: "Auto Parts, Tyres & Bicycle",
-    image: "product-images/2-ht9711e25-thumb.jpg",
+    image: "product-images/generated/ht-9711-e25-auto.png",
     description: "25kN servo-hydraulic dynamic fatigue machine for automotive components & suspension parts. Sine, random & triangle waveforms up to 50Hz.",
     specs: [
       { label: "Capacity", value: "25 kN" },
@@ -396,7 +396,7 @@ export const products: Product[] = [
     tagline: "100kN servo-hydraulic for larger automotive components.",
     category: "auto-parts",
     categoryLabel: "Auto Parts, Tyres & Bicycle",
-    image: "product-images/2-ht9711e2100-thumb.jpg",
+    image: "product-images/generated/ht-9711-e100.png",
     description: "100kN servo-hydraulic dynamic fatigue machine for larger automotive & structural components. High-frequency up to 50Hz.",
     specs: [
       { label: "Capacity", value: "100 kN" },
@@ -412,7 +412,7 @@ export const products: Product[] = [
     tagline: "Heavy-duty dynamic fatigue for large structural specimens.",
     category: "auto-parts",
     categoryLabel: "Auto Parts, Tyres & Bicycle",
-    image: "product-images/2-ht9711d300-thumb.jpg",
+    image: "product-images/generated/ht-9711-d300.png",
     description: "Heavy-duty 100~300kN dynamic fatigue machine for large structural, aircraft & civil engineering specimens. Damage accumulation modeling.",
     specs: [
       { label: "Capacity", value: "100 ~ 300 kN" },
@@ -428,7 +428,7 @@ export const products: Product[] = [
     tagline: "200kN for vehicle frames & aerospace structures.",
     category: "auto-parts",
     categoryLabel: "Auto Parts, Tyres & Bicycle",
-    image: "product-images/2-ht9711e200-thumb.jpg",
+    image: "product-images/generated/ht-9711-e200.png",
     description: "200kN servo-hydraulic fatigue machine for vehicle frames, large forgings & aerospace structures. Adaptive high-frequency control.",
     specs: [
       { label: "Capacity", value: "200 kN" },
@@ -446,7 +446,7 @@ export const products: Product[] = [
     tagline: "MDR for rubber vulcanization characterization.",
     category: "rubber",
     categoryLabel: "Rubber, Plastics & Polymers",
-    image: "product-images/3-ht2556-thumb.jpg",
+    image: "product-images/generated/ht-2556.png",
     description: "MDR for rubber vulcanization characterization. Provides cure curves, scorch time & T90. Essential for rubber compound development & QC.",
     specs: [
       { label: "Output", value: "Cure curves, scorch time, T90" },
@@ -462,7 +462,7 @@ export const products: Product[] = [
     tagline: "Foam rheometer for polyurethane & latex foam QC.",
     category: "rubber",
     categoryLabel: "Rubber, Plastics & Polymers",
-    image: "product-images/3-ht2556f-thumb.jpg",
+    image: "product-images/generated/ht-2556f.png",
     description: "Foam rheometer monitoring rise profile, gel time & cure for polyurethane & latex foam production QC.",
     specs: [
       { label: "Measurements", value: "Rise profile, gel time, cure" },
@@ -478,7 +478,7 @@ export const products: Product[] = [
     tagline: "Auto disk rheometer for storage modulus & tan delta.",
     category: "rubber",
     categoryLabel: "Rubber, Plastics & Polymers",
-    image: "product-images/3-ht8756p-thumb.jpg",
+    image: "product-images/generated/ht-8756p.png",
     description: "Automatic disk rheometer measuring storage modulus, loss modulus & tan delta. Full auto specimen loading & temperature control.",
     specs: [
       { label: "Measurements", value: "Storage modulus, loss modulus, tan delta" },
@@ -494,7 +494,7 @@ export const products: Product[] = [
     tagline: "Mooney Viscometer for rubber viscosity & scorch testing.",
     category: "rubber",
     categoryLabel: "Rubber, Plastics & Polymers",
-    image: "product-images/3-ht8752-thumb.jpg",
+    image: "product-images/generated/ht-8752.png",
     description: "Mooney Viscometer for rubber viscosity (ML 1+4) & scorch testing. Computer-controlled temperature & torque measurement.",
     specs: [
       { label: "Test", value: "ML 1+4 viscosity & scorch" },
@@ -512,7 +512,7 @@ export const products: Product[] = [
     tagline: "Non-contact laser thickness for PCB copper clad laminates.",
     category: "wires",
     categoryLabel: "Wires and Cable",
-    image: "product-images/4-hte2000-thumb.jpg",
+    image: "product-images/generated/ht-e2000.png",
     description: "Non-contact laser thickness system for PCB copper clad laminates. Micron accuracy. Integrates into production lines for 100% inline QC.",
     specs: [
       { label: "Method", value: "Non-contact laser" },
@@ -529,7 +529,7 @@ export const products: Product[] = [
     tagline: "Machine vision for wire & cable surface inspection.",
     category: "wires",
     categoryLabel: "Wires and Cable",
-    image: "product-images/4-hte2100-thumb.jpg",
+    image: "product-images/generated/ht-e2100.png",
     description: "Machine vision system for wire & cable surface inspection. Detects defects, dimensional deviations & marking errors at production speed.",
     specs: [
       { label: "Method", value: "Machine vision" },
@@ -545,7 +545,7 @@ export const products: Product[] = [
     tagline: "Single column UTM for wire & cable testing.",
     category: "wires",
     categoryLabel: "Wires and Cable",
-    image: "product-images/4-ht2328-thumb.jpg",
+    image: "product-images/generated/ht-2328-wire.png",
     description: "Single column UTM for wire & cable tensile, peel & adhesion testing. BP variant has built-in printer; BI variant has image capture.",
     specs: [
       { label: "Tests", value: "Tensile, peel, adhesion" },
@@ -561,7 +561,7 @@ export const products: Product[] = [
     tagline: "Benchtop force tester for connectors & contacts.",
     category: "wires",
     categoryLabel: "Wires and Cable",
-    image: "product-images/4-ht8116-thumb.jpg",
+    image: "product-images/generated/ht-8116.png",
     description: "Benchtop force tester for connector pull-out, insertion force & contact retention. Digital display with peak hold function.",
     specs: [
       { label: "Tests", value: "Pull-out, insertion force, contact retention" },
@@ -577,7 +577,7 @@ export const products: Product[] = [
     tagline: "Compact horizontal tensile tester for wire & rope.",
     category: "wires",
     categoryLabel: "Wires and Cable",
-    image: "product-images/4-ht8296b-thumb.jpg",
+    image: "product-images/generated/ht-8296b.png",
     description: "Compact horizontal tensile tester for wire, rope & textile. Accommodates long specimens. Up to 50kN. Ideal for bench QC.",
     specs: [
       { label: "Capacity", value: "Up to 50 kN" },
@@ -596,7 +596,7 @@ export const products: Product[] = [
     tagline: "Box compression tester for cartons & corrugated board.",
     category: "paper",
     categoryLabel: "Paper & Paperboard Testing",
-    image: "product-images/5-ht8506-thumb.jpg",
+    image: "product-images/generated/ht-8506.png",
     description: "Box compression tester (BCT) for cartons & corrugated board. Measures BCT, ECT & FCT. Auto test cycle with data storage.",
     specs: [
       { label: "Tests", value: "BCT, ECT, FCT" },
@@ -613,7 +613,7 @@ export const products: Product[] = [
     tagline: "Large walk-in conditioning chamber for paper & packaging.",
     category: "paper",
     categoryLabel: "Paper & Paperboard Testing",
-    image: "product-images/5-ht9745-thumb.jpg",
+    image: "product-images/generated/ht-9745.png",
     description: "Large walk-in conditioning chamber 10~80°C, 10~98% RH. Programmable controller with data logging for paper & packaging.",
     specs: [
       { label: "Temperature", value: "10 ~ 80°C" },
@@ -630,7 +630,7 @@ export const products: Product[] = [
     tagline: "Vibration test chamber for transport stress simulation.",
     category: "paper",
     categoryLabel: "Paper & Paperboard Testing",
-    image: "product-images/5-vs300v-thumb.jpg",
+    image: "product-images/generated/vs-300v.png",
     description: "Vibration test chamber for transport stress simulation. Road, rail & air vibration profiles. Meets packaging transport test standards.",
     specs: [
       { label: "Profiles", value: "Road, rail, air vibration" },
@@ -646,7 +646,7 @@ export const products: Product[] = [
     tagline: "16,000 kgf electrodynamic vibration system.",
     category: "paper",
     categoryLabel: "Paper & Paperboard Testing",
-    image: "product-images/5-vs16000vh-thumb.jpg",
+    image: "product-images/generated/vs-16000vh.png",
     description: "16,000 kgf electrodynamic vibration system, 2~2500 Hz. For electronics, military & industrial product qualification.",
     specs: [
       { label: "Force", value: "16,000 kgf" },
@@ -662,7 +662,7 @@ export const products: Product[] = [
     tagline: "2000 kgf electrodynamic vibration system.",
     category: "paper",
     categoryLabel: "Paper & Paperboard Testing",
-    image: "product-images/5-vs2000vh-thumb.jpg",
+    image: "product-images/generated/vs-2000vh.png",
     description: "2000 kgf electrodynamic vibration system. Horizontal & vertical test capability. Sine, random & shock waveforms.",
     specs: [
       { label: "Force", value: "2000 kgf" },
@@ -679,7 +679,7 @@ export const products: Product[] = [
     tagline: "Mechanical shock tester up to 100G peak.",
     category: "paper",
     categoryLabel: "Paper & Paperboard Testing",
-    image: "product-images/5-shock50-thumb.jpg",
+    image: "product-images/generated/shock-50.png",
     description: "Mechanical shock tester 50kg table, up to 100G peak. Half-sine, trapezoidal & sawtooth pulses. For packaging & product drop simulation.",
     specs: [
       { label: "Table", value: "50 kg" },
@@ -696,7 +696,7 @@ export const products: Product[] = [
     tagline: "Compact shock tester up to 500G for PCBs.",
     category: "paper",
     categoryLabel: "Paper & Paperboard Testing",
-    image: "product-images/5-shock5-thumb.jpg",
+    image: "product-images/generated/shock-5.png",
     description: "Compact shock tester 5kg table, up to 500G for PCBs & miniature devices. Programmable pulse duration & shape.",
     specs: [
       { label: "Table", value: "5 kg" },
@@ -715,7 +715,7 @@ export const products: Product[] = [
     tagline: "Portable ultrasonic thickness gauge 0.75~300mm.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-accur1-thumb.jpg",
+    image: "product-images/generated/accur-1.png",
     description: "Portable ultrasonic thickness gauge 0.75~300mm, 0.001mm resolution. Non-destructive single-side access for corrosion monitoring.",
     specs: [
       { label: "Range", value: "0.75 ~ 300 mm" },
@@ -732,7 +732,7 @@ export const products: Product[] = [
     tagline: "Advanced coating gauge with Bluetooth data transfer.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-uct6800-thumb.jpg",
+    image: "product-images/generated/uct6800.png",
     description: "Advanced coating gauge, auto-detects ferrous/non-ferrous. 0~2000Î¼m range. Bluetooth data transfer.",
     specs: [
       { label: "Range", value: "0 ~ 2000 Î¼m" },
@@ -749,7 +749,7 @@ export const products: Product[] = [
     tagline: "Dual F+N coating gauge, pocket-size with USB.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-uct6500-thumb.jpg",
+    image: "product-images/generated/uct6500.png",
     description: "Dual F+N coating gauge for paint, plating & anodizing. 0~1250Î¼m. Pocket-size, USB output for SPC.",
     specs: [
       { label: "Range", value: "0 ~ 1250 Î¼m" },
@@ -766,7 +766,7 @@ export const products: Product[] = [
     tagline: "Portable Leeb rebound hardness tester.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-hardtestii-thumb.jpg",
+    image: "product-images/generated/hardtest-ii.png",
     description: "Portable Leeb rebound hardness tester for large in-situ workpieces. Reads HLD, HRC, HRB, HB, HV, HS scales.",
     specs: [
       { label: "Method", value: "Leeb rebound" },
@@ -783,7 +783,7 @@ export const products: Product[] = [
     tagline: "Classic manual Rockwell for metals.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-rockwellhr150a-thumb.jpg",
+    image: "product-images/generated/hr-150a.png",
     description: "Classic manual Rockwell tester for metals. HRA, HRB, HRC scales. Robust cast iron frame. For production QC & incoming inspection.",
     specs: [
       { label: "Scales", value: "HRA, HRB, HRC" },
@@ -799,7 +799,7 @@ export const products: Product[] = [
     tagline: "Motorized Rockwell with digital readout & statistics.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-rockwellhr150dt-thumb.jpg",
+    image: "product-images/generated/hr-150dt.png",
     description: "Motorized Rockwell tester with digital readout & statistics (mean, max, min, std dev). RS232 output. All Rockwell scales.",
     specs: [
       { label: "Statistics", value: "Mean, max, min, std dev" },
@@ -816,7 +816,7 @@ export const products: Product[] = [
     tagline: "Fully auto Rockwell with LCD & USB output.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-rockwellhrs150-thumb.jpg",
+    image: "product-images/generated/hrs-150.png",
     description: "Fully auto Rockwell tester with LCD display. Stores 100 results. USB/RS232 output. Automatic test cycle.",
     specs: [
       { label: "Storage", value: "100 results" },
@@ -833,7 +833,7 @@ export const products: Product[] = [
     tagline: "Enhanced Rockwell with touchscreen & network connectivity.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-rockwellhrs150l-thumb.jpg",
+    image: "product-images/generated/hrs-150l.png",
     description: "Enhanced Rockwell with extended throat for larger workpieces. Touchscreen with graphical interface. Auto scale conversion. Network connectivity.",
     specs: [
       { label: "Throat", value: "Extended for large workpieces" },
@@ -850,7 +850,7 @@ export const products: Product[] = [
     tagline: "Superficial Rockwell for thin materials & case-hardened layers.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-rockwellhrm45-thumb.jpg",
+    image: "product-images/generated/hrm-45.png",
     description: "Superficial Rockwell for thin materials & case-hardened layers. HR15N, HR30N, HR45N & T scales. Low test loads minimize damage.",
     specs: [
       { label: "Scales", value: "HR15N, HR30N, HR45N, T" },
@@ -866,7 +866,7 @@ export const products: Product[] = [
     tagline: "Motorized superficial Rockwell for thin sheets & coatings.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-rockwellhrm45dt-thumb.jpg",
+    image: "product-images/generated/hrm-45dt.png",
     description: "Motorized superficial Rockwell for thin sheets & coatings. All 15N, 30N, 45N & T scales. RS232 output for SPC.",
     specs: [
       { label: "Scales", value: "15N, 30N, 45N, T" },
@@ -882,7 +882,7 @@ export const products: Product[] = [
     tagline: "Digital superficial Rockwell with auto cycle & batch mode.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-rockwellhrms45-thumb.jpg",
+    image: "product-images/generated/hrms-45.png",
     description: "Digital superficial Rockwell with auto cycle & batch mode. For carburized, nitrided & chrome-plated surfaces.",
     specs: [
       { label: "Features", value: "Auto cycle, batch mode" },
@@ -898,7 +898,7 @@ export const products: Product[] = [
     tagline: "Rockwell for plastics & rubber with dwell time control.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-rockwellxhr150-thumb.jpg",
+    image: "product-images/generated/xhr-150.png",
     description: "Rockwell for plastics & rubber. HRM & HRR scales with dwell time control for viscoelastic materials.",
     specs: [
       { label: "Scales", value: "HRM, HRR" },
@@ -914,7 +914,7 @@ export const products: Product[] = [
     tagline: "Digital plastics Rockwell with auto cycle & USB export.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-rockwellxhrs150-thumb.jpg",
+    image: "product-images/generated/xhrs-150.png",
     description: "Digital plastics Rockwell with auto cycle & programmable dwell. HRM, HRR, HRE, HRL scales. USB data export.",
     specs: [
       { label: "Scales", value: "HRM, HRR, HRE, HRL" },
@@ -931,7 +931,7 @@ export const products: Product[] = [
     tagline: "Twin display showing direct & converted Rockwell values.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-rockwell560rss-thumb.jpg",
+    image: "product-images/generated/560rss.png",
     description: "Twin display showing direct Rockwell value & converted value simultaneously. Extended throat depth for large samples.",
     specs: [
       { label: "Display", value: "Twin (direct + converted)" },
@@ -947,7 +947,7 @@ export const products: Product[] = [
     tagline: "Full-colour touchscreen Rockwell with WiFi & USB.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-rockwellhr150t-thumb.jpg",
+    image: "product-images/generated/hr-150t.png",
     description: "Modern full-colour touchscreen Rockwell tester. WiFi & USB. Graphical charts & statistics. All Rockwell scales.",
     specs: [
       { label: "Interface", value: "Full-colour touchscreen" },
@@ -964,7 +964,7 @@ export const products: Product[] = [
     tagline: "Fully auto Rockwell with motorized X-Y stage & hardness mapping.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-rockwell560rssz-thumb.jpg",
+    image: "product-images/generated/560rssz.png",
     description: "Fully auto Rockwell with motorized X-Y stage for hardness mapping. Barcode scanner. Auto report with hardness map overlay.",
     specs: [
       { label: "Stage", value: "Motorized X-Y" },
@@ -981,7 +981,7 @@ export const products: Product[] = [
     tagline: "3-in-1 Brinell + Rockwell + Vickers on one machine.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-universalhbrv1875-thumb.jpg",
+    image: "product-images/generated/hbrv-1875.png",
     description: "3-in-1 Brinell + Rockwell + Vickers on one machine. Motorized force selection. Optical indentation measurement system.",
     specs: [
       { label: "Methods", value: "Brinell, Rockwell, Vickers" },
@@ -998,7 +998,7 @@ export const products: Product[] = [
     tagline: "Digital Brinell/Vickers/Rockwell with built-in camera.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-universal570had-thumb.jpg",
+    image: "product-images/generated/570had.png",
     description: "Digital Brinell/Vickers/Rockwell with built-in camera. Auto indentation measurement & analysis. Touch panel, multi-language. LAN/USB output.",
     specs: [
       { label: "Camera", value: "Built-in auto measurement" },
@@ -1015,7 +1015,7 @@ export const products: Product[] = [
     tagline: "Enhanced universal hardness with larger display & network.",
     category: "hardness",
     categoryLabel: "Hardness Testing & Thickness Measurement",
-    image: "product-images/6-universal570hadl-thumb.jpg",
+    image: "product-images/generated/570hadl.png",
     description: "Enhanced 570HAD with larger display & extended throat. Advanced image analysis. Network connectivity for enterprise QC integration.",
     specs: [
       { label: "Display", value: "Larger display" },
@@ -1034,7 +1034,7 @@ export const products: Product[] = [
     tagline: "25kN servo-hydraulic dynamic fatigue machine.",
     category: "dynamic",
     categoryLabel: "Dynamic Testing",
-    image: "product-images/7-ht9711e25-thumb.jpg",
+    image: "product-images/generated/ht-9711e25-dyn.png",
     description: "25kN servo-hydraulic dynamic fatigue machine. Sine, random, square & triangle profiles. 0.001~50Hz. Real-time force & strain monitoring.",
     specs: [
       { label: "Capacity", value: "25 kN" },
@@ -1052,7 +1052,7 @@ export const products: Product[] = [
     tagline: "Torsional fatigue for drive shafts & fasteners.",
     category: "dynamic",
     categoryLabel: "Dynamic Testing",
-    image: "product-images/7-ht9711t5-thumb.jpg",
+    image: "product-images/generated/ht-9711t5.png",
     description: "Servo-hydraulic torsional fatigue machine for drive shafts, fasteners, springs & bio-medical implants. Up to 20Hz. ISO 1352 compliant.",
     specs: [
       { label: "Frequency", value: "Up to 20 Hz" },
@@ -1071,7 +1071,7 @@ export const products: Product[] = [
     category: "compression",
     categoryLabel: "Concrete Compression Testing",
     brand: "Armstrong",
-    image: "product-images/armstrong-automatic-concrete-compression-tester.jpeg",
+    image: "product-images/generated/armstrong-compression.png",
     catalogueUrl: "catalogues/armstrong-automatic-concrete-compression-tester.pdf",
     description: "Armstrong automatic computer-controlled hydraulic compression tester for concrete cubes. Available in 1,000 kN and 2,000 kN capacity configurations, with digital force indication, controlled loading rate, peak hold and overload protection.",
     specs: [
@@ -1092,7 +1092,7 @@ export const products: Product[] = [
     category: "lab-equipment",
     categoryLabel: "Laboratory & Weighing Equipment",
     brand: "Armstrong",
-    image: "product-images/armstrong-800c-muffle-furnace.jpeg",
+    image: "product-images/generated/armstrong-furnace.png",
     catalogueUrl: "catalogues/armstrong-800c-muffle-furnace.pdf",
     description: "Armstrong laboratory muffle furnace with a maximum temperature of 800 °C and 220-240 V AC supply, for heat-treatment and material-preparation workflows.",
     specs: [
@@ -1110,7 +1110,7 @@ export const products: Product[] = [
     category: "lab-equipment",
     categoryLabel: "Laboratory & Weighing Equipment",
     brand: "Armstrong",
-    image: "product-images/armstrong-200g-laboratory-balance.jpeg",
+    image: "product-images/generated/armstrong-balance.png",
     catalogueUrl: "catalogues/armstrong-200g-laboratory-balance.pdf",
     description: "Armstrong compact laboratory balance for routine sample weighing, with 200 g capacity, 0.1 g readability and a calibration certificate requirement.",
     specs: [
@@ -1128,7 +1128,7 @@ export const products: Product[] = [
     category: "lab-equipment",
     categoryLabel: "Laboratory & Weighing Equipment",
     brand: "Armstrong",
-    image: "product-images/armstrong-5kg-digital-weighing-scale.jpeg",
+    image: "product-images/generated/armstrong-scale-5kg.png",
     catalogueUrl: "catalogues/armstrong-5kg-digital-weighing-scale.pdf",
     description: "Armstrong digital weighing scale with 5 kg capacity, an integrated digital display and stainless-steel weighing platform. A calibration certificate is required.",
     specs: [
@@ -1140,6 +1140,11 @@ export const products: Product[] = [
     idealFor: ["Laboratory weighing", "Bench use", "Quality control"],
   },
 ];
+
+// Each product has its own customer-facing PDF catalogue.
+for (const product of products) {
+  product.catalogueUrl = `catalogues/products/${product.id}.pdf`;
+}
 
 export const accessories = [
   {

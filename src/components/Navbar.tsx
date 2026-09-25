@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Home", path: "/" },
   { label: "Products", path: "/products" },
   { label: "Armstrong", path: "/armstrong-testing-machines-malaysia" },
+  { label: "Spare Parts", path: "/spare-parts" },
   { label: "Calibration", path: "/calibration-service-malaysia" },
   { label: "Services", path: "/services" },
   { label: "About", path: "/about" },
