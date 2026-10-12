@@ -6,6 +6,17 @@ import { JSDOM } from "jsdom";
 
 const origin = "https://www.hungtainstrument.com.my";
 
+test("Calibration service illustration is locally hosted with stable dimensions", async () => {
+  const dom = new JSDOM(await readFile("dist/calibration-service-malaysia/index.html", "utf8"));
+  const image = dom.window.document.querySelector('img[src*="tensile-machine-service.webp"]');
+  assert.ok(image);
+  assert.equal(image.getAttribute("width"), "1672");
+  assert.equal(image.getAttribute("height"), "941");
+  assert.ok(dom.window.document.querySelector("figcaption").textContent.includes("AI-generated"));
+  assert.ok((await readFile("dist/product-images/tensile-machine-service.webp")).length > 1000);
+  dom.window.close();
+});
+
 test("Company history distinguishes Taiwan and Malaysia establishment dates", async () => {
   const dom = new JSDOM(await readFile("dist/about/index.html", "utf8"));
   const text = dom.window.document.body.textContent;

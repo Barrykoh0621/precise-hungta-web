@@ -103,6 +103,20 @@ const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
               </div>
             </div>
           </AnimatedSection>
+          <figure className="mt-10 max-w-6xl">
+            <img
+              src="/product-images/tensile-machine-service.webp"
+              alt="Illustrative scene of a technician servicing a tensile testing machine"
+              width={1672}
+              height={941}
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-auto"
+            />
+            <figcaption className="mt-3 text-xs text-primary-foreground/70">
+              AI-generated service illustration, not a photograph of our premises or team.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
