@@ -25,8 +25,8 @@ const appRoutes = {
   },
   about: {
     title: "About Hung Ta Instrument | Testing Instruments Malaysia",
-    description: "Meet Hung Ta Instrument in Seremban, Malaysia. Testing machine selection, installation, service and calibration support for factories, laboratories and QA teams.",
-    content: '<h1>About Hung Ta Instrument</h1><p>Hung Ta Instrument supplies testing machines and supports factories, laboratories and QA teams from Seremban, Malaysia.</p><p>Our work includes machine selection, installation, service support and calibration enquiries for material testing equipment.</p>',
+    description: "Hung Ta Instrument was founded in Taiwan in September 1975. Malaysian operations began in 1992, supplying testing machines and local support from Seremban.",
+    content: '<h1>About Hung Ta Instrument</h1><p>HUNG TA INSTRUMENT was founded in September 1975 in Taiwan. Our Malaysian operations began in 1992.</p><p>Hung Ta Instrument supplies testing machines and supports factories, laboratories and QA teams from Seremban, Malaysia.</p><p>Our work includes machine selection, installation, service support and calibration enquiries for material testing equipment.</p>',
   },
   "spare-parts": {
     title: "Testing Machine Spare Parts, Grips & Fixtures Malaysia | Hung Ta",

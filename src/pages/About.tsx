@@ -11,16 +11,16 @@ const values = [
 ];
 
 const stats = [
-  { value: "1975", label: "Founded" },
+  { value: "1992", label: "Malaysia operations" },
   { value: "1000+", label: "Testing Instruments" },
   { value: "10+", label: "Testing Categories" },
 ];
 
 const About = () => {
   usePageSeo({
-    title: "About Hung Ta Instrument Malaysia | Testing Instruments Since 1975",
+    title: "About Hung Ta Instrument | Malaysia Since 1992, Taiwan Since 1975",
     description:
-      "Learn about HUNG TA INSTRUMENT (M) Sdn. Bhd. (SSM 256852-H), a Malaysia supplier of hydraulic testing machines, compression machines, electrical tensile testing machines and support services.",
+      "Hung Ta Instrument was founded in Taiwan in September 1975. Malaysian operations began in 1992, supplying testing machines and local support services.",
   });
 
   return (
@@ -34,7 +34,7 @@ const About = () => {
             Precision You Can<br />Count On
           </h1>
           <p className="text-primary-foreground/60 max-w-xl text-lg font-montserrat">
-            HUNG TA INSTRUMENT (M) Sdn. Bhd. (SSM 256852-H) has served quality control testing needs since 1975.
+            Hung Ta Instrument was founded in Taiwan in September 1975. Our Malaysian operations began in 1992, serving local quality control testing needs.
           </p>
         </AnimatedSection>
 
@@ -68,7 +68,7 @@ const About = () => {
           <AnimatedSection delay={0.15}>
             <div className="space-y-6 text-muted-foreground leading-relaxed font-montserrat">
               <p>
-                HUNG TA INSTRUMENT (M) Sdn. Bhd. was founded in September 1975 as a pioneer in manufacturing and supplying quality control testing and inspecting equipment.
+                HUNG TA INSTRUMENT was founded in September 1975 in Taiwan, manufacturing and supplying quality control testing and inspecting equipment. Our Malaysian operations began in 1992.
               </p>
               <p>
                 From 109, Taman AST, Jalan Sungai Ujong, Seremban, Negeri Sembilan, we support manufacturers, laboratories and quality control departments with testing instruments, application guidance, servicing, upgrading, modification, calibration and software support.

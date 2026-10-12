@@ -213,8 +213,7 @@ const ProductLanding = ({ pageKey, onOpenQuote }: ProductLandingProps) => {
       serviceType: page.primaryKeyword,
       provider: {
         "@type": "LocalBusiness",
-        name: "HUNG TA INSTRUMENT (M) Sdn. Bhd.",
-        identifier: "SSM 256852-H",
+        name: "Hung Ta Instrument Enterprise",
         telephone: "+60126280096",
         email: "hungtatest@yahoo.com",
         areaServed: ["Malaysia", "Singapore", "Asia"],
@@ -269,7 +268,7 @@ const ProductLanding = ({ pageKey, onOpenQuote }: ProductLandingProps) => {
 
       <section className="bg-muted border-b border-border">
         <div className="container mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-3">
-          {["Since 1975", "SSM 256852-H", "Malaysia support", "ASTM / ISO guidance"].map((item) => (
+          {["Taiwan since 1975", "Malaysia since 1992", "Malaysia support", "ASTM / ISO guidance"].map((item) => (
             <div key={item} className="bg-white border border-border rounded-lg px-4 py-3 flex items-center gap-2 text-sm font-semibold">
               <ShieldCheck className="w-4 h-4 text-accent" />
               {item}

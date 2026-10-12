@@ -6,6 +6,15 @@ import { JSDOM } from "jsdom";
 
 const origin = "https://www.hungtainstrument.com.my";
 
+test("Company history distinguishes Taiwan and Malaysia establishment dates", async () => {
+  const dom = new JSDOM(await readFile("dist/about/index.html", "utf8"));
+  const text = dom.window.document.body.textContent;
+  assert.ok(text.includes("September 1975 in Taiwan"));
+  assert.ok(text.includes("Malaysian operations began in 1992"));
+  assert.ok(!text.includes("Sdn. Bhd."));
+  dom.window.close();
+});
+
 test("New Armstrong models have product images and downloadable catalogues", async () => {
   const landing = await readFile("dist/armstrong-testing-machines-malaysia/index.html", "utf8");
   for (const model of ["waw-300d", "yew-3000e"]) {

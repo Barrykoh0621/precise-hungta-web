@@ -55,7 +55,7 @@ const buyerSearches = [
 ];
 
 const performanceStats = [
-  { value: "1975", label: "Established" },
+  { value: "1992", label: "Malaysia operations" },
   { value: "1000+", label: "Testing machine range" },
   { value: "10+", label: "Application categories" },
   { value: "MY", label: "Local sales & support" },
@@ -106,7 +106,7 @@ const Index = ({ onOpenQuote }: IndexProps) => {
             <div className="max-w-5xl">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-xs font-semibold mb-7 border border-white/20 uppercase tracking-[0.22em]">
                 <Gauge className="w-4 h-4 text-accent" />
-                Testing instruments since 1975
+                Taiwan heritage since 1975 · Malaysia since 1992
               </span>
               <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl text-white mb-7">
                 Hung Ta Instrument
@@ -141,7 +141,7 @@ const Index = ({ onOpenQuote }: IndexProps) => {
       {/* Trust bar */}
       <section className="bg-muted border-b border-border">
         <div className="container mx-auto px-4 py-6 flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground font-medium">
-          {["Established 1975", "Malaysia Support", "ASTM / ISO Test Applications", "Hydraulic & Tensile Machines", "Malaysia, Singapore & Asia"].map((t) => (
+          {["Malaysia Since 1992", "Malaysia Support", "ASTM / ISO Test Applications", "Hydraulic & Tensile Machines", "Malaysia, Singapore & Asia"].map((t) => (
             <div key={t} className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-accent" />
               {t}
