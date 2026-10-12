@@ -23,12 +23,29 @@ const equipmentTypes = [
   "Compression and material testing equipment",
 ];
 
-const searchTerms = [
-  "Testing machine calibration Malaysia",
-  "Tensile machine calibration",
-  "Universal testing machine calibration",
-  "Load cell calibration Malaysia",
-  "ISO 17025 calibration Malaysia",
+const enquirySteps = [
+  "Send the brand, model, serial number, load cell capacity, working force range and factory location.",
+  "Share your previous calibration record, requested test standard and audit or calibration due date.",
+  "Review machine condition, support availability and documentation requirements with us before confirming a quotation or appointment.",
+];
+
+const calibrationQuestions = [
+  {
+    question: "How often should a tensile testing machine be calibrated?",
+    answer: "Use the interval required by your quality system, customer requirements and applicable test method. Usage, previous results and repairs can affect the review. Share your existing due date; there is no single interval suitable for every machine.",
+  },
+  {
+    question: "Can calibration fix unstable readings or a damaged machine?",
+    answer: "Calibration evaluates measurement performance; it does not replace repair. Report drifting force readings, damaged grips, controller problems or recent load cell replacement so service needs can be reviewed first.",
+  },
+  {
+    question: "Do you offer ISO/IEC 17025 accredited calibration?",
+    answer: "We do not currently claim ISO/IEC 17025 accreditation. If your audit requires an accredited certificate, tell us before quotation and confirm the provider, approved scope and required force range before booking.",
+  },
+  {
+    question: "What affects the calibration support quotation?",
+    answer: "The machine model, measurement range, number of load systems, condition, factory location and required records affect the enquiry. Send these details for a scope review rather than relying on a general price.",
+  },
 ];
 
 const calibrationFocus = [
@@ -58,7 +75,7 @@ const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
   usePageSeo({
     title: "Testing Machine Calibration Malaysia | Hung Ta Instrument",
     description:
-      "Calibration support for tensile machines, universal testing machines, load systems and factory QC equipment in Malaysia. Hung Ta is preparing ISO/IEC 17025 calibration capability.",
+      "Testing machine and tensile machine calibration support in Malaysia. Send your UTM model, load capacity, factory location and due date to Hung Ta for a scope review.",
     canonicalPath: "/calibration-service-malaysia",
   });
 
@@ -69,9 +86,9 @@ const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
           <AnimatedSection>
             <div className="max-w-4xl">
               <p className="text-accent text-xs font-bold uppercase tracking-[0.28em] mb-4">Testing machine calibration Malaysia</p>
-              <h1 className="font-serif text-5xl md:text-7xl leading-[0.95] mb-6">Calibration support for testing machines and QC equipment.</h1>
+              <h1 className="font-serif text-5xl md:text-7xl leading-[0.95] mb-6">Testing machine calibration support in Malaysia.</h1>
               <p className="text-lg md:text-xl text-primary-foreground/72 max-w-3xl leading-relaxed">
-                Calibration support for tensile machines, universal testing machines, load systems and material testing equipment. Hung Ta is preparing ISO/IEC 17025 calibration capability for audit-driven factories and laboratories.
+                Discuss tensile machine calibration, universal testing machine calibration and load cell requirements with Hung Ta Instrument in Seremban. Send your machine details so we can review the measurement range, condition and documentation you need.
               </p>
               <div className="flex flex-wrap gap-3 mt-8">
                 <Button onClick={onOpenQuote} className="rounded-full bg-accent text-white hover:bg-orange-light font-semibold gap-2 px-7">
@@ -154,9 +171,9 @@ const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
           <AnimatedSection>
             <div className="max-w-3xl mb-10">
               <p className="text-xs font-bold uppercase tracking-[0.24em] text-accent mb-3">Calibration support scope</p>
-              <h2 className="text-3xl md:text-5xl font-black mb-5">Built around the calibration searches buyers actually use</h2>
+              <h2 className="text-3xl md:text-5xl font-black mb-5">Calibration support for your testing equipment</h2>
               <p className="text-muted-foreground leading-relaxed">
-                This page is prepared for customers searching for testing machine calibration, tensile machine calibration, universal testing machine calibration, load cell calibration and ISO/IEC 17025 preparation support in Malaysia.
+                Metal, rubber and copper manufacturers use different force ranges, fixtures and test methods. Tell us what your machine measures and the records your QA team needs; we will review the suitable support before quotation.
               </p>
             </div>
           </AnimatedSection>
@@ -181,22 +198,37 @@ const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
                 <div className="max-w-2xl">
                   <Wrench className="w-8 h-8 text-accent mb-5" />
-                  <p className="text-xs font-bold uppercase tracking-[0.24em] text-accent mb-3">Google Ads focus</p>
-                  <h2 className="text-3xl md:text-4xl font-black mb-4">Search terms we are targeting</h2>
+                  <p className="text-xs font-bold uppercase tracking-[0.24em] text-accent mb-3">Plan your service enquiry</p>
+                  <h2 className="text-3xl md:text-4xl font-black mb-4">How to arrange testing machine calibration support</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    These are high-intent searches from customers who may already have testing equipment and need service, calibration support or audit readiness.
+                    Prepare your equipment and QA requirements before requesting a quotation. Our team follows up during business hours.
                   </p>
                 </div>
-                <div className="flex flex-wrap gap-2 max-w-xl">
-                  {searchTerms.map((term) => (
-                    <span key={term} className="bg-muted border border-border rounded-full px-4 py-2 text-sm font-semibold">
-                      {term}
-                    </span>
+                <ol className="list-decimal pl-5 space-y-4 max-w-xl">
+                  {enquirySteps.map((step) => (
+                    <li key={step} className="text-sm leading-relaxed">{step}</li>
                   ))}
-                </div>
+                </ol>
               </div>
+              <p className="text-sm mt-6 leading-relaxed">
+                Read our <a className="underline" href="/testing-machine-calibration-checklist-malaysia/">testing machine calibration checklist</a> or the <a className="underline" href="/tensile-machine-calibration-malaysia/">tensile machine calibration preparation guide</a>.
+              </p>
             </div>
           </AnimatedSection>
+        </div>
+      </section>
+
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-black mb-8">Testing machine calibration questions</h2>
+          <div className="divide-y divide-border">
+            {calibrationQuestions.map(({ question, answer }) => (
+              <details key={question} className="py-5">
+                <summary className="font-bold cursor-pointer">{question}</summary>
+                <p className="mt-3 text-muted-foreground leading-relaxed">{answer}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 

@@ -1,0 +1,160 @@
+import { readFile, writeFile, readdir } from "node:fs/promises";
+import path from "node:path";
+import { JSDOM } from "jsdom";
+
+const origin = "https://www.hungtainstrument.com.my";
+const dist = path.resolve("dist");
+const shell = await readFile(path.join(dist, "index.html"), "utf8");
+
+// Serve the existing interactive app at real URLs instead of noindex redirect stubs.
+const appRoutes = {
+  contact: {
+    title: "Contact Hung Ta Instrument | Testing Machines & Calibration Malaysia",
+    description: "Contact Hung Ta Instrument in Seremban for tensile testing machines, UTM service and calibration support. Call 012-628 0096. Monday-Friday, 8:30am-6pm.",
+    content: '<h1>Contact Hung Ta Instrument</h1><p>Testing machine supply, service and calibration support in Malaysia.</p><address>109, Taman AST, Jalan Sungai Ujong, 70200 Seremban, Negeri Sembilan, Malaysia</address><p><a href="tel:+60126280096">012-628 0096 Sales Manager</a><br><a href="tel:+60122201096">012-220 1096 Product Specialist</a><br><a href="mailto:hungtatest@yahoo.com">hungtatest@yahoo.com</a></p><p>Monday to Friday, 8:30 AM - 6:00 PM. Service enquiries: Malaysia, Singapore and Asia.</p>',
+  },
+  services: {
+    title: "Testing Machine Service & Calibration Support Malaysia | Hung Ta",
+    description: "Service, maintenance, calibration support, software and spare parts for tensile and universal testing machines. Contact Hung Ta Instrument in Seremban, Malaysia.",
+    content: '<h1>Testing Machine Service and Calibration Support</h1><p>Hung Ta supports factories and laboratories with machine servicing, maintenance, software, spare parts and calibration enquiries.</p><p><a href="../calibration-service-malaysia/">Testing machine calibration support in Malaysia</a></p><p><a href="../universal-testing-machine-service-malaysia/">Universal testing machine service</a></p>',
+  },
+  products: {
+    title: "Testing Machine Catalogue Malaysia | Hung Ta Instrument",
+    description: "Browse tensile, universal, hydraulic and compression testing machines, grips and fixtures for metal, rubber and copper quality control. Request a model quotation.",
+    content: '<h1>Testing Machine Catalogue</h1><p>Testing instruments, grips and fixtures for factory and laboratory quality control.</p><ul><li><a href="../tensile-testing-machine-malaysia/">Tensile testing machines</a></li><li><a href="../universal-testing-machine-malaysia/">Universal testing machines</a></li><li><a href="../hydraulic-testing-machine-malaysia/">Hydraulic testing machines</a></li><li><a href="../compression-machine-malaysia/">Compression testing machines</a></li><li><a href="../spare-parts/">Spare parts and fixtures</a></li></ul>',
+  },
+  about: {
+    title: "About Hung Ta Instrument | Testing Instruments Malaysia",
+    description: "Meet Hung Ta Instrument in Seremban, Malaysia. Testing machine selection, installation, service and calibration support for factories, laboratories and QA teams.",
+    content: '<h1>About Hung Ta Instrument</h1><p>Hung Ta Instrument supplies testing machines and supports factories, laboratories and QA teams from Seremban, Malaysia.</p><p>Our work includes machine selection, installation, service support and calibration enquiries for material testing equipment.</p>',
+  },
+  "spare-parts": {
+    title: "Testing Machine Spare Parts, Grips & Fixtures Malaysia | Hung Ta",
+    description: "Enquire about tensile testing machine grips, fixtures and spare parts in Malaysia. Share your machine model, sample material and capacity for compatibility review.",
+    content: '<h1>Testing Machine Spare Parts, Grips and Fixtures</h1><p>Send your machine model, existing part details, sample material and capacity to Hung Ta for a compatibility review.</p><p><a href="../products/">Testing machine catalogue</a></p>',
+  },
+};
+
+function setMeta(document, attribute, key, content) {
+  let element = document.querySelector(`meta[${attribute}="${key}"]`);
+  if (!element) {
+    element = document.createElement("meta");
+    element.setAttribute(attribute, key);
+    document.head.append(element);
+  }
+  element.setAttribute("content", content);
+}
+
+for (const [route, data] of Object.entries(appRoutes)) {
+  const dom = new JSDOM(shell);
+  const document = dom.window.document;
+  document.title = data.title;
+  setMeta(document, "name", "description", data.description);
+  setMeta(document, "property", "og:title", data.title);
+  setMeta(document, "property", "og:description", data.description);
+  setMeta(document, "name", "twitter:title", data.title);
+  setMeta(document, "name", "twitter:description", data.description);
+  document.querySelector('link[rel="canonical"]').href = `${origin}/${route}/`;
+  setMeta(document, "property", "og:url", `${origin}/${route}/`);
+  document.getElementById("root").innerHTML = `<header><a href="../">Hung Ta Instrument</a></header><main>${data.content}<p><a href="../contact/">Contact Hung Ta</a></p></main>`;
+  for (const element of document.querySelectorAll("script[src], link[href]")) {
+    const attribute = element.tagName === "SCRIPT" ? "src" : "href";
+    const value = element.getAttribute(attribute);
+    if (value.startsWith("./")) element.setAttribute(attribute, `../${value.slice(2)}`);
+  }
+  await writeFile(path.join(dist, route, "index.html"), dom.serialize());
+  dom.window.close();
+}
+
+function canonicalize(value) {
+  if (!value.startsWith(`${origin}/`)) return value;
+  const url = new URL(value);
+  if (url.search || url.hash || path.posix.extname(url.pathname)) return value;
+  url.pathname = `${url.pathname.replace(/\/+$/, "")}/`;
+  return url.href;
+}
+
+function normalizeSchema(value) {
+  if (typeof value === "string") return canonicalize(value);
+  if (Array.isArray(value)) return value.map(normalizeSchema);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, normalizeSchema(item)]));
+  }
+  return value;
+}
+
+const entries = await readdir(dist, { withFileTypes: true });
+const pageFiles = ["index.html"];
+for (const entry of entries.filter((item) => item.isDirectory())) {
+  try {
+    await readFile(path.join(dist, entry.name, "index.html"));
+    pageFiles.push(`${entry.name}/index.html`);
+  } catch (error) {
+    if (error.code !== "ENOENT") throw error;
+  }
+}
+
+const urls = new Set();
+for (const file of pageFiles) {
+  const dom = new JSDOM(await readFile(path.join(dist, file), "utf8"));
+  const document = dom.window.document;
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) throw new Error(`Missing canonical: ${file}`);
+  const url = `${origin}/${file === "index.html" ? "" : `${path.posix.dirname(file)}/`}`;
+  canonical.setAttribute("href", url);
+  setMeta(document, "property", "og:url", url);
+  for (const script of document.querySelectorAll('script[type="application/ld+json"]')) {
+    script.textContent = JSON.stringify(normalizeSchema(JSON.parse(script.textContent)), null, 2);
+  }
+  if (document.querySelector('meta[name="robots"]')?.content.includes("noindex")) {
+    throw new Error(`Public page cannot be indexed: ${file}`);
+  }
+  for (const element of document.querySelectorAll('a[href]')) {
+    const href = element.getAttribute("href");
+    if (!href || href.startsWith("#")) continue;
+    const target = new URL(href, url);
+    if (target.origin === origin && !target.search && !target.hash && !path.posix.extname(target.pathname)) {
+      element.setAttribute("href", `${target.pathname.replace(/\/+$/, "")}/`);
+    }
+  }
+  for (const script of document.querySelectorAll('script[type="module"][src]')) {
+    await readFile(path.resolve(dist, path.posix.dirname(file), script.getAttribute("src")));
+  }
+  await writeFile(path.join(dist, file), dom.serialize());
+  urls.add(url);
+  dom.window.close();
+}
+
+const sitemapDom = new JSDOM(await readFile(path.join(dist, "sitemap.xml"), "utf8"), { contentType: "application/xml" });
+const sitemap = sitemapDom.window.document;
+for (const entry of [...sitemap.getElementsByTagName("url")]) {
+  const loc = entry.getElementsByTagName("loc")[0];
+  loc.textContent = canonicalize(loc.textContent);
+  if (!urls.has(loc.textContent)) entry.remove();
+}
+const existing = new Set([...sitemap.getElementsByTagName("loc")].map((loc) => loc.textContent));
+for (const url of urls) {
+  if (existing.has(url)) continue;
+  const entry = sitemap.createElementNS(sitemap.documentElement.namespaceURI, "url");
+  const loc = sitemap.createElementNS(sitemap.documentElement.namespaceURI, "loc");
+  loc.textContent = url;
+  entry.append(loc);
+  sitemap.documentElement.append(entry);
+}
+// Only date pages actually edited, not every page on each deployment.
+for (const entry of [...sitemap.getElementsByTagName("url")]) {
+  const url = entry.getElementsByTagName("loc")[0].textContent;
+  if (["/", "/calibration-service-malaysia/", "/tensile-machine-calibration-malaysia/", "/testing-machine-calibration-checklist-malaysia/", ...Object.keys(appRoutes).map((route) => `/${route}/`)].includes(new URL(url).pathname)) {
+    let lastmod = entry.getElementsByTagName("lastmod")[0];
+    if (!lastmod) {
+      lastmod = sitemap.createElementNS(sitemap.documentElement.namespaceURI, "lastmod");
+      entry.append(lastmod);
+    }
+    lastmod.textContent = "2026-10-12";
+  }
+}
+for (const name of ["sitemap.xml", "sitemap-github.xml"]) {
+  await writeFile(path.join(dist, name), sitemapDom.serialize());
+}
+sitemapDom.window.close();
+console.log(`SEO verified: ${urls.size} indexable pages, canonical URLs, route assets and sitemap.`);

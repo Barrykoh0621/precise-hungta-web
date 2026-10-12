@@ -10,11 +10,7 @@ function getCanonicalUrl(canonicalPath?: string) {
   const rawPath = canonicalPath || window.location.pathname;
   const path = rawPath.replace(/^\/precise-hungta-web/, "") || "/";
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
-  const baseUrl = window.location.hostname.endsWith("github.io")
-    ? "https://barrykoh0621.github.io/precise-hungta-web"
-    : "https://www.hungtainstrument.com.my";
-
-  return `${baseUrl}${normalizedPath === "/" ? "/" : normalizedPath}`;
+  return `https://www.hungtainstrument.com.my${normalizedPath === "/" ? "/" : `${normalizedPath.replace(/\/+$/, "")}/`}`;
 }
 
 function upsertMeta(selector: string, attribute: "name" | "property", key: string, content: string) {

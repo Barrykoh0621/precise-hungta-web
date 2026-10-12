@@ -79,9 +79,9 @@ const qualityProofs = [
 ];
 
 const enquirySystem = [
-  "Website and Google Ads bring buyers to focused tensile, UTM and calibration pages.",
-  "WhatsApp templates collect machine model, capacity, location and required date.",
-  "Sales can qualify the enquiry faster during business hours and prepare the next step.",
+  "Tell us your material, test method or testing machine model.",
+  "Include the capacity, factory location and required date in your WhatsApp or email enquiry.",
+  "Our team follows up during business hours with the next step for your requirement.",
 ];
 
 const featuredProducts = products.filter((p) => p.featured);
@@ -311,8 +311,8 @@ const Index = ({ onOpenQuote }: IndexProps) => {
           <AnimatedSection>
             <div className="bg-white border border-border rounded-lg p-8 md:p-10 grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-8 items-center">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.28em] text-accent mb-3">24-hour enquiry intake</p>
-                <h2 className="text-3xl md:text-5xl font-black mb-4">Let the website collect better leads even after office hours</h2>
+                <p className="text-xs font-bold uppercase tracking-[0.28em] text-accent mb-3">Quotation and service enquiries</p>
+                <h2 className="text-3xl md:text-5xl font-black mb-4">Send your testing requirement at any time</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   Buyers can send machine or calibration requirements any time. Hung Ta receives structured WhatsApp and email enquiries with the details needed for faster follow-up.
                 </p>
