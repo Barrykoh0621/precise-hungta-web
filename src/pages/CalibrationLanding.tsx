@@ -61,10 +61,6 @@ const calibrationFocus = [
     title: "Load cell calibration support",
     desc: "For load cells, force systems and load measurement chains used in material testing equipment.",
   },
-  {
-    title: "ISO/IEC 17025 preparation",
-    desc: "Hung Ta is preparing ISO/IEC 17025 calibration capability. We will only make official certificate claims after approval documents are ready.",
-  },
 ];
 
 const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
@@ -112,7 +108,7 @@ const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
 
       <section className="bg-muted border-b border-border">
         <div className="container mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-4 gap-3">
-          {["Factory QC", "QA audits", "Load systems", "ISO/IEC 17025 preparation"].map((item) => (
+          {["Factory QC", "QA audits", "Load systems", "Scope review"].map((item) => (
             <div key={item} className="bg-white border border-border rounded-lg px-4 py-3 flex items-center gap-2 text-sm font-semibold">
               <ShieldCheck className="w-4 h-4 text-accent" />
               {item}
