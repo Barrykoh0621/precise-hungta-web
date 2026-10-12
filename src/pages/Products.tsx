@@ -89,7 +89,7 @@ const Products = ({ onOpenQuote, initialBrand }: ProductsProps) => {
           <AnimatedSection>
             <p className="text-accent text-xs font-bold uppercase tracking-[0.28em] mb-4">{initialBrand ? "Armstrong product range" : "Product catalogue"}</p>
             <h1 className="font-serif text-5xl md:text-6xl text-primary-foreground mb-5">{initialBrand ? "Armstrong Testing Equipment" : "Testing Machine Products"}</h1>
-            <p className="text-primary-foreground/68 max-w-2xl text-lg">{initialBrand ? "Explore the Armstrong-branded concrete testing and laboratory equipment range from Hung Ta Instrument." : "Browse Hung Ta and Armstrong testing machines and laboratory equipment by brand and application."}</p>
+            <p className="text-primary-foreground/68 max-w-2xl text-lg">{initialBrand ? "Explore the Armstrong-branded universal, compression testing and laboratory equipment range from Hung Ta Instrument." : "Browse Hung Ta and Armstrong testing machines and laboratory equipment by brand and application."}</p>
           </AnimatedSection>
         </div>
       </section>

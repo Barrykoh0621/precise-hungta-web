@@ -6,6 +6,18 @@ import { JSDOM } from "jsdom";
 
 const origin = "https://www.hungtainstrument.com.my";
 
+test("New Armstrong models have product images and downloadable catalogues", async () => {
+  const landing = await readFile("dist/armstrong-testing-machines-malaysia/index.html", "utf8");
+  for (const model of ["waw-300d", "yew-3000e"]) {
+    const id = `armstrong-${model}`;
+    assert.ok(landing.includes(model.toUpperCase()));
+    assert.ok(landing.includes(`catalogues/products/${id}.pdf`));
+    const pdf = await readFile(`dist/catalogues/products/${id}.pdf`);
+    assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
+    assert.ok((await readFile(`dist/product-images/${id}.png`)).length > 1000);
+  }
+});
+
 test("Interactive deep links serve indexable HTML and real app assets", async () => {
   for (const route of ["contact", "products", "services", "about", "spare-parts", "resources"]) {
     const dom = new JSDOM(await readFile(`dist/${route}/index.html`, "utf8"));
