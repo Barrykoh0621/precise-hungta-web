@@ -39,10 +39,6 @@ const calibrationQuestions = [
     answer: "Calibration evaluates measurement performance; it does not replace repair. Report drifting force readings, damaged grips, controller problems or recent load cell replacement so service needs can be reviewed first.",
   },
   {
-    question: "Do you offer ISO/IEC 17025 accredited calibration?",
-    answer: "We do not currently claim ISO/IEC 17025 accreditation. If your audit requires an accredited certificate, tell us before quotation and confirm the provider, approved scope and required force range before booking.",
-  },
-  {
     question: "What affects the calibration support quotation?",
     answer: "The machine model, measurement range, number of load systems, condition, factory location and required records affect the enquiry. Send these details for a scope review rather than relying on a general price.",
   },
