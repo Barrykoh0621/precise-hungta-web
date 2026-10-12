@@ -56,14 +56,14 @@ a {
 
 h1 {
   max-width: 980px;
-  font-size: clamp(42px, 7vw, 82px);
-  line-height: 0.95;
+  font-size: 56px;
+  line-height: 1.1;
   margin: 16px 0 24px;
 }
 
 .lead {
   max-width: 780px;
-  color: rgba(255, 255, 255, 0.76);
+  color: #f1f5f9;
   font-size: 20px;
   line-height: 1.65;
 }
@@ -95,6 +95,20 @@ h1 {
 
 .section {
   padding: 70px 6vw;
+}
+
+.hero .eyebrow {
+  color: #ffb8c6;
+}
+
+.section p,
+.section ol {
+  max-width: 80ch;
+  line-height: 1.7;
+}
+
+.section ol li + li {
+  margin-top: 16px;
 }
 
 .muted {
@@ -151,6 +165,15 @@ h1 {
 }
 
 @media (max-width: 720px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  .hero,
+  .section {
+    padding: 48px 6vw;
+  }
+
   .topbar {
     align-items: flex-start;
     flex-direction: column;
