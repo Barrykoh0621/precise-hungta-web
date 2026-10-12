@@ -38,7 +38,7 @@ const BrandLogo = ({ variant = "dark", size = "md" }: BrandLogoProps) => {
     <Link to="/" className="flex items-center gap-3" aria-label="Hung Ta Instrument home">
       <BrandMark size={size} />
       <span className="leading-none">
-        <span className={`${textColor} ${titleSize} font-black tracking-tight uppercase block`}>
+        <span className={`${textColor} ${titleSize} font-black tracking-normal uppercase block`}>
           Hung Ta <span className="text-accent">Instrument</span>
         </span>
         <span className={`${subTextColor} text-[10px] font-bold tracking-[0.22em] uppercase mt-1 block`}>

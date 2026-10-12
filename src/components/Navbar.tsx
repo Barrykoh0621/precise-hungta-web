@@ -7,10 +7,10 @@ import BrandLogo from "@/components/BrandLogo";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Products", path: "/products" },
-  { label: "Armstrong", path: "/armstrong-testing-machines-malaysia" },
   { label: "Spare Parts", path: "/spare-parts" },
   { label: "Calibration", path: "/calibration-service-malaysia" },
   { label: "Services", path: "/services" },
+  { label: "Resources", path: "/resources" },
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
 ];
@@ -29,13 +29,13 @@ const Navbar = ({ onOpenQuote }: NavbarProps) => {
         <BrandLogo />
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden min-[1150px]:flex items-center gap-1" aria-label="Main navigation">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                location.pathname === link.path
+                (location.pathname.replace(/\/+$/, "") || "/") === link.path
                   ? "text-accent"
                   : "text-primary/75 hover:text-primary"
               }`}
@@ -54,9 +54,11 @@ const Navbar = ({ onOpenQuote }: NavbarProps) => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-primary p-2"
+          className="min-[1150px]:hidden text-primary p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-navigation"
         >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -64,14 +66,14 @@ const Navbar = ({ onOpenQuote }: NavbarProps) => {
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-border pb-4 shadow-lg">
+        <nav id="mobile-navigation" aria-label="Mobile navigation" className="min-[1150px]:hidden bg-white border-t border-border pb-4 shadow-lg max-h-[calc(100dvh-5rem)] overflow-y-auto">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               onClick={() => setMobileOpen(false)}
               className={`block px-6 py-3 text-sm font-medium ${
-                location.pathname === link.path
+                (location.pathname.replace(/\/+$/, "") || "/") === link.path
                   ? "text-accent"
                   : "text-primary/80"
               }`}
@@ -88,7 +90,7 @@ const Navbar = ({ onOpenQuote }: NavbarProps) => {
               Get a Quote
             </Button>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );

@@ -24,6 +24,8 @@ const Footer = () => (
               { label: "Compression Machines", path: "/compression-machine-malaysia" },
               { label: "Electrical Tensile Machines", path: "/electrical-tensile-testing-machine-malaysia" },
               { label: "Services", path: "/services" },
+              { label: "Testing Guides & Resources", path: "/resources" },
+              { label: "Armstrong Equipment", path: "/armstrong-testing-machines-malaysia" },
               { label: "About Us", path: "/about" },
               { label: "Contact", path: "/contact" },
             ].map((link) => (
@@ -84,6 +86,9 @@ const Footer = () => (
             </li>
           </ul>
           <p className="text-xs text-primary-foreground/40 mt-4">Service area: Malaysia, Singapore, Thailand, Indonesia and Southeast Asia.</p>
+          <p className="text-sm text-primary-foreground/80 mt-4">
+            Already a customer? <a href="https://g.page/r/CerseOxyZsvtEBM/review" target="_blank" rel="noopener noreferrer" className="underline hover:text-accent">Share your experience on Google</a>.
+          </p>
         </div>
       </div>
 

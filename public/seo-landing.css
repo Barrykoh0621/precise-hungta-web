@@ -164,6 +164,42 @@ h1 {
   color: #ffffff;
 }
 
+.table-scroll {
+  overflow-x: auto;
+}
+
+.guide-table {
+  width: 100%;
+  border-collapse: collapse;
+  line-height: 1.6;
+}
+
+.guide-table caption {
+  text-align: left;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.guide-table th,
+.guide-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 16px;
+  border: 1px solid #dbe3ee;
+}
+
+.guide-table thead {
+  background: #f4f7fb;
+}
+
+@media print {
+  .topbar, .footer, .actions { display: none; }
+  .hero, .muted { background: white; color: #10213f; }
+  .hero .eyebrow, .lead { color: #10213f; }
+  .hero, .section { padding: 16px 0; }
+  h1 { font-size: 28px; }
+}
+
 @media (max-width: 720px) {
   h1 {
     font-size: 38px;

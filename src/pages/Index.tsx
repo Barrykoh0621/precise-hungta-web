@@ -4,10 +4,11 @@ import { ArrowUpRight, Download, Wrench, Package, Headphones, ShieldCheck, Facto
 import AnimatedSection from "@/components/AnimatedSection";
 import heroImg from "@/assets/hero-lab.jpg";
 import ht9501Img from "@/assets/ht-9501.jpg";
-import ht2402Img from "@/assets/ht-2402.jpg";
+import ht2402Img from "@/assets/ht-2402.webp";
 import ht2101Img from "@/assets/ht-2101.jpg";
 import { products } from "@/data/products";
 import { usePageSeo } from "@/hooks/use-page-seo";
+import { testingGuides } from "@/data/resources";
 
 interface IndexProps {
   onOpenQuote: () => void;
@@ -20,10 +21,10 @@ const productImages: Record<string, string> = {
 };
 
 const whyUs = [
-  { icon: Wrench, title: "Expert Servicing", desc: "Factory-trained technicians with decades of experience in UTM maintenance and repair." },
+  { icon: Wrench, title: "Machine Service Support", desc: "Discuss maintenance, repairs, spare parts and software requirements with our team." },
   { icon: Package, title: "Priority Machine Range", desc: "Hydraulic testing machines, compression machines and electrical tensile testing machines for production QC." },
   { icon: Headphones, title: "Regional Support", desc: "Support for customers across Malaysia, Singapore and Asia. Remote diagnostics and on-site visits where suitable." },
-  { icon: ShieldCheck, title: "Certified Equipment", desc: "All instruments comply with ASTM, ISO, EN, and BS international testing standards." },
+  { icon: ShieldCheck, title: "Test Method Matching", desc: "Share your required ASTM, ISO, EN or BS test method so the suitable machine and fixture scope can be reviewed." },
 ];
 
 const industries = [
@@ -108,8 +109,9 @@ const Index = ({ onOpenQuote }: IndexProps) => {
                 Testing instruments since 1975
               </span>
               <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[0.95] max-w-4xl text-white mb-7">
-                The precise force behind quality control.
+                Hung Ta Instrument
               </h1>
+              <p className="text-xl md:text-2xl font-semibold text-white mb-5">Materials testing machines & calibration support in Malaysia.</p>
               <p className="text-lg md:text-xl max-w-2xl text-white mb-8 leading-relaxed bg-primary/78 backdrop-blur-sm border border-white/15 rounded-lg px-5 py-4 shadow-navy">
                 Hydraulic testing machines, compression machines and electrical tensile testing machines for metal, rubber and copper manufacturers that need dependable results, service support and calibration guidance.
               </p>
@@ -219,6 +221,8 @@ const Index = ({ onOpenQuote }: IndexProps) => {
                     <img
                       src={productImages[product.image]}
                       alt={product.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-contain p-7 group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
@@ -282,10 +286,10 @@ const Index = ({ onOpenQuote }: IndexProps) => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <AnimatedSection>
-            <p className="text-center text-xs font-bold uppercase tracking-[0.28em] text-accent mb-3">Buyer pathways</p>
+            <p className="text-center text-xs font-bold uppercase tracking-[0.28em] text-accent mb-3">Machines & service</p>
             <h2 className="text-3xl md:text-5xl font-black text-center mb-4">Find the Right Testing Machine Faster</h2>
             <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-              Start from your material, test standard or application. Each path leads buyers to a focused machine category and faster quotation discussion.
+              Choose equipment for your material and test method, or arrange support for an existing testing machine.
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -349,6 +353,29 @@ const Index = ({ onOpenQuote }: IndexProps) => {
                   <span className="text-sm font-semibold">{ind.label}</span>
                 </div>
               </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 bg-muted border-y border-border">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+            <div>
+              <p className="text-sm font-semibold text-accent mb-3">Technical resources</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-3">Make informed testing decisions</h2>
+              <p className="text-muted-foreground max-w-2xl">Practical guides for machine selection, calibration preparation and service enquiries.</p>
+            </div>
+            <Link to="/resources" className="inline-flex items-center gap-1 text-sm font-semibold">All testing guides <ArrowUpRight className="w-4 h-4" /></Link>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {testingGuides.slice(0, 3).map((guide) => (
+              <article key={guide.path} className="border-t-2 border-accent pt-5">
+                <p className="text-xs uppercase font-semibold text-muted-foreground mb-2">{guide.category}</p>
+                <h3 className="font-bold text-xl mb-3"><a href={guide.path} className="hover:text-accent">{guide.title}</a></h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3">{guide.description}</p>
+                <a href={guide.path} className="text-sm font-semibold inline-flex items-center gap-1">Read guide <ArrowUpRight className="w-4 h-4" /></a>
+              </article>
             ))}
           </div>
         </div>

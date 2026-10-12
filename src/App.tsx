@@ -14,6 +14,7 @@ import SpareParts from "./pages/SpareParts";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Resources from "./pages/Resources";
 import ProductLanding from "./pages/ProductLanding";
 import CalibrationLanding from "./pages/CalibrationLanding";
 import NotFound from "./pages/NotFound";
@@ -72,6 +73,7 @@ const App = () => {
             <Route path="/services" element={<Services onOpenQuote={() => openQuote()} />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/resources" element={<Resources />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

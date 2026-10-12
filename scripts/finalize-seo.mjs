@@ -33,7 +33,16 @@ const appRoutes = {
     description: "Enquire about tensile testing machine grips, fixtures and spare parts in Malaysia. Share your machine model, sample material and capacity for compatibility review.",
     content: '<h1>Testing Machine Spare Parts, Grips and Fixtures</h1><p>Send your machine model, existing part details, sample material and capacity to Hung Ta for a compatibility review.</p><p><a href="../products/">Testing machine catalogue</a></p>',
   },
+  resources: {
+    title: "Testing Guides & Resources | Hung Ta Instrument Malaysia",
+    description: "Practical guides for tensile testing machine selection, calibration preparation, grips and UTM service. Resources for Malaysia factory and laboratory QA teams.",
+    content: "",
+  },
 };
+
+const resourceSource = new JSDOM(await readFile("public/resources/index.html", "utf8"));
+appRoutes.resources.content = resourceSource.window.document.querySelector("main").innerHTML;
+resourceSource.window.close();
 
 function setMeta(document, attribute, key, content) {
   let element = document.querySelector(`meta[${attribute}="${key}"]`);
@@ -78,7 +87,12 @@ function normalizeSchema(value) {
   if (typeof value === "string") return canonicalize(value);
   if (Array.isArray(value)) return value.map(normalizeSchema);
   if (value && typeof value === "object") {
-    return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, normalizeSchema(item)]));
+    const normalized = Object.fromEntries(Object.entries(value).map(([key, item]) => [key, normalizeSchema(item)]));
+    if (typeof normalized.name === "string" && /^hung ta instrument.*sdn/i.test(normalized.name)) {
+      normalized.name = "Hung Ta Instrument Enterprise";
+      delete normalized.identifier;
+    }
+    return normalized;
   }
   return value;
 }
@@ -103,6 +117,34 @@ for (const file of pageFiles) {
   const url = `${origin}/${file === "index.html" ? "" : `${path.posix.dirname(file)}/`}`;
   canonical.setAttribute("href", url);
   setMeta(document, "property", "og:url", url);
+  const brandImage = document.querySelector(".brand img");
+  if (brandImage) {
+    brandImage.setAttribute("src", "../favicon.svg");
+    brandImage.setAttribute("alt", "Hung Ta gear H mark");
+  }
+  const staticNav = document.querySelector(".topbar nav");
+  if (staticNav && ![...staticNav.querySelectorAll("a")].some((link) => link.getAttribute("href")?.includes("resources"))) {
+    const link = document.createElement("a");
+    link.href = "/resources/";
+    link.textContent = "Resources";
+    staticNav.append(link);
+  }
+  const footer = document.querySelector(".footer");
+  if (footer?.textContent.includes("Sdn. Bhd.")) {
+    const name = footer.querySelector("strong");
+    if (name) name.textContent = "Hung Ta Instrument Enterprise";
+    for (const node of footer.childNodes) {
+      if (node.nodeType === 3) node.textContent = node.textContent.replace("SSM 256852-H | ", "");
+    }
+  }
+  if (footer && !footer.querySelector('a[href="https://g.page/r/CerseOxyZsvtEBM/review"]')) {
+    const reviewLink = document.createElement("a");
+    reviewLink.href = "https://g.page/r/CerseOxyZsvtEBM/review";
+    reviewLink.target = "_blank";
+    reviewLink.rel = "noopener noreferrer";
+    reviewLink.textContent = "Share your experience on Google";
+    footer.append(document.createElement("br"), reviewLink);
+  }
   for (const script of document.querySelectorAll('script[type="application/ld+json"]')) {
     script.textContent = JSON.stringify(normalizeSchema(JSON.parse(script.textContent)), null, 2);
   }
@@ -144,7 +186,7 @@ for (const url of urls) {
 // Only date pages actually edited, not every page on each deployment.
 for (const entry of [...sitemap.getElementsByTagName("url")]) {
   const url = entry.getElementsByTagName("loc")[0].textContent;
-  if (["/", "/calibration-service-malaysia/", "/tensile-machine-calibration-malaysia/", "/testing-machine-calibration-checklist-malaysia/", ...Object.keys(appRoutes).map((route) => `/${route}/`)].includes(new URL(url).pathname)) {
+  if (["/", "/calibration-service-malaysia/", "/tensile-machine-calibration-malaysia/", "/testing-machine-calibration-checklist-malaysia/", "/tensile-grips-selection-guide/", ...Object.keys(appRoutes).map((route) => `/${route}/`)].includes(new URL(url).pathname)) {
     let lastmod = entry.getElementsByTagName("lastmod")[0];
     if (!lastmod) {
       lastmod = sitemap.createElementNS(sitemap.documentElement.namespaceURI, "lastmod");

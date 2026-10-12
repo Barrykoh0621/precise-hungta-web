@@ -6,7 +6,7 @@ import type { Product } from "@/data/products";
 import AnimatedSection from "@/components/AnimatedSection";
 import ProductDetailModal from "@/components/ProductDetailModal";
 import ht9501Img from "@/assets/ht-9501.jpg";
-import ht2402Img from "@/assets/ht-2402.jpg";
+import ht2402Img from "@/assets/ht-2402.webp";
 import ht2101Img from "@/assets/ht-2101.jpg";
 import { ArrowUpRight, Download, Eye, FileText, Package } from "lucide-react";
 import { accessories } from "@/data/products";

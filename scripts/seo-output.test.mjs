@@ -7,7 +7,7 @@ import { JSDOM } from "jsdom";
 const origin = "https://www.hungtainstrument.com.my";
 
 test("Interactive deep links serve indexable HTML and real app assets", async () => {
-  for (const route of ["contact", "products", "services", "about", "spare-parts"]) {
+  for (const route of ["contact", "products", "services", "about", "spare-parts", "resources"]) {
     const dom = new JSDOM(await readFile(`dist/${route}/index.html`, "utf8"));
     const document = dom.window.document;
     assert.equal(document.querySelector('link[rel="canonical"]').href, `${origin}/${route}/`);
@@ -19,6 +19,19 @@ test("Interactive deep links serve indexable HTML and real app assets", async ()
     await readFile(path.resolve("dist", route, script.getAttribute("src")));
     dom.window.close();
   }
+});
+
+test("Home and resource pages expose crawlable routes without JavaScript", async () => {
+  for (const file of ["dist/index.html", "dist/resources/index.html"]) {
+    const dom = new JSDOM(await readFile(file, "utf8"));
+    const document = dom.window.document;
+    assert.ok(document.querySelector("#root h1"));
+    assert.ok(document.querySelector('a[href="/calibration-service-malaysia/"]') || document.querySelector('a[href="/testing-machine-calibration-checklist-malaysia/"]'));
+    assert.ok(document.querySelector('a[href="/contact/"]'));
+    dom.window.close();
+  }
+  const checklist = await readFile("dist/testing-machine-enquiry-checklist.txt", "utf8");
+  assert.ok(checklist.includes("hungtatest@yahoo.com"));
 });
 
 test("Every sitemap URL exists and agrees with its page canonical", async () => {
