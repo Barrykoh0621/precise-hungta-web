@@ -11,6 +11,7 @@ import ht2101Img from "@/assets/ht-2101.jpg";
 import { ArrowUpRight, Download, Eye, FileText, Package } from "lucide-react";
 import { accessories } from "@/data/products";
 import { usePageSeo } from "@/hooks/use-page-seo";
+import { machinePages } from "@/data/machine-pages";
 
 const localImages: Record<string, string> = {
   "ht-9501": ht9501Img,
@@ -205,6 +206,7 @@ const Products = ({ onOpenQuote, initialBrand }: ProductsProps) => {
                         ))}
                       </div>
                     )}
+                    {machinePages[product.id] && <a href={machinePages[product.id].path} className="mt-4 text-xs font-semibold text-accent inline-flex items-center gap-1">Full specification page <ArrowUpRight className="w-3.5 h-3.5" /></a>}
                     <Button
                       variant="outline"
                       size="sm"

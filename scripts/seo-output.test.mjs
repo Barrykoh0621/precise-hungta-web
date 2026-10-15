@@ -6,6 +6,49 @@ import { JSDOM } from "jsdom";
 
 const origin = "https://www.hungtainstrument.com.my";
 
+test("Priority machine pages expose real specifications, images, enquiries and sitemap entries", async () => {
+  const sitemap = await readFile("dist/sitemap.xml", "utf8");
+  for (const [route, model] of [
+    ["ht-2402-tensile-testing-machine", "HT-2402"],
+    ["ht-9501-universal-testing-machine", "HT-9501"],
+    ["ht-2101-universal-testing-machine", "HT-2101"],
+    ["armstrong-waw-300d-universal-testing-machine", "WAW-300D"],
+    ["armstrong-yew-3000e-compression-testing-machine", "YEW-3000E"],
+  ]) {
+    const dom = new JSDOM(await readFile(`dist/${route}/index.html`, "utf8"));
+    const document = dom.window.document;
+    assert.equal(document.querySelector("h1").textContent, model);
+    assert.equal(document.querySelector('link[rel="canonical"]').href, `${origin}/${route}/`);
+    assert.ok(document.querySelector("table th").textContent.includes("Capacity"));
+    const image = document.querySelector("figure img").getAttribute("src");
+    await readFile(path.join("dist", image));
+    const enquiry = document.querySelector('a[href^="https://wa.me/"]');
+    assert.ok(new URL(enquiry.href).searchParams.get("text").includes(model));
+    assert.ok(document.querySelector('a[href="/calibration-service-malaysia/"]'));
+    const schema = JSON.parse(document.querySelector('script[type="application/ld+json"]').textContent);
+    const itemPage = schema["@graph"].find(item => item["@type"] === "ItemPage");
+    assert.equal(itemPage.about.identifier, model);
+    assert.ok(itemPage.image.includes(image));
+    assert.ok(!schema["@graph"].some(item => item["@type"] === "Product"), "quote-only pages must not claim price/review rich-result eligibility");
+    assert.ok(sitemap.includes(`${origin}/${route}/`));
+    assert.ok(!document.querySelector('script[type="module"]'), "static specifications must not be replaced by a 404 app route");
+    dom.window.close();
+  }
+});
+
+test("Homepage has a raster social image and crawlable machine specification links", async () => {
+  const dom = new JSDOM(await readFile("dist/index.html", "utf8"));
+  const document = dom.window.document;
+  const image = new URL(document.querySelector('meta[property="og:image"]').content);
+  assert.equal(image.origin, origin);
+  await readFile(path.join("dist", image.pathname));
+  assert.ok(document.querySelector('a[href="/ht-9501-universal-testing-machine/"]'));
+  const business = JSON.parse(document.querySelector('script[type="application/ld+json"]').textContent);
+  assert.equal(business.foundingDate, "1992");
+  assert.ok((await readFile("dist/robots.txt", "utf8")).startsWith("User-agent:"));
+  dom.window.close();
+});
+
 test("Calibration service illustration is locally hosted with stable dimensions", async () => {
   const dom = new JSDOM(await readFile("dist/calibration-service-malaysia/index.html", "utf8"));
   const image = dom.window.document.querySelector('img[src*="tensile-machine-service.webp"]');

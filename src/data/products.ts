@@ -1072,6 +1072,7 @@ export const products: Product[] = [
     categoryLabel: "Universal Testing Machine",
     brand: "Armstrong",
     image: "product-images/armstrong-waw-300d.png",
+    catalogueUrl: "catalogues/products/armstrong-waw-300d.pdf",
     description: "Armstrong WAW-300D computerised electro-hydraulic servo hydraulic universal testing machine with 300 kN capacity. Contact Hung Ta to confirm the specimen, fixtures, test method and installation requirements for your application.",
     specs: [
       { label: "Capacity", value: "300 kN" },
@@ -1089,6 +1090,7 @@ export const products: Product[] = [
     categoryLabel: "Compression Testing",
     brand: "Armstrong",
     image: "product-images/armstrong-yew-3000e.png",
+    catalogueUrl: "catalogues/products/armstrong-yew-3000e.pdf",
     description: "Armstrong YEW-3000E computer-controlled compression testing machine with 3,000 kN capacity. Share your specimen dimensions, test method and laboratory requirements so Hung Ta can review the suitable configuration before quotation.",
     specs: [
       { label: "Capacity", value: "3,000 kN" },

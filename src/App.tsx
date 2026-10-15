@@ -3,22 +3,23 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import QuoteModal from "@/components/QuoteModal";
 import Index from "./pages/Index";
-import Products from "./pages/Products";
-import SpareParts from "./pages/SpareParts";
-import Services from "./pages/Services";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Resources from "./pages/Resources";
-import ProductLanding from "./pages/ProductLanding";
-import CalibrationLanding from "./pages/CalibrationLanding";
-import NotFound from "./pages/NotFound";
 import { trackLeadEvent } from "@/lib/analytics";
+
+const Products = lazy(() => import("./pages/Products"));
+const SpareParts = lazy(() => import("./pages/SpareParts"));
+const Services = lazy(() => import("./pages/Services"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Resources = lazy(() => import("./pages/Resources"));
+const ProductLanding = lazy(() => import("./pages/ProductLanding"));
+const CalibrationLanding = lazy(() => import("./pages/CalibrationLanding"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 const routerBasename =
@@ -58,6 +59,7 @@ const App = () => {
         <BrowserRouter basename={routerBasename}>
           <RedirectHandler />
           <Navbar onOpenQuote={() => openQuote()} />
+          <Suspense fallback={<main className="pt-32 pb-20 container min-h-[60vh]" aria-busy="true"><p role="status">Loading...</p></main>}>
           <Routes>
             <Route path="/" element={<Index onOpenQuote={() => openQuote()} />} />
             <Route path="/hydraulic-testing-machine-malaysia" element={<ProductLanding pageKey="hydraulic" onOpenQuote={openQuote} />} />
@@ -76,6 +78,7 @@ const App = () => {
             <Route path="/resources" element={<Resources />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </Suspense>
           <Footer />
           <WhatsAppButton />
           <QuoteModal open={quoteOpen} onOpenChange={setQuoteOpen} preselectedProduct={quoteProduct} />

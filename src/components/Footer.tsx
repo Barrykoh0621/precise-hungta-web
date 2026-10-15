@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import BrandLogo from "@/components/BrandLogo";
 
 const Footer = () => (
-  <footer className="bg-primary text-primary-foreground">
+  <footer className="bg-primary text-primary-foreground break-words">
     <div className="container mx-auto px-4 py-16">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-1">
@@ -82,7 +82,7 @@ const Footer = () => (
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-4 h-4 shrink-0 text-accent" />
-              <a href="mailto:hungtatest@yahoo.com" className="hover:text-accent transition-colors">hungtatest@yahoo.com</a>
+              <a href="mailto:hungtatest@yahoo.com" className="min-w-0 break-words hover:text-accent transition-colors">hungtatest@yahoo.com</a>
             </li>
           </ul>
           <p className="text-xs text-primary-foreground/40 mt-4">Service area: Malaysia, Singapore, Thailand, Indonesia and Southeast Asia.</p>

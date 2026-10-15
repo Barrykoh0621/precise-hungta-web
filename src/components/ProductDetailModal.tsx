@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Download } from "lucide-react";
 import type { Product } from "@/data/products";
+import { machinePages } from "@/data/machine-pages";
 
 interface ProductDetailModalProps {
   product: Product | null;
@@ -66,6 +67,7 @@ const ProductDetailModal = ({ product, open, onOpenChange, onEnquire, getImage }
           </div>
 
           {/* CTA */}
+          {machinePages[product.id] && <a href={machinePages[product.id].path} className="flex items-center gap-2 text-accent font-semibold text-sm">Open full specification page <ArrowUpRight className="w-4 h-4" /></a>}
           {product.catalogueUrl && <a href={`/${product.catalogueUrl}`} target="_blank" rel="noreferrer" className="w-full inline-flex items-center justify-center gap-2 border border-border rounded-full px-4 py-2.5 text-sm font-semibold hover:bg-muted"><Download className="w-4 h-4" /> View Catalogue PDF</a>}
           <Button onClick={() => { onOpenChange(false); onEnquire(product.id); }} className="w-full rounded-full bg-accent text-white hover:bg-orange-light font-semibold gap-1">
             Enquire Now <ArrowUpRight className="w-4 h-4" />

@@ -1,10 +1,12 @@
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { JSDOM } from "jsdom";
+import { generateMachinePages } from "./machine-pages.mjs";
 
 const origin = "https://www.hungtainstrument.com.my";
 const dist = path.resolve("dist");
 const shell = await readFile(path.join(dist, "index.html"), "utf8");
+const machinePages = await generateMachinePages(dist, shell);
 
 // Serve the existing interactive app at real URLs instead of noindex redirect stubs.
 const appRoutes = {
@@ -43,6 +45,8 @@ const appRoutes = {
 const resourceSource = new JSDOM(await readFile("public/resources/index.html", "utf8"));
 appRoutes.resources.content = resourceSource.window.document.querySelector("main").innerHTML;
 resourceSource.window.close();
+const modelLinks = `<section id="machine-specification-links"><h2>Machine specifications</h2><ul>${machinePages.map(page => `<li><a href="${page.path}">${page.name} testing machine specifications</a></li>`).join("")}</ul></section>`;
+appRoutes.products.content += modelLinks;
 
 function setMeta(document, attribute, key, content) {
   let element = document.querySelector(`meta[${attribute}="${key}"]`);
@@ -112,6 +116,13 @@ const urls = new Set();
 for (const file of pageFiles) {
   const dom = new JSDOM(await readFile(path.join(dist, file), "utf8"));
   const document = dom.window.document;
+  if (file === "index.html" && !document.getElementById("machine-specification-links")) document.querySelector("#root main").insertAdjacentHTML("beforeend", modelLinks);
+  if (["tensile-testing-machine-malaysia/index.html", "universal-testing-machine-malaysia/index.html"].includes(file) && !document.getElementById("machine-specification-links")) {
+    const section = document.createElement("section");
+    section.className = "section";
+    section.innerHTML = modelLinks;
+    document.querySelector("main").append(section);
+  }
   const canonical = document.querySelector('link[rel="canonical"]');
   if (!canonical) throw new Error(`Missing canonical: ${file}`);
   const url = `${origin}/${file === "index.html" ? "" : `${path.posix.dirname(file)}/`}`;
@@ -186,13 +197,18 @@ for (const url of urls) {
 // Only date pages actually edited, not every page on each deployment.
 for (const entry of [...sitemap.getElementsByTagName("url")]) {
   const url = entry.getElementsByTagName("loc")[0].textContent;
-  if (["/", "/calibration-service-malaysia/", "/tensile-machine-calibration-malaysia/", "/testing-machine-calibration-checklist-malaysia/", "/tensile-grips-selection-guide/", ...Object.keys(appRoutes).map((route) => `/${route}/`)].includes(new URL(url).pathname)) {
+  if (["/", "/tensile-testing-machine-malaysia/", "/universal-testing-machine-malaysia/", "/calibration-service-malaysia/", "/tensile-machine-calibration-malaysia/", "/testing-machine-calibration-checklist-malaysia/", "/tensile-grips-selection-guide/", ...Object.keys(appRoutes).map((route) => `/${route}/`)].includes(new URL(url).pathname)) {
     let lastmod = entry.getElementsByTagName("lastmod")[0];
     if (!lastmod) {
       lastmod = sitemap.createElementNS(sitemap.documentElement.namespaceURI, "lastmod");
       entry.append(lastmod);
     }
-    lastmod.textContent = "2026-10-12";
+    lastmod.textContent = ["/", "/products/", "/tensile-testing-machine-malaysia/", "/universal-testing-machine-malaysia/"].includes(new URL(url).pathname) ? "2026-10-15" : "2026-10-12";
+  }
+  if (machinePages.some(page => page.path === new URL(url).pathname)) {
+    const lastmod = sitemap.createElementNS(sitemap.documentElement.namespaceURI, "lastmod");
+    lastmod.textContent = "2026-10-15";
+    entry.append(lastmod);
   }
 }
 for (const name of ["sitemap.xml", "sitemap-github.xml"]) {
