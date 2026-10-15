@@ -109,6 +109,21 @@ test("Home and resource pages expose crawlable routes without JavaScript", async
   assert.ok(checklist.includes("hungtatest@yahoo.com"));
 });
 
+test("Customer checklist links open the PDF rather than the legacy text download", async () => {
+  const pdf = await readFile("dist/testing-machine-enquiry-checklist.pdf");
+  assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
+  for (const route of ["resources", "tensile-grips-selection-guide", "ht-2402-tensile-testing-machine", "ht-9501-universal-testing-machine"]) {
+    const dom = new JSDOM(await readFile(`dist/${route}/index.html`, "utf8"));
+    const link = dom.window.document.querySelector('a[href$="testing-machine-enquiry-checklist.pdf"]');
+    assert.ok(link, `${route} must offer the PDF checklist`);
+    assert.ok(link.textContent.includes("PDF"));
+    assert.equal(link.hasAttribute("download"), false);
+    assert.equal(link.target, "_blank");
+    assert.equal(dom.window.document.querySelector('a[href$="testing-machine-enquiry-checklist.txt"]'), null);
+    dom.window.close();
+  }
+});
+
 test("Every sitemap URL exists and agrees with its page canonical", async () => {
   const dom = new JSDOM(await readFile("dist/sitemap.xml", "utf8"), { contentType: "application/xml" });
   const urls = [...dom.window.document.getElementsByTagName("loc")].map((loc) => loc.textContent);

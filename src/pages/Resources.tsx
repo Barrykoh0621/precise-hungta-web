@@ -40,7 +40,7 @@ const Resources = () => {
               <ClipboardCheck className="w-6 h-6 text-accent mb-3" />
               <h2 className="text-xl font-bold mb-3">Prepare an enquiry</h2>
               <p className="text-sm text-muted-foreground leading-relaxed mb-4">Collect your sample or machine details before asking for a recommendation or quotation.</p>
-              <a href="/testing-machine-enquiry-checklist.txt" download className="inline-flex gap-2 items-center text-sm font-semibold underline"><FileText className="w-4 h-4" />Download enquiry checklist (TXT)</a>
+              <a href="/testing-machine-enquiry-checklist.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex gap-2 items-center text-sm font-semibold underline"><FileText className="w-4 h-4" />Enquiry checklist (PDF)</a>
             </div>
             <div className="border-t border-border pt-6">
               <BookOpen className="w-6 h-6 text-accent mb-3" />
