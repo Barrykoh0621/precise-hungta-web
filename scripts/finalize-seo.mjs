@@ -128,6 +128,36 @@ for (const file of pageFiles) {
   const url = `${origin}/${file === "index.html" ? "" : `${path.posix.dirname(file)}/`}`;
   canonical.setAttribute("href", url);
   setMeta(document, "property", "og:url", url);
+  const description = document.querySelector('meta[name="description"]')?.content;
+  setMeta(document, "property", "og:title", document.title);
+  setMeta(document, "name", "twitter:title", document.title);
+  if (description) {
+    setMeta(document, "property", "og:description", description);
+    setMeta(document, "name", "twitter:description", description);
+  }
+  if (!document.querySelector('meta[property="og:type"]')) setMeta(document, "property", "og:type", "website");
+  if (!document.querySelector('meta[property="og:image"]')) {
+    setMeta(document, "property", "og:image", `${origin}/product-images/models/ht-9501.jpg`);
+    setMeta(document, "property", "og:image:alt", "Hung Ta HT-9501 testing machine catalogue image");
+  }
+  setMeta(document, "property", "og:site_name", "Hung Ta Instrument");
+  setMeta(document, "name", "twitter:card", "summary_large_image");
+  setMeta(document, "name", "twitter:image", document.querySelector('meta[property="og:image"]').content);
+  if (["tensile-testing-machine-malaysia/index.html", "universal-testing-machine-malaysia/index.html"].includes(file)) {
+    for (const card of document.querySelectorAll(".card")) {
+      const model = card.querySelector("h3")?.textContent.trim();
+      const machine = machinePages.find(page => page.name === model);
+      const image = card.querySelector("img");
+      if (machine && image && ["HT-9501", "HT-2402", "HT-2101"].includes(model)) {
+        image.src = `/product-images/models/${machine.id}${model === "HT-2402" ? ".webp" : ".jpg"}`;
+      }
+    }
+    const resources = document.createElement("section");
+    resources.className = "section";
+    resources.id = "buyer-resources";
+    resources.innerHTML = '<h2>Plan your testing system</h2><ul><li><a href="/how-to-choose-tensile-testing-machine-malaysia/">Machine selection guide</a></li><li><a href="/tensile-grips-selection-guide/">Grips and fixtures</a></li><li><a href="/calibration-service-malaysia/">Calibration support</a></li><li><a href="/testing-machine-enquiry-checklist.pdf" target="_blank" rel="noopener noreferrer">Enquiry checklist (PDF)</a></li></ul>';
+    document.querySelector("main").append(resources);
+  }
   const brandImage = document.querySelector(".brand img");
   if (brandImage) {
     brandImage.setAttribute("src", "../favicon.svg");

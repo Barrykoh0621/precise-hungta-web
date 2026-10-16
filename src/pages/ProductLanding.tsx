@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, ClipboardCheck, Factory, FileText, Gauge, Shi
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "@/components/AnimatedSection";
 import { products } from "@/data/products";
+import { machinePages } from "@/data/machine-pages";
 import type { Product } from "@/data/products";
 import { usePageSeo } from "@/hooks/use-page-seo";
 import ht9501Img from "@/assets/ht-9501.jpg";
@@ -172,7 +173,7 @@ function ProductCard({ product, onOpenQuote }: { product: Product; onOpenQuote: 
           ))}
         </div>
         <div className="mt-5 grid grid-cols-2 gap-2">
-          <Link to={`/products?product=${product.id}`}>
+          <Link to={machinePages[product.id]?.path || `/products?product=${product.id}`}>
             <Button variant="outline" size="sm" className="w-full rounded-full text-xs">
               Details
             </Button>
@@ -219,12 +220,11 @@ const ProductLanding = ({ pageKey, onOpenQuote }: ProductLandingProps) => {
         areaServed: ["Malaysia", "Singapore", "Asia"],
         url: `${baseUrl}/`,
       },
-      areaServed: page.industries,
+      areaServed: ["Malaysia", "Singapore", "Asia"],
       description: page.seoDescription,
       url: `${baseUrl}${page.path}`,
       offers: featuredProducts.map((product) => ({
         "@type": "Offer",
-        availability: "https://schema.org/InStock",
         areaServed: ["Malaysia", "Singapore", "Asia"],
         itemOffered: {
           "@type": "Service",
@@ -274,6 +274,18 @@ const ProductLanding = ({ pageKey, onOpenQuote }: ProductLandingProps) => {
               {item}
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="py-10 bg-background border-y border-border">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold mb-5">Plan your testing system</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 text-sm font-semibold">
+            <Link to="/how-to-choose-tensile-testing-machine-malaysia/" className="underline underline-offset-4">Machine selection guide</Link>
+            <Link to="/tensile-grips-selection-guide/" className="underline underline-offset-4">Grips and fixtures</Link>
+            <Link to="/calibration-service-malaysia/" className="underline underline-offset-4">Calibration support</Link>
+            <a href="/testing-machine-enquiry-checklist.pdf" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Enquiry checklist (PDF)</a>
+          </div>
         </div>
       </section>
 

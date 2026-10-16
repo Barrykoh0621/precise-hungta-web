@@ -6,6 +6,40 @@ import { JSDOM } from "jsdom";
 
 const origin = "https://www.hungtainstrument.com.my";
 
+test("Every sitemap page has complete, consistent social sharing metadata", async () => {
+  const xml = new JSDOM(await readFile("dist/sitemap.xml", "utf8"), { contentType: "application/xml" });
+  for (const loc of xml.window.document.getElementsByTagName("loc")) {
+    const url = new URL(loc.textContent);
+    const dom = new JSDOM(await readFile(path.join("dist", url.pathname, "index.html"), "utf8"));
+    const doc = dom.window.document;
+    assert.equal(doc.querySelector('meta[property="og:title"]').content, doc.title);
+    assert.equal(doc.querySelector('meta[property="og:description"]').content, doc.querySelector('meta[name="description"]').content);
+    assert.equal(doc.querySelector('meta[property="og:url"]').content, url.href);
+    assert.equal(doc.querySelector('meta[name="twitter:card"]').content, "summary_large_image");
+    const image = new URL(doc.querySelector('meta[property="og:image"]').content);
+    assert.equal(image.origin, origin);
+    await readFile(path.join("dist", image.pathname));
+    assert.equal(doc.querySelector('meta[name="twitter:image"]').content, image.href);
+    dom.window.close();
+  }
+  xml.window.close();
+});
+
+test("Priority category pages connect buyers to guides, calibration and the PDF", async () => {
+  for (const route of ["tensile-testing-machine-malaysia", "universal-testing-machine-malaysia"]) {
+    const dom = new JSDOM(await readFile(`dist/${route}/index.html`, "utf8"));
+    const section = dom.window.document.querySelector("#buyer-resources");
+    assert.ok(section.querySelector('a[href="/tensile-grips-selection-guide/"]'));
+    assert.ok(section.querySelector('a[href="/calibration-service-malaysia/"]'));
+    assert.ok(section.querySelector('a[href="/testing-machine-enquiry-checklist.pdf"]'));
+    for (const image of dom.window.document.querySelectorAll(".card img")) {
+      const url = new URL(image.getAttribute("src"), `${origin}/${route}/`);
+      await readFile(path.join("dist", url.pathname));
+    }
+    dom.window.close();
+  }
+});
+
 test("Priority machine pages expose real specifications, images, enquiries and sitemap entries", async () => {
   const sitemap = await readFile("dist/sitemap.xml", "utf8");
   for (const [route, model] of [
