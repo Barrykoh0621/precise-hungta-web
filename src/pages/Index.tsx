@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, Download, Gauge, Wrench, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ht9501Img from "@/assets/ht-9501.jpg";
-import heroImg from "@/assets/hero-lab.jpg";
+import heroImg from "@/assets/hero-lab-armstrong.jpg";
 import ht2402Img from "@/assets/ht-2402.webp";
 import ht2101Img from "@/assets/ht-2101.jpg";
 import { products } from "@/data/products";
@@ -27,7 +27,7 @@ export default function Index({ onOpenQuote }: IndexProps) {
   const productLink = (id: string) => machinePages[id]?.path || `/products/?product=${id}`;
   return <main className="home-page pt-20">
     <section className="machine-hero relative overflow-hidden" aria-labelledby="home-title">
-      <img src={heroImg} width={1920} height={1080} fetchPriority="high" decoding="async" alt="Materials testing laboratory illustration with testing machines" className="machine-hero-image absolute" />
+      <img src={heroImg} width={1672} height={941} fetchPriority="high" decoding="async" alt="Materials testing laboratory illustration with an ARMSTRONG testing machine" className="machine-hero-image absolute" />
       <div className="machine-hero-shade absolute inset-0" aria-hidden="true" />
       <div className="container mx-auto px-5 relative z-10"><div className="machine-hero-copy">
         <p className="text-xs font-semibold text-accent mb-5">MALAYSIA OPERATIONS SINCE 1992</p>
