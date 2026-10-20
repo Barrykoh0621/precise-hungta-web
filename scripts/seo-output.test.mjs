@@ -10,7 +10,8 @@ test("New Armstrong products publish confirmed specs without private delivery ma
   const wds = new JSDOM(await readFile("dist/armstrong-wds-20-tensile-testing-machine/index.html", "utf8"));
   const carton = new JSDOM(await readFile("dist/armstrong-zl-9001a-carton-compression-testing-machine/index.html", "utf8"));
   assert.ok(wds.window.document.querySelector("table").textContent.includes("1-500 mm/min"));
-  assert.ok(!wds.window.document.body.textContent.includes("20 kN"), "capacity must wait for nameplate confirmation");
+  assert.ok(wds.window.document.querySelector("table").textContent.includes("500 kgf"));
+  assert.ok(!wds.window.document.body.textContent.includes("20 kN"), "WDS-20 is a model name, not a 20 kN capacity");
   assert.ok(carton.window.document.querySelector("table").textContent.includes("800 x 800 x 800 mm"));
   assert.ok(carton.window.document.querySelector("table").textContent.includes("1000 kgf"));
   assert.ok(carton.window.document.title.includes("Carton Compression"));

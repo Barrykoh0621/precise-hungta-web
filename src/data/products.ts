@@ -27,7 +27,7 @@ export const products: Product[] = [
     image: "product-images/armstrong/wds-20.png",
     description: "The ARMSTRONG WDS-20 is a dual-column touchscreen tensile testing machine with a servo motor and TS7003L measurement and control system. Select the force range, specimen grips and test settings for your material and application. The controller supports tensile and compression test directions; compression testing requires the appropriate fixtures. Confirm the supplied capacity and accessories in the quotation.",
     specs: [
-      { label: "Capacity", value: "Configured load range confirmed in quotation" },
+      { label: "Capacity", value: "500 kgf (approximately 4.9 kN)" },
       { label: "Control", value: "TS7003L touchscreen measurement and control system" },
       { label: "Drive System", value: "Servo motor, dual-column frame" },
       { label: "Tests", value: "Tensile; compression with suitable fixtures" },
