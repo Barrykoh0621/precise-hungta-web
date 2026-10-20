@@ -6,6 +6,31 @@ import { JSDOM } from "jsdom";
 
 const origin = "https://www.hungtainstrument.com.my";
 
+test("New Armstrong products publish confirmed specs without private delivery manuals", async () => {
+  const wds = new JSDOM(await readFile("dist/armstrong-wds-20-tensile-testing-machine/index.html", "utf8"));
+  const carton = new JSDOM(await readFile("dist/armstrong-zl-9001a-carton-compression-testing-machine/index.html", "utf8"));
+  assert.ok(wds.window.document.querySelector("table").textContent.includes("1-500 mm/min"));
+  assert.ok(!wds.window.document.body.textContent.includes("20 kN"), "capacity must wait for nameplate confirmation");
+  assert.ok(carton.window.document.querySelector("table").textContent.includes("800 x 800 x 800 mm"));
+  assert.ok(carton.window.document.querySelector("table").textContent.includes("1000 kgf"));
+  assert.ok(carton.window.document.title.includes("Carton Compression"));
+  const enquiry = new URL(carton.window.document.querySelector('a[href^="https://wa.me/"]').href);
+  assert.ok(enquiry.searchParams.get("text").includes("Carton dimensions"));
+  for (const dom of [wds, carton]) {
+    assert.ok(![...dom.window.document.querySelectorAll("a[href]")].some(a => /operation.manual|\.docx|WDS20_Operation_Manual/i.test(a.href)));
+    assert.ok(!dom.window.document.querySelector('a[href^="/catalogues/products/armstrong-"]'), "do not advertise a catalogue PDF that has not been published");
+    dom.window.close();
+  }
+  const sitemap = new JSDOM(await readFile("dist/sitemap.xml", "utf8"), { contentType: "application/xml" });
+  for (const entry of sitemap.window.document.getElementsByTagName("url")) {
+    if (/armstrong-(wds-20|zl-9001a)-/.test(entry.textContent)) {
+      assert.equal(entry.getElementsByTagName("lastmod").length, 1);
+      assert.equal(entry.getElementsByTagName("lastmod")[0].textContent, "2026-10-20");
+    }
+  }
+  sitemap.window.close();
+});
+
 test("Every sitemap page has complete, consistent social sharing metadata", async () => {
   const xml = new JSDOM(await readFile("dist/sitemap.xml", "utf8"), { contentType: "application/xml" });
   for (const loc of xml.window.document.getElementsByTagName("loc")) {
@@ -48,6 +73,8 @@ test("Priority machine pages expose real specifications, images, enquiries and s
     ["ht-2101-universal-testing-machine", "HT-2101"],
     ["armstrong-waw-300d-universal-testing-machine", "WAW-300D"],
     ["armstrong-yew-3000e-compression-testing-machine", "YEW-3000E"],
+    ["armstrong-wds-20-tensile-testing-machine", "WDS-20"],
+    ["armstrong-zl-9001a-carton-compression-testing-machine", "ZL-9001A"],
   ]) {
     const dom = new JSDOM(await readFile(`dist/${route}/index.html`, "utf8"));
     const document = dom.window.document;

@@ -233,12 +233,12 @@ for (const entry of [...sitemap.getElementsByTagName("url")]) {
       lastmod = sitemap.createElementNS(sitemap.documentElement.namespaceURI, "lastmod");
       entry.append(lastmod);
     }
-    lastmod.textContent = ["/", "/products/", "/tensile-testing-machine-malaysia/", "/universal-testing-machine-malaysia/"].includes(new URL(url).pathname) ? "2026-10-15" : "2026-10-12";
+    lastmod.textContent = new URL(url).pathname === "/products/" ? "2026-10-20" : ["/", "/tensile-testing-machine-malaysia/", "/universal-testing-machine-malaysia/"].includes(new URL(url).pathname) ? "2026-10-15" : "2026-10-12";
   }
   if (machinePages.some(page => page.path === new URL(url).pathname)) {
-    const lastmod = sitemap.createElementNS(sitemap.documentElement.namespaceURI, "lastmod");
-    lastmod.textContent = "2026-10-15";
-    entry.append(lastmod);
+    let lastmod = entry.getElementsByTagName("lastmod")[0];
+    if (!lastmod) { lastmod = sitemap.createElementNS(sitemap.documentElement.namespaceURI, "lastmod"); entry.append(lastmod); }
+    lastmod.textContent = machinePages.find(page => page.path === new URL(url).pathname).lastmod || "2026-10-15";
   }
 }
 for (const name of ["sitemap.xml", "sitemap-github.xml"]) {

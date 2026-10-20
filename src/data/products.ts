@@ -16,6 +16,53 @@
 }
 
 export const products: Product[] = [
+  {
+    id: "armstrong-wds-20",
+    model: "WDS-20",
+    brand: "Armstrong",
+    name: "Dual Column Touchscreen Tensile Testing Machine",
+    tagline: "Servo-driven tensile testing with touchscreen control for laboratory and factory QC.",
+    category: "utm",
+    categoryLabel: "Universal Testing Machine",
+    image: "product-images/armstrong/wds-20.png",
+    description: "The ARMSTRONG WDS-20 is a dual-column touchscreen tensile testing machine with a servo motor and TS7003L measurement and control system. Select the force range, specimen grips and test settings for your material and application. The controller supports tensile and compression test directions; compression testing requires the appropriate fixtures. Confirm the supplied capacity and accessories in the quotation.",
+    specs: [
+      { label: "Capacity", value: "Configured load range confirmed in quotation" },
+      { label: "Control", value: "TS7003L touchscreen measurement and control system" },
+      { label: "Drive System", value: "Servo motor, dual-column frame" },
+      { label: "Tests", value: "Tensile; compression with suitable fixtures" },
+      { label: "Test speed", value: "1-500 mm/min" },
+      { label: "Maximum travel", value: "800 mm excluding grips" },
+      { label: "Force Accuracy", value: "+/-1% per supplied manual; verify configured range" },
+      { label: "Force Resolution", value: "1/25,000" },
+      { label: "Force units", value: "kg, N, lb" },
+      { label: "Machine dimensions", value: "1010 x 490 x 1730 mm" },
+      { label: "Weight", value: "Approximately 150 kg" },
+      { label: "Power supply", value: "Single-phase 220 V; confirm electrical rating before installation" },
+    ],
+    idealFor: ["Factory quality control", "Material testing laboratories", "Specimen tensile testing"],
+  },
+  {
+    id: "armstrong-zl-9001a",
+    model: "ZL-9001A",
+    brand: "Armstrong",
+    name: "Computer Controlled Carton Compression Testing Machine",
+    tagline: "800 x 800 x 800 mm compression space for corrugated cartons and packaging containers.",
+    category: "paper",
+    categoryLabel: "Paper & Packaging Testing",
+    image: "product-images/armstrong/zl-9001a.jpeg",
+    description: "The ARMSTRONG ZL-9001A is a computer-controlled carton compression testing machine for assessing the load-bearing ability of corrugated cartons and packaging containers. The supplied documentation specifies an 800 x 800 x 800 mm compression space, a 1000 kgf load cell and TM2101 control software. Discuss carton dimensions, expected force, compression or holding requirements and report needs before selecting the test configuration. Confirm the maximum permitted operating load and supplied accessories in the quotation.",
+    specs: [
+      { label: "Capacity", value: "1000 kgf load cell (approximately 9.81 kN); operating limit confirmed in quotation" },
+      { label: "Compression space", value: "800 x 800 x 800 mm" },
+      { label: "Control", value: "Computer control with TM2101 software" },
+      { label: "Drive System", value: "Servo motor with twin ball screws" },
+      { label: "Tests", value: "Carton and packaging container compression" },
+      { label: "Power supply", value: "Single-phase 220 V, 50 Hz; confirm machine nameplate" },
+      { label: "Test method", value: "Agreed packaging compression method; confirm applicable standard and edition" },
+    ],
+    idealFor: ["Corrugated carton manufacturers", "Packaging quality control", "Factory packaging laboratories"],
+  },
   // === UNIVERSAL TESTING MACHINE ===
   {
     id: "ht-2402",
@@ -1179,6 +1226,7 @@ export const products: Product[] = [
 
 // Each product has its own customer-facing PDF catalogue.
 for (const product of products) {
+  if (["armstrong-wds-20", "armstrong-zl-9001a"].includes(product.id)) continue;
   product.catalogueUrl = `catalogues/products/${product.id}.pdf`;
 }
 
