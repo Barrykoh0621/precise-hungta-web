@@ -67,15 +67,19 @@ def build(product):
         rule(48)
         text(M,34,'www.hungtainstrument.com.my',8.5,color=NAVY)
         c.linkURL('https://www.hungtainstrument.com.my/',(M,30,M+180,43),relative=0)
-        text(M,21,f"{extra['code']}  |  Rev 01  |  20 October 2026",7.5,color=GREY)
+        text(M,21,f"{extra['code']}  |  Rev 02  |  20 October 2026",7.5,color=GREY)
         text(W-M-35,23,f'{page} / 2',8,color=GREY)
     def cta():
-        c.setFillColor(HexColor(RED));c.rect(M,64,CW,63,stroke=0,fill=1)
-        text(M+13,107,f'Request your {model} quotation',12,True,'#ffffff')
-        text(M+13,89,'012-628 0096  |  hungtatest@yahoo.com',9.5,color='#ffffff')
-        text(M+13,75,'Malaysia team in Seremban  |  Click to enquire on WhatsApp',8,color='#ffffff')
+        c.setFillColor(HexColor(RED));c.rect(M,64,CW,84,stroke=0,fill=1)
+        text(M+13,132,'HUNG TA INSTRUMENT ENTERPRISE',11,True,'#ffffff')
+        text(M+13,117,f'Request your {model} quotation',9.5,True,'#ffffff')
+        text(M+13,102,'Tel / WhatsApp: +60 12-628 0096  |  Email: hungtatest@yahoo.com',9,color='#ffffff')
+        text(M+13,87,'109, Taman A.S.T., Jalan Sungai Ujong,',8.5,color='#ffffff')
+        text(M+13,74,'70200 Seremban, Negeri Sembilan, Malaysia',8.5,color='#ffffff')
         message=f'Hello Hung Ta Instrument, I would like a quotation for ARMSTRONG {model}.\nCompany and location:\nSpecimen / carton dimensions:\nExpected force:\nRequired test method:\nRequired date:'
-        c.linkURL('https://wa.me/60126280096?text='+quote(message),(M,64,W-M,127),relative=0)
+        c.linkURL('https://wa.me/60126280096?text='+quote(message),(M,111,W-M,127),relative=0)
+        c.linkURL('https://wa.me/60126280096',(M+13,98,M+220,111),relative=0)
+        c.linkURL('mailto:hungtatest@yahoo.com',(M+225,98,W-M-13,111),relative=0)
 
     furniture(1)
     text(M,738,'ARMSTRONG',12,True,RED)
@@ -108,7 +112,7 @@ def build(product):
     for item in extra['configuration']:y=para('- '+item,M,y,CW,9)-4
     y-=5;y=para(extra['caution'],M,y,CW,8.5,GREY)
     y-=10;y=para('Specifications are reference values for configuration review. Final capacity, fixtures, software functions and supplied accessories must be agreed in the quotation. Calibration scope and documentation are confirmed separately.',M,y,CW,8,GREY)
-    assert y>140,(model,'Content reaches quotation panel',y)
+    assert y>158,(model,'Content reaches quotation panel',y)
     cta();c.showPage();c.save()
     copy2(out,PUBLIC/f"{product['id']}.pdf")
     pages=convert_from_path(str(out),dpi=120,fmt='png')
@@ -117,6 +121,9 @@ def build(product):
     doc=PdfReader(out);body='\n'.join(p.extract_text() for p in doc.pages)
     assert model in body and 'ARMSTRONG' in body and 'Serial number' not in body
     assert 'ISO/IEC 17025 accredited' not in body
+    for page in doc.pages:
+        for contact in ('HUNG TA INSTRUMENT ENTERPRISE', '+60 12-628 0096', 'hungtatest@yahoo.com', 'Jalan Sungai Ujong', 'www.hungtainstrument.com.my'):
+            assert contact in page.extract_text(), (model, 'Missing contact', contact)
     assert any('/Annots' in p for p in doc.pages)
     print(str(out))
 
