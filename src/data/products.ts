@@ -1226,7 +1226,6 @@ export const products: Product[] = [
 
 // Each product has its own customer-facing PDF catalogue.
 for (const product of products) {
-  if (["armstrong-wds-20", "armstrong-zl-9001a"].includes(product.id)) continue;
   product.catalogueUrl = `catalogues/products/${product.id}.pdf`;
 }
 

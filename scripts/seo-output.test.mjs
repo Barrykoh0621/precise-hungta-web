@@ -19,7 +19,10 @@ test("New Armstrong products publish confirmed specs without private delivery ma
   assert.ok(enquiry.searchParams.get("text").includes("Carton dimensions"));
   for (const dom of [wds, carton]) {
     assert.ok(![...dom.window.document.querySelectorAll("a[href]")].some(a => /operation.manual|\.docx|WDS20_Operation_Manual/i.test(a.href)));
-    assert.ok(!dom.window.document.querySelector('a[href^="/catalogues/products/armstrong-"]'), "do not advertise a catalogue PDF that has not been published");
+    const catalogue = dom.window.document.querySelector('a[href^="/catalogues/products/armstrong-"]');
+    assert.ok(catalogue, "the public product catalogue must be downloadable");
+    const pdf = await readFile(path.join("dist", catalogue.getAttribute("href")));
+    assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
     dom.window.close();
   }
   const sitemap = new JSDOM(await readFile("dist/sitemap.xml", "utf8"), { contentType: "application/xml" });
