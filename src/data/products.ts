@@ -1136,7 +1136,7 @@ export const products: Product[] = [
     category: "compression",
     categoryLabel: "Compression Testing",
     brand: "Armstrong",
-    image: "product-images/armstrong-yew-3000e.png",
+    image: "product-images/armstrong-yew-3000e-v2.webp",
     catalogueUrl: "catalogues/products/armstrong-yew-3000e.pdf",
     description: "Armstrong YEW-3000E computer-controlled compression testing machine with 3,000 kN capacity. Share your specimen dimensions, test method and laboratory requirements so Hung Ta can review the suitable configuration before quotation.",
     specs: [
