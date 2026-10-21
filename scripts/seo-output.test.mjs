@@ -87,6 +87,10 @@ test("Priority machine pages expose real specifications, images, enquiries and s
     assert.ok(document.querySelector("table th").textContent.includes("Capacity"));
     const image = document.querySelector("figure img").getAttribute("src");
     await readFile(path.join("dist", image));
+    if (model === "WAW-300D") {
+      assert.equal(image, "/product-images/armstrong-waw-300d-v2.webp");
+      assert.ok(document.querySelector("figcaption").textContent.includes("Product illustration"));
+    }
     const enquiry = document.querySelector('a[href^="https://wa.me/"]');
     assert.ok(new URL(enquiry.href).searchParams.get("text").includes(model));
     assert.ok(document.querySelector('a[href="/calibration-service-malaysia/"]'));

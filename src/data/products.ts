@@ -1118,7 +1118,7 @@ export const products: Product[] = [
     category: "utm",
     categoryLabel: "Universal Testing Machine",
     brand: "Armstrong",
-    image: "product-images/armstrong-waw-300d.png",
+    image: "product-images/armstrong-waw-300d-v2.webp",
     catalogueUrl: "catalogues/products/armstrong-waw-300d.pdf",
     description: "Armstrong WAW-300D computerised electro-hydraulic servo hydraulic universal testing machine with 300 kN capacity. Contact Hung Ta to confirm the specimen, fixtures, test method and installation requirements for your application.",
     specs: [
