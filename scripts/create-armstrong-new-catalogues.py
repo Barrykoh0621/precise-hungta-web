@@ -59,7 +59,6 @@ def build(product):
         return top-hh
     def rule(y):c.setStrokeColor(HexColor('#d5dce1'));c.setLineWidth(.5);c.line(M,y,W-M,y)
     def furniture(page):
-        c.setFillColor(HexColor(RED));c.rect(0,H-5,W,5,stroke=0,fill=1)
         c.drawImage(str(LOGO),M,H-66,width=34,height=38,preserveAspectRatio=True,anchor='c',mask='auto')
         text(M+47,H-42,'HUNG TA INSTRUMENT',15,True,NAVY)
         text(M+47,H-58,'Enterprise  |  Testing machines and local support',8.5,color=GREY)

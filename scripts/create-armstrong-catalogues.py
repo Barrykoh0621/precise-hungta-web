@@ -35,7 +35,6 @@ def main(source):
         pdf.setTitle(f"Armstrong {model} | Hung Ta Instrument")
         pdf.setAuthor("Hung Ta Instrument Enterprise")
         pdf.setFillColor(HexColor("#c91436"))
-        pdf.rect(0, 828, A4[0], 14, fill=1, stroke=0)
         pdf.setFont("Helvetica-Bold", 15)
         pdf.drawString(44, 794, "HUNG TA INSTRUMENT")
         pdf.setFillColor(HexColor("#374151"))

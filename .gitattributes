@@ -1,2 +1,1 @@
-public/catalogues/products/armstrong-wds-20.pdf binary
-public/catalogues/products/armstrong-zl-9001a.pdf binary
+public/catalogues/**/*.pdf binary
