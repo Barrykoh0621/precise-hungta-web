@@ -113,9 +113,6 @@ const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
               decoding="async"
               className="w-full h-auto"
             />
-            <figcaption className="mt-3 text-xs text-primary-foreground/70">
-              AI-generated service illustration, not a photograph of our premises or team.
-            </figcaption>
           </figure>
         </div>
       </section>

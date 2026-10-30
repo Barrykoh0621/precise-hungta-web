@@ -1,4 +1,4 @@
-import { readFile, writeFile, readdir } from "node:fs/promises";
+import { readFile, writeFile, readdir, mkdir } from "node:fs/promises";
 import path from "node:path";
 import { JSDOM } from "jsdom";
 import { generateMachinePages } from "./machine-pages.mjs";
@@ -104,6 +104,7 @@ function normalizeSchema(value) {
 const entries = await readdir(dist, { withFileTypes: true });
 const pageFiles = ["index.html"];
 for (const entry of entries.filter((item) => item.isDirectory())) {
+  if (entry.name === "armstrong-waw-300d-universal-testing-machine") continue;
   try {
     await readFile(path.join(dist, entry.name, "index.html"));
     pageFiles.push(`${entry.name}/index.html`);
@@ -247,4 +248,8 @@ for (const name of ["sitemap.xml", "sitemap-github.xml"]) {
   await writeFile(path.join(dist, name), sitemapDom.serialize());
 }
 sitemapDom.window.close();
+// Preserve previously shared links after the confirmed WAW model correction.
+const legacyWaw = path.join(dist, "armstrong-waw-300d-universal-testing-machine");
+await mkdir(legacyWaw, { recursive: true });
+await writeFile(path.join(legacyWaw, "index.html"), '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=/armstrong-waw-300e-universal-testing-machine/"><link rel="canonical" href="https://www.hungtainstrument.com.my/armstrong-waw-300e-universal-testing-machine/"><title>WAW-300E | Hung Ta Instrument</title></head><body><a href="/armstrong-waw-300e-universal-testing-machine/">View the corrected WAW-300E model</a></body></html>');
 console.log(`SEO verified: ${urls.size} indexable pages, canonical URLs, route assets and sitemap.`);

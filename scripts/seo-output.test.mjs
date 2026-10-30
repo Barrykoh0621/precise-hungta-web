@@ -1,10 +1,37 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import { JSDOM } from "jsdom";
 
 const origin = "https://www.hungtainstrument.com.my";
+
+test("Catalogue downloads use the shared company branding and detailed source models", async () => {
+  const paths = [];
+  async function collect(folder) {
+    for (const file of await readdir(folder, { withFileTypes: true })) {
+      const full = path.join(folder, file.name);
+      if (file.isDirectory()) await collect(full);
+      else if (file.name.endsWith(".pdf")) paths.push(full);
+    }
+  }
+  await collect("dist/catalogues");
+  assert.ok(paths.length >= 74);
+  for (const file of paths) {
+    const bytes = await readFile(file);
+    assert.equal(bytes.subarray(0, 5).toString(), "%PDF-");
+    assert.ok(bytes.toString("latin1").includes("/Author (Hung Ta Instrument)"), file);
+    assert.ok(!bytes.toString("latin1").includes("/Author (Hung Ta Instrument Enterprise)"), file);
+  }
+  for (const [model, minimum] of [["armstrong-waw-300e", 6], ["armstrong-yew-3000e", 5]]) {
+    const pdf = (await readFile(`dist/catalogues/products/${model}.pdf`)).toString("latin1");
+    assert.ok((pdf.match(/\/Type\s*\/Page\b/g) || []).length >= minimum);
+  }
+  const legacy = new JSDOM(await readFile("dist/armstrong-waw-300d-universal-testing-machine/index.html", "utf8"));
+  assert.equal(legacy.window.document.querySelector('meta[name="robots"]').content, "noindex");
+  assert.equal(legacy.window.document.querySelector('link[rel="canonical"]').href, `${origin}/armstrong-waw-300e-universal-testing-machine/`);
+  legacy.window.close();
+});
 
 test("New Armstrong products publish confirmed specs without private delivery manuals", async () => {
   const wds = new JSDOM(await readFile("dist/armstrong-wds-20-tensile-testing-machine/index.html", "utf8"));
@@ -75,7 +102,7 @@ test("Priority machine pages expose real specifications, images, enquiries and s
     ["ht-2402-tensile-testing-machine", "HT-2402"],
     ["ht-9501-universal-testing-machine", "HT-9501"],
     ["ht-2101-universal-testing-machine", "HT-2101"],
-    ["armstrong-waw-300d-universal-testing-machine", "WAW-300D"],
+    ["armstrong-waw-300e-universal-testing-machine", "WAW-300E"],
     ["armstrong-yew-3000e-compression-testing-machine", "YEW-3000E"],
     ["armstrong-wds-20-tensile-testing-machine", "WDS-20"],
     ["armstrong-zl-9001a-carton-compression-testing-machine", "ZL-9001A"],
@@ -87,13 +114,13 @@ test("Priority machine pages expose real specifications, images, enquiries and s
     assert.ok(document.querySelector("table th").textContent.includes("Capacity"));
     const image = document.querySelector("figure img").getAttribute("src");
     await readFile(path.join("dist", image));
-    if (model === "WAW-300D") {
-      assert.equal(image, "/product-images/armstrong-waw-300d-v2.webp");
-      assert.ok(document.querySelector("figcaption").textContent.includes("Product illustration"));
+    if (model === "WAW-300E") {
+      assert.equal(image, "/product-images/armstrong-waw-300e.png");
+      assert.ok(document.querySelector("figcaption").textContent.includes("supplied product catalogue"));
     }
     if (model === "YEW-3000E") {
-      assert.equal(image, "/product-images/armstrong-yew-3000e-v2.webp");
-      assert.ok(document.querySelector("figcaption").textContent.includes("Product illustration"));
+      assert.equal(image, "/product-images/armstrong-yew-3000e.png");
+      assert.ok(document.querySelector("figcaption").textContent.includes("supplied product catalogue"));
     }
     const enquiry = document.querySelector('a[href^="https://wa.me/"]');
     assert.ok(new URL(enquiry.href).searchParams.get("text").includes(model));
@@ -147,7 +174,7 @@ test("Calibration service illustration is locally hosted with stable dimensions"
   assert.ok(image);
   assert.equal(image.getAttribute("width"), "1672");
   assert.equal(image.getAttribute("height"), "941");
-  assert.ok(dom.window.document.querySelector("figcaption").textContent.includes("AI-generated"));
+  assert.ok(!dom.window.document.body.textContent.includes("AI-generated service illustration, not a photograph"));
   assert.ok((await readFile("dist/product-images/tensile-machine-service.webp")).length > 1000);
   dom.window.close();
 });
@@ -163,7 +190,7 @@ test("Company history distinguishes Taiwan and Malaysia establishment dates", as
 
 test("New Armstrong models have product images and downloadable catalogues", async () => {
   const landing = await readFile("dist/armstrong-testing-machines-malaysia/index.html", "utf8");
-  for (const model of ["waw-300d", "yew-3000e"]) {
+  for (const model of ["waw-300e", "yew-3000e"]) {
     const id = `armstrong-${model}`;
     assert.ok(landing.includes(model.toUpperCase()));
     assert.ok(landing.includes(`catalogues/products/${id}.pdf`));

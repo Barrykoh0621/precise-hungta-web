@@ -37,7 +37,8 @@ const Products = ({ onOpenQuote, initialBrand }: ProductsProps) => {
   });
 
   const [searchParams] = useSearchParams();
-  const expandedId = searchParams.get("product");
+  const requestedId = searchParams.get("product");
+  const expandedId = requestedId === "armstrong-waw-300d" ? "armstrong-waw-300e" : requestedId;
   const categoryParam = searchParams.get("category");
   const brandParam = searchParams.get("brand");
   const [filter, setFilter] = useState("all");

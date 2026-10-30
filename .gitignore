@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local catalogue source backups and visual verification outputs.
+/tmp/catalogue-unification/
+/tmp/catalogue-products.json
