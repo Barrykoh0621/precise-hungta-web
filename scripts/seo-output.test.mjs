@@ -204,7 +204,7 @@ test("Home and resource pages expose crawlable routes without JavaScript", async
 test("Customer checklist links open the PDF rather than the legacy text download", async () => {
   const pdf = await readFile("dist/testing-machine-enquiry-checklist.pdf");
   assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
-  for (const route of ["resources", "tensile-grips-selection-guide", "ht-2402-tensile-testing-machine", "ht-9501-universal-testing-machine"]) {
+  for (const route of ["resources", "testing-machine-calibration-vs-servicing", "tensile-grips-selection-guide", "ht-2402-tensile-testing-machine", "ht-9501-universal-testing-machine"]) {
     const dom = new JSDOM(await readFile(`dist/${route}/index.html`, "utf8"));
     const link = dom.window.document.querySelector('a[href$="testing-machine-enquiry-checklist.pdf"]');
     assert.ok(link, `${route} must offer the PDF checklist`);
