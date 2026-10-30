@@ -122,6 +122,25 @@ test("Homepage has a raster social image and crawlable machine specification lin
   dom.window.close();
 });
 
+test("Calibration decision guide has crawlable entry points, references and current sitemap date", async () => {
+  const route = "/testing-machine-calibration-vs-servicing/";
+  for (const page of ["resources", "calibration-service-malaysia", "tensile-machine-calibration-malaysia"]) {
+    const dom = new JSDOM(await readFile(`dist/${page}/index.html`, "utf8"));
+    assert.ok(dom.window.document.querySelector(`a[href="${route}"]`), `${page} should link to the decision guide`);
+    dom.window.close();
+  }
+  const guide = new JSDOM(await readFile(`dist${route}index.html`, "utf8"));
+  assert.ok(guide.window.document.querySelector('a[href="/calibration-service-malaysia/"]'));
+  assert.ok(guide.window.document.querySelector('a[href^="https://www.nist.gov/"]'));
+  const schemas = [...guide.window.document.querySelectorAll('script[type="application/ld+json"]')].map((script) => JSON.parse(script.textContent));
+  assert.ok(schemas.some((schema) => schema["@type"] === "BreadcrumbList"));
+  guide.window.close();
+  const sitemap = new JSDOM(await readFile("dist/sitemap.xml", "utf8"), { contentType: "application/xml" });
+  const entry = [...sitemap.window.document.getElementsByTagName("url")].find((entry) => entry.getElementsByTagName("loc")[0].textContent === `${origin}${route}`);
+  assert.equal(entry.getElementsByTagName("lastmod")[0].textContent, "2026-10-30");
+  sitemap.window.close();
+});
+
 test("Calibration service illustration is locally hosted with stable dimensions", async () => {
   const dom = new JSDOM(await readFile("dist/calibration-service-malaysia/index.html", "utf8"));
   const image = dom.window.document.querySelector('img[src*="tensile-machine-service.webp"]');

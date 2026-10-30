@@ -227,13 +227,15 @@ for (const url of urls) {
 // Only date pages actually edited, not every page on each deployment.
 for (const entry of [...sitemap.getElementsByTagName("url")]) {
   const url = entry.getElementsByTagName("loc")[0].textContent;
-  if (["/", "/tensile-testing-machine-malaysia/", "/universal-testing-machine-malaysia/", "/calibration-service-malaysia/", "/tensile-machine-calibration-malaysia/", "/testing-machine-calibration-checklist-malaysia/", "/tensile-grips-selection-guide/", ...Object.keys(appRoutes).map((route) => `/${route}/`)].includes(new URL(url).pathname)) {
+  const updatedRoutes = ["/calibration-service-malaysia/", "/tensile-machine-calibration-malaysia/", "/universal-testing-machine-service-malaysia/", "/resources/", "/testing-machine-calibration-vs-servicing/"];
+  const route = new URL(url).pathname;
+  if (updatedRoutes.includes(route) || ["/", "/tensile-testing-machine-malaysia/", "/universal-testing-machine-malaysia/", "/calibration-service-malaysia/", "/tensile-machine-calibration-malaysia/", "/testing-machine-calibration-checklist-malaysia/", "/tensile-grips-selection-guide/", ...Object.keys(appRoutes).map((route) => `/${route}/`)].includes(route)) {
     let lastmod = entry.getElementsByTagName("lastmod")[0];
     if (!lastmod) {
       lastmod = sitemap.createElementNS(sitemap.documentElement.namespaceURI, "lastmod");
       entry.append(lastmod);
     }
-    lastmod.textContent = new URL(url).pathname === "/products/" ? "2026-10-20" : ["/", "/tensile-testing-machine-malaysia/", "/universal-testing-machine-malaysia/"].includes(new URL(url).pathname) ? "2026-10-15" : "2026-10-12";
+    lastmod.textContent = updatedRoutes.includes(route) ? "2026-10-30" : route === "/products/" ? "2026-10-20" : ["/", "/tensile-testing-machine-malaysia/", "/universal-testing-machine-malaysia/"].includes(route) ? "2026-10-15" : "2026-10-12";
   }
   if (machinePages.some(page => page.path === new URL(url).pathname)) {
     let lastmod = entry.getElementsByTagName("lastmod")[0];

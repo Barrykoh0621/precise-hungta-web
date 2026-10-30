@@ -1,5 +1,11 @@
 export const testingGuides = [
   {
+    title: "Calibration, verification or servicing?",
+    category: "Calibration & service",
+    description: "Match your machine symptoms, measurement requirements and QA records to the right enquiry.",
+    path: "/testing-machine-calibration-vs-servicing/",
+  },
+  {
     title: "Choosing a tensile testing machine",
     category: "Machine selection",
     description: "Compare the material, force range, fixtures and reports needed before choosing a system.",

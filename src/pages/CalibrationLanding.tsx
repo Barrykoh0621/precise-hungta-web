@@ -65,7 +65,7 @@ const calibrationFocus = [
 
 const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
   usePageSeo({
-    title: "Testing Machine Calibration Malaysia | Hung Ta Instrument",
+    title: "Tensile & Testing Machine Calibration Malaysia | Hung Ta",
     description:
       "Testing machine and tensile machine calibration support in Malaysia. Send your UTM model, load capacity, factory location and due date to Hung Ta for a scope review.",
     canonicalPath: "/calibration-service-malaysia",
@@ -218,6 +218,9 @@ const CalibrationLanding = ({ onOpenQuote }: CalibrationLandingProps) => {
               </div>
               <p className="text-sm mt-6 leading-relaxed">
                 Read our <a className="underline" href="/testing-machine-calibration-checklist-malaysia/">testing machine calibration checklist</a> or the <a className="underline" href="/tensile-machine-calibration-malaysia/">tensile machine calibration preparation guide</a>.
+              </p>
+              <p className="text-sm mt-3 leading-relaxed">
+                Unsure which service to request? Compare <a className="underline" href="/testing-machine-calibration-vs-servicing/">calibration, verification and servicing for testing machines</a>.
               </p>
             </div>
           </AnimatedSection>
