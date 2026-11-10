@@ -22,6 +22,15 @@ test("Catalogue downloads use the shared company branding and detailed source mo
     assert.equal(bytes.subarray(0, 5).toString(), "%PDF-");
     assert.ok(bytes.toString("latin1").includes("/Author (Hung Ta Instrument)"), file);
     assert.ok(!bytes.toString("latin1").includes("/Author (Hung Ta Instrument Enterprise)"), file);
+    const pdf = bytes.toString("latin1");
+    const pageCount = (pdf.match(/\/Type\s*\/Page\b/g) || []).length;
+    const urls = [...pdf.matchAll(/\/URI \(([^\r\n)]+)\)/g)].map(([, url]) =>
+      url.replace(/\\([0-7]{3})/g, (_, octal) => String.fromCharCode(parseInt(octal, 8))),
+    );
+    assert.ok(pageCount > 0, file);
+    for (const contact of ["https://wa.me/60122201096", "https://wa.me/60126280096", "mailto:hungtatest@yahoo.com"]) {
+      assert.ok(urls.filter((url) => url === contact).length >= pageCount, `${file}: ${contact}`);
+    }
   }
   for (const [model, minimum] of [["armstrong-waw-300e", 6], ["armstrong-yew-3000e", 5]]) {
     const pdf = (await readFile(`dist/catalogues/products/${model}.pdf`)).toString("latin1");
