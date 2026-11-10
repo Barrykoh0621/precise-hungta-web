@@ -36,29 +36,45 @@ test("Catalogue downloads use the shared company branding and detailed source mo
 test("New Armstrong products publish confirmed specs without private delivery manuals", async () => {
   const wds = new JSDOM(await readFile("dist/armstrong-wds-20-tensile-testing-machine/index.html", "utf8"));
   const carton = new JSDOM(await readFile("dist/armstrong-zl-9001a-carton-compression-testing-machine/index.html", "utf8"));
+  const dz = new JSDOM(await readFile("dist/armstrong-dz-104-tensile-testing-machine/index.html", "utf8"));
   assert.ok(wds.window.document.querySelector("table").textContent.includes("1-500 mm/min"));
   assert.ok(wds.window.document.querySelector("table").textContent.includes("500 kgf"));
   assert.ok(!wds.window.document.body.textContent.includes("20 kN"), "WDS-20 is a model name, not a 20 kN capacity");
   assert.ok(carton.window.document.querySelector("table").textContent.includes("800 x 800 x 800 mm"));
   assert.ok(carton.window.document.querySelector("table").textContent.includes("1000 kgf"));
   assert.ok(carton.window.document.title.includes("Carton Compression"));
+  assert.ok(dz.window.document.querySelector("table").textContent.includes("2,000 kgf (approximately 19.61 kN)"));
   const enquiry = new URL(carton.window.document.querySelector('a[href^="https://wa.me/"]').href);
   assert.ok(enquiry.searchParams.get("text").includes("Carton dimensions"));
-  for (const dom of [wds, carton]) {
+  const range = new JSDOM(await readFile("dist/armstrong-testing-machines-malaysia/index.html", "utf8"));
+  for (const [dom, id, route] of [
+    [wds, "armstrong-wds-20", "armstrong-wds-20-tensile-testing-machine"],
+    [carton, "armstrong-zl-9001a", "armstrong-zl-9001a-carton-compression-testing-machine"],
+    [dz, "armstrong-dz-104", "armstrong-dz-104-tensile-testing-machine"],
+  ]) {
     assert.ok(![...dom.window.document.querySelectorAll("a[href]")].some(a => /operation.manual|\.docx|WDS20_Operation_Manual/i.test(a.href)));
-    const catalogue = dom.window.document.querySelector('a[href^="/catalogues/products/armstrong-"]');
+    const catalogue = dom.window.document.querySelector(`a[href="/catalogues/products/${id}.pdf"]`);
     assert.ok(catalogue, "the public product catalogue must be downloadable");
     const pdf = await readFile(path.join("dist", catalogue.getAttribute("href")));
     assert.equal(pdf.subarray(0, 5).toString(), "%PDF-");
+    const image = `/product-images/armstrong/${id}.webp`;
+    assert.equal(dom.window.document.querySelector("figure img").getAttribute("src"), image);
+    await readFile(path.join("dist", image));
+    assert.ok(range.window.document.querySelector(`a[href$="/${route}/"]`));
+    assert.ok(range.window.document.querySelector(`a[href$="/catalogues/products/${id}.pdf"]`));
     dom.window.close();
   }
+  range.window.close();
   const sitemap = new JSDOM(await readFile("dist/sitemap.xml", "utf8"), { contentType: "application/xml" });
+  let updatedModels = 0;
   for (const entry of sitemap.window.document.getElementsByTagName("url")) {
-    if (/armstrong-(wds-20|zl-9001a)-/.test(entry.textContent)) {
+    if (/armstrong-(wds-20|zl-9001a|dz-104)-/.test(entry.textContent)) {
+      updatedModels += 1;
       assert.equal(entry.getElementsByTagName("lastmod").length, 1);
-      assert.equal(entry.getElementsByTagName("lastmod")[0].textContent, "2026-10-20");
+      assert.equal(entry.getElementsByTagName("lastmod")[0].textContent, "2026-11-10");
     }
   }
+  assert.equal(updatedModels, 3);
   sitemap.window.close();
 });
 
@@ -106,6 +122,7 @@ test("Priority machine pages expose real specifications, images, enquiries and s
     ["armstrong-yew-3000e-compression-testing-machine", "YEW-3000E"],
     ["armstrong-wds-20-tensile-testing-machine", "WDS-20"],
     ["armstrong-zl-9001a-carton-compression-testing-machine", "ZL-9001A"],
+    ["armstrong-dz-104-tensile-testing-machine", "DZ-104"],
   ]) {
     const dom = new JSDOM(await readFile(`dist/${route}/index.html`, "utf8"));
     const document = dom.window.document;
