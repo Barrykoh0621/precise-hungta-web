@@ -17,6 +17,268 @@ export interface Product {
 
 export const products: Product[] = [
   {
+    "id": "armstrong-armsr-150",
+    "model": "ARMSR-150",
+    "name": "Benchtop Hall Effect Wall Thickness Gauge",
+    "brand": "Armstrong",
+    "tagline": "Measure non-ferromagnetic bottle walls without cutting the sample.",
+    "category": "hardness",
+    "categoryLabel": "Thickness Measurement",
+    "image": "product-images/armstrong/armstrong-armsr-150.webp",
+    "description": "Measure non-ferromagnetic bottle walls without cutting the sample. A steel target ball works with the fixed probe.",
+    "specs": [
+      {
+        "label": "Measurement range",
+        "value": "0-6 mm"
+      },
+      {
+        "label": "Accuracy",
+        "value": "±2% of reading"
+      },
+      {
+        "label": "Resolution",
+        "value": "0.01 mm"
+      }
+    ],
+    "idealFor": [
+      "HDPE bottles",
+      "Plastic containers"
+    ]
+  },
+  {
+    "id": "armstrong-armsr-200",
+    "model": "ARMSR-200",
+    "name": "Separate-Probe Hall Effect Wall Thickness Gauge",
+    "brand": "Armstrong",
+    "tagline": "Use a separate Hall-effect probe and target ball to check wall thickness on curved parts, recesses and grooves without cutting the sample.",
+    "category": "hardness",
+    "categoryLabel": "Thickness Measurement",
+    "image": "product-images/armstrong/armstrong-armsr-200.webp",
+    "description": "Use a separate Hall-effect probe and target ball to check wall thickness on curved parts, recesses and grooves without cutting the sample.",
+    "specs": [
+      {
+        "label": "Measurement range",
+        "value": "Up to 10 mm with a 4.76 mm target ball"
+      },
+      {
+        "label": "Accuracy with 4.76 mm ball",
+        "value": "±1%"
+      },
+      {
+        "label": "Measurement rate",
+        "value": "16 readings/s"
+      }
+    ],
+    "idealFor": [
+      "Plastic containers",
+      "Glass packaging",
+      "Non-ferromagnetic components"
+    ]
+  },
+  {
+    "id": "armstrong-arm-9001a",
+    "model": "ARM-9001A",
+    "name": "Computer-Controlled Carton Compression Tester",
+    "brand": "Armstrong",
+    "tagline": "Assess the compressive strength of corrugated cartons.",
+    "category": "paper",
+    "categoryLabel": "Paper & Paperboard Testing",
+    "image": "product-images/armstrong/armstrong-arm-9001a.webp",
+    "description": "Assess the compressive strength of corrugated cartons. Verify the supplied machine's operating load rather than using the sum of the load-cell ratings.",
+    "specs": [
+      {
+        "label": "Compression space",
+        "value": "1,000 x 1,000 x 1,000 mm"
+      },
+      {
+        "label": "Compression speed",
+        "value": "10-350 mm/min"
+      },
+      {
+        "label": "Control",
+        "value": "Computer and software included"
+      }
+    ],
+    "idealFor": [
+      "Corrugated cartons",
+      "Packaging QC"
+    ]
+  },
+  {
+    "id": "armstrong-arm-a504-a",
+    "model": "ARM-A504-A",
+    "name": "Semi-Automatic Bursting Strength Tester",
+    "brand": "Armstrong",
+    "tagline": "Measures bursting strength on suitable paper and board.",
+    "category": "paper",
+    "categoryLabel": "Paper & Paperboard Testing",
+    "image": "product-images/armstrong/armstrong-arm-a504-a.webp",
+    "description": "Measures bursting strength on suitable paper and board. The illustrated configuration is the high-pressure semi-automatic type.",
+    "specs": [
+      {
+        "label": "Pressure range",
+        "value": "0-100 kgf/cm²"
+      },
+      {
+        "label": "Pressure resolution",
+        "value": "0.1 kgf/cm²"
+      },
+      {
+        "label": "Sample thickness",
+        "value": "0-10 mm"
+      }
+    ],
+    "idealFor": [
+      "Corrugated board",
+      "Paper and packaging"
+    ]
+  },
+  {
+    "id": "armstrong-hd-p815",
+    "model": "HD-P815",
+    "name": "Outsole Flexing Resistance Tester",
+    "brand": "Armstrong",
+    "tagline": "Repeatedly flexes prepared outsole specimens so cracking and damage can be assessed.",
+    "category": "rubber",
+    "categoryLabel": "Rubber, Plastics & Polymers",
+    "image": "product-images/armstrong/armstrong-hd-p815.webp",
+    "description": "Repeatedly flexes prepared outsole specimens so cracking and damage can be assessed.",
+    "specs": [
+      {
+        "label": "Specimen size",
+        "value": "150 x 25 x 5 mm"
+      },
+      {
+        "label": "Clamps",
+        "value": "6 groups"
+      },
+      {
+        "label": "Maximum bending angle",
+        "value": "90°, adjustable"
+      }
+    ],
+    "idealFor": [
+      "Rubber outsoles",
+      "Footwear testing"
+    ]
+  },
+  {
+    "id": "armstrong-hd-p301",
+    "model": "HD-P301",
+    "name": "Bally Leather Flexing Tester",
+    "brand": "Armstrong",
+    "tagline": "Tests resistance to repeated flexing on suitable leather and fabric specimens.",
+    "category": "rubber",
+    "categoryLabel": "Rubber, Plastics & Polymers",
+    "image": "product-images/armstrong/armstrong-hd-p301.webp",
+    "description": "Tests resistance to repeated flexing on suitable leather and fabric specimens.",
+    "specs": [
+      {
+        "label": "Fixture configurations",
+        "value": "6 or 12 sets"
+      },
+      {
+        "label": "Bending angle",
+        "value": "22.5°"
+      },
+      {
+        "label": "Speed",
+        "value": "100 ±5 cycles/min"
+      }
+    ],
+    "idealFor": [
+      "Leather",
+      "Footwear and luggage materials"
+    ]
+  },
+  {
+    "id": "armstrong-hd-a833-6",
+    "model": "HD-A833-6",
+    "name": "Leather Thickness Meter",
+    "brand": "Armstrong",
+    "tagline": "A contact gauge for suitable thickness measurements.",
+    "category": "hardness",
+    "categoryLabel": "Thickness Measurement",
+    "image": "product-images/armstrong/armstrong-hd-a833-6.webp",
+    "description": "A contact gauge for suitable thickness measurements. Select the probe and loading configuration required by the specimen and test method.",
+    "specs": [
+      {
+        "label": "Range",
+        "value": "0-10 mm"
+      },
+      {
+        "label": "Scale increment",
+        "value": "0.01 mm"
+      },
+      {
+        "label": "Dimensions",
+        "value": "145 x 80 x 195 mm"
+      }
+    ],
+    "idealFor": [
+      "Rubber and plastic specimens",
+      "Cable insulation and sheathing"
+    ]
+  },
+  {
+    "id": "armstrong-hd-g803",
+    "model": "HD-G803",
+    "name": "Shore Hardness Tester - Type A",
+    "brand": "Armstrong",
+    "tagline": "Checks Shore A hardness on appropriate rubber and plastic specimens.",
+    "category": "hardness",
+    "categoryLabel": "Hardness Testing",
+    "image": "product-images/armstrong/armstrong-hd-g803.webp",
+    "description": "Checks Shore A hardness on appropriate rubber and plastic specimens.",
+    "specs": [
+      {
+        "label": "Dial range",
+        "value": "0-100 HA"
+      },
+      {
+        "label": "Indenter travel",
+        "value": "0-2.5 mm"
+      },
+      {
+        "label": "Accuracy",
+        "value": "±1 HA"
+      }
+    ],
+    "idealFor": [
+      "Vulcanised rubber",
+      "Soft plastics"
+    ]
+  },
+  {
+    "id": "armstrong-arm-8001b-50kn",
+    "model": "ARM-8001B (50 kN)",
+    "name": "Computer Servo Universal Testing Machine",
+    "brand": "Armstrong",
+    "tagline": "A computer-servo test system for material testing.",
+    "category": "utm",
+    "categoryLabel": "Universal Testing Machine",
+    "image": "product-images/armstrong/armstrong-arm-8001b-50kn.webp",
+    "description": "A computer-servo test system for material testing. Top-load testing requires an appropriate load cell and separate compression platens.",
+    "specs": [
+      {
+        "label": "Maximum load",
+        "value": "50 kN"
+      },
+      {
+        "label": "Crosshead speed",
+        "value": "0.01-500 mm/min"
+      },
+      {
+        "label": "Effective test width",
+        "value": "390 mm; wider configuration on request"
+      }
+    ],
+    "idealFor": [
+      "Prepared material specimens",
+      "Compression with suitable fixtures"
+    ]
+  },
+  {
     id: "armstrong-wdw-02d",
     model: "WDW-02D",
     brand: "Armstrong",
